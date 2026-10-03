@@ -9,8 +9,8 @@ These notes record what could and could not be verified in the current coding en
 - Repository worktree: `/home/runner/work/lego_robotics/lego_robotics`.
 - Read-only checks found only a 15-byte initial README in the worktree; no app packages, manifests, tests, or workflows.
 - Searched conventional Windows install roots (`/Program Files`, `/Program Files (x86)`, `/ProgramData`, `/mnt/c/...`) and Linux locations under `/opt`, `/usr/local/share`, `/usr/share/applications`, `/var/lib/snapd/desktop/applications`, `/home/runner/.local/share`, `.config`, and `Documents`. Windows roots were absent. No EV3/MINDSTORMS app or content was found in the searched locations.
-- Checked installed Debian package names for EV3/LEGO/MINDSTORMS and found no relevant package. No Windows registry or Windows user profile is available here.
-- Direct requests to external technical websites failed DNS resolution in this environment. Links and source names in these notes are research leads unless explicitly stated otherwise; they were not independently fetched here.
+- Checked installed Debian package names for EV3/LEGO/MINDSTORMS; the substring search returned only unrelated `libblockdev3`. No Windows registry or Windows user profile is available here.
+- Direct web fetches from this environment failed DNS resolution. Secondary research yielded GitHub source references, but official LEGO, Apple, and MDN pages were not fetched; citations remain leads unless explicitly described as verified.
 - No legacy app was launched, no installation was modified, and no original content was available to copy or inspect.
 
 ## Documents
