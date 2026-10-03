@@ -13,7 +13,7 @@ The requested EV3 Home Edition, EV3 Lab / Education, and EV3 Classroom installat
 | `/mnt/c/Program Files`, `/mnt/c/Program Files (x86)`, `/mnt/c/ProgramData`, `/mnt/c/Users` | Absent |
 | Linux app locations under `/opt`, `/usr/local/share`, `/usr/share/applications`, `/var/lib/snapd/desktop/applications` | No EV3 application found |
 | `/home/runner/.local/share`, `/home/runner/.config`, `/home/runner/Documents` | No EV3 application or content found |
-| Installed Debian package names | No relevant EV3/LEGO/MINDSTORMS package found |
+| Installed Debian package names | No relevant EV3/LEGO/MINDSTORMS package found; the substring search's only result was unrelated `libblockdev3` |
 | Windows registry / application package database | UNAVAILABLE |
 
 The worktree contains only the initial `README.md`; the repository itself provides no installed application artifacts. Search results are negative only for the listed paths, not proof that the apps do not exist on the user's device.

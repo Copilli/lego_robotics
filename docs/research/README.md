@@ -23,7 +23,7 @@ These notes record what could and could not be verified in the current coding en
 | [04 — Lab content](04-lab-content.md) | Lab / Education library | UNKNOWN |
 | [05 — Classroom content](05-classroom-content.md) | App technology and content | UNKNOWN |
 | [06 — File formats](06-file-formats.md) | Containers, signatures, media | UNKNOWN |
-| [07 — EV3 protocol](07-ev3-protocol.md) | Protocol evidence plan | UNTESTED |
+| [07 — EV3 protocol](07-ev3-protocol.md) | Protocol evidence plan | EXPERIMENTAL (secondary-source review) |
 | [08 — iOS connectivity](08-ios-ev3-connectivity.md) | iPad transport feasibility | UNTESTED |
 | [09 — Android connectivity](09-android-connectivity.md) | Android transport feasibility | UNTESTED |
 | [10 — Web connectivity](10-web-connectivity.md) | Browser and desktop options | UNTESTED |
