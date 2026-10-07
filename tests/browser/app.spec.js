@@ -1,4 +1,17 @@
 import {test,expect} from '@playwright/test';
+test('browser without Web Serial shows the limitation and still runs the simulator',async({page})=>{
+  await page.addInitScript(()=>Object.defineProperty(navigator,'serial',{configurable:true,value:undefined}));
+  await page.goto('');
+  await expect(page.getByRole('button',{name:'Ver compatibilidad',exact:true})).toBeVisible();
+  await expect(page.locator('#notice')).toContainText('En iPad');
+  await page.getByRole('button',{name:'Ver compatibilidad',exact:true}).click();
+  await expect(page.locator('#hub-status')).toContainText('sin conexión');
+  await page.getByRole('button',{name:'+ Crear proyecto'}).click();
+  await page.getByRole('checkbox',{name:'Simulador (sin robot)'}).check();
+  await page.getByRole('button',{name:'Ejecutar'}).click();
+  await expect(page.locator('#console')).toContainText('[Simulador] Tono');
+  await expect(page.locator('#console')).toContainText('Programa terminado.');
+});
 test('editor persists, searches, exports and imports projects',async({page})=>{
   const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('');
   await page.getByRole('button',{name:'+ Crear proyecto'}).click();

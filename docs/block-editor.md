@@ -4,7 +4,7 @@ The default new-project editor uses the actual Scratch Blocks 2.1.30 library. Su
 
 Projects store both `blocksXML` and generated JavaScript in localStorage. JSON export/import and duplication preserve editable blocks. Existing JavaScript projects open as JavaScript. Switching from blocks regenerates JavaScript; editing JavaScript does not reverse-convert it to blocks. Invalid block programs remain saveable but cannot execute or export stale JavaScript.
 
-The home screen provides project cards, an Iniciar entry and the tutorial collection. The four-step guide covers pairing/connection, a greeting and tone, timed motor movement and sensor readings. Loading an example is explicit and replaces the current blocks. Progress and the current guide step persist locally.
+The home screen provides project cards and an Iniciar entry opening the activity collection. All practices share the same editor, projects and video library; Home/Lab names appear only as optional material provenance. The four-step guide covers pairing/connection, a greeting and tone, timed motor movement and sensor readings. Loading an example is explicit and replaces the current blocks. Progress and the current guide step persist locally.
 
 The simulator executes the same generated program with command validation, console output and fixed test sensor readings. It is not a physics simulator. Real EV3 commands use the paired Bluetooth serial port through Web Serial in desktop Chrome/Edge over HTTPS or localhost. A physical brick remains untested.
 

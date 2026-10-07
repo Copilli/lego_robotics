@@ -1,8 +1,9 @@
 import { packet, ReplyParser, stopOps, motorOps, toneOps, sensorOps } from './ev3-protocol.js';
+import {connectionSupport} from './connection-support.js';
 export class LegoBluetooth {
   constructor({output,status}){this.output=output;this.status=status;this.pending=new Map();this.counter=0;this.queue=Promise.resolve();this.connected=false;this.closing=false;}
   async connect(){
-    if(!globalThis.isSecureContext||!navigator.serial)throw new Error('EV3 requiere Chrome/Edge de escritorio con Web Serial, HTTPS o localhost. Empareja Bluetooth primero en el sistema. iPad no admite esta conexión.');
+    const support=connectionSupport();if(!support.supported)throw new Error(support.message);
     if(this.connected)return;
     this.port=await navigator.serial.requestPort();
     try{

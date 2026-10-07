@@ -3,6 +3,8 @@ import {test,expect} from '@playwright/test';
 test('first-program guide runs editable Scratch blocks and persists its project',async({page})=>{
   const errors=[];page.on('pageerror',error=>errors.push(error.message));
   await page.goto('');await page.getByRole('button',{name:'Iniciar',exact:true}).click();
+  await expect(page.getByRole('heading',{name:'Primeros pasos',exact:true})).toBeVisible();
+  await page.getByRole('button',{name:'Abrir guía',exact:true}).click();
   await expect(page.locator('#blocks-editor .blocklySvg')).toBeVisible();
   await expect(page.locator('.examples h3')).toHaveText('Conecta tu EV3');
   await page.getByRole('button',{name:'Siguiente',exact:true}).click();
