@@ -1,5 +1,21 @@
 import fs from 'node:fs';
 import {test,expect} from '@playwright/test';
+test('clean Pages build plays all five bundled tutorial videos without external servers',async({page})=>{
+  await page.route('**/*',route=>{
+    const url=new URL(route.request().url());
+    if(url.pathname.endsWith('/media/lego-local/catalog.json'))return route.fulfill({status:404,body:''});
+    return url.hostname==='127.0.0.1'?route.continue():route.abort();
+  });
+  await page.goto('');await page.getByRole('button',{name:'Videos locales',exact:true}).click();
+  await expect(page.locator('.media-item')).toHaveCount(5);
+  for(const id of ['start','motors','touch','color','distance']){
+    await page.locator('[data-view="tutorials"]').click();await page.locator(`[data-lesson="${id}"]`).click();
+    const video=page.locator('.lesson-layout video');
+    await expect(video).toHaveAttribute('src',/\/media\/tutorials\/[a-f0-9]+\.mp4$/);
+    await video.evaluate(async v=>{v.muted=true;await v.play();});
+    await expect.poll(()=>video.evaluate(v=>v.currentTime>0&&Number.isFinite(v.duration))).toBe(true);
+  }
+});
 test('preserved lesson videos load without external requests',async({page})=>{
   test.skip(!fs.existsSync('public/media/lego-local/catalog.json'),'Local preservation inventory is not shipped in Git.');
   await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.abort());

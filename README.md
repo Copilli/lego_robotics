@@ -2,7 +2,7 @@
 
 ## Web prototype — October 7, 2026
 
-A runnable Copilli classroom prototype now exists: JavaScript editor, local projects, five guided EV3 tutorials with official embedded videos, and an experimental Bluetooth serial transport for desktop Chrome/Edge. Run `npm ci` and `npm run dev`. See [development and compatibility](docs/development.md) for the supported API, limitations, tests, and GitHub Pages setup from `main`.
+A runnable Copilli classroom prototype now exists: actual Scratch Blocks 2 visual editor, advanced JavaScript editor, local projects, a four-step first-program guide, a console simulator, five tutorials with bundled local videos, and an experimental Bluetooth serial transport for desktop Chrome/Edge. Run `npm ci` and `npm run dev`. See [visual editor](docs/block-editor.md) and [development and compatibility](docs/development.md) for project formats, media preservation, limitations, tests, and GitHub Pages setup from `main`.
 
 Physical EV3 connectivity has not been verified. The research notes below describe the earlier discovery phase and remain as historical evidence; the prototype does not resolve the iPad transport or proprietary content-import questions.
 
@@ -41,7 +41,7 @@ Preserve, modernize, and extend the educational usefulness of the LEGO MINDSTORM
 
 ## Current status
 
-**Phase 1 — Discovery & Research (in progress).** This repository currently contains research notes and a proposed architecture only. The available development environment is Ubuntu 24.04 and does not contain the legacy EV3 applications or their content. Consequently, application internals, content, file formats, and hardware connectivity have not been verified. See [`docs/research/`](docs/research/README.md) for the evidence, limits, and unknowns.
+**Prototype development and preservation in progress.** The current Windows environment contains EV3 Home, Education/Lab and SPIKE. Local inventory preserved 146 original videos and converted all 47 WMV files to browser-playable MP4 derivatives. Classroom is not installed and physical EV3 connectivity remains unverified. Earlier discovery notes describe their original environment; see [`docs/research/`](docs/research/README.md) for the evidence, limits, and unknowns.
 
 There is no runnable app or importer yet. Development and import instructions will be added when those tools exist; do not treat proposed architecture or untested compatibility as implemented features.
 

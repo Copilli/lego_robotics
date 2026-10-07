@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "importedAt": "2026-10-07T18:55:54.254Z",
+  "applications": [
+    {
+      "id": "home",
+      "folder": "LEGO MINDSTORMS EV3 Home Edition",
+      "version": "1.4.4",
+      "videoCount": 32
+    },
+    {
+      "id": "education",
+      "folder": "LEGO MINDSTORMS Edu EV3",
+      "version": "1.4.16",
+      "contentVersion": "1.4.19",
+      "videoCount": 114
+    }
+  ],
+  "entries": [
+    {
+      "id": "62d1545860762dbf9128",
+      "application": "education",
+      "sourcePath": "Resources/ContentPacks/Education/nonlocalized/LEGO/pack3/projects/Color sensor color_Marker video.mp4",
+      "label": "Color sensor color_Marker video",
+      "locale": "nonlocalized",
+      "format": "mp4",
+      "bytes": 1067023,
+      "sha256": "024fcc4f320f8f2518a3f02e521ca92a3706fb010410ea5068ec056b42afc6ac",
+      "file": "024fcc4f320f8f2518a3f02e521ca92a3706fb010410ea5068ec056b42afc6ac.mp4",
+      "browserPlayable": true,
+      "bundled": true
+    },
+    {
+      "id": "d4447807f689f2c934cb",
+      "application": "education",
+      "sourcePath": "Resources/ContentPacks/Education/nonlocalized/LEGO/pack3/projects/large motor_marker.mp4",
+      "label": "large motor_marker",
+      "locale": "nonlocalized",
+      "format": "mp4",
+      "bytes": 991970,
+      "sha256": "c4ff64ca529431d4035d323fff0e89281fdb8b139d59f571eed4d06bae732862",
+      "file": "c4ff64ca529431d4035d323fff0e89281fdb8b139d59f571eed4d06bae732862.mp4",
+      "browserPlayable": true,
+      "bundled": true
+    },
+    {
+      "id": "04db1b2fe28354a6fe9b",
+      "application": "education",
+      "sourcePath": "Resources/ContentPacks/Education/nonlocalized/LEGO/pack3/projects/Touch sensor_marker.mp4",
+      "label": "Touch sensor_marker",
+      "locale": "nonlocalized",
+      "format": "mp4",
+      "bytes": 691724,
+      "sha256": "7a789e8d82eefcab16be1abfb9895653244ba625b99db83bca87a15114b54297",
+      "file": "7a789e8d82eefcab16be1abfb9895653244ba625b99db83bca87a15114b54297.mp4",
+      "browserPlayable": true,
+      "bundled": true
+    },
+    {
+      "id": "8f3154bb610cbc5e2aca",
+      "application": "education",
+      "sourcePath": "Resources/ContentPacks/Education/nonlocalized/LEGO/pack3/projects/ultrasonic sensor_Marker.mp4",
+      "label": "ultrasonic sensor_Marker",
+      "locale": "nonlocalized",
+      "format": "mp4",
+      "bytes": 836990,
+      "sha256": "e483c5e0c99ad5aca1a1eba30420df69ea57329c38df9a8030d3c860f3b30d16",
+      "file": "e483c5e0c99ad5aca1a1eba30420df69ea57329c38df9a8030d3c860f3b30d16.mp4",
+      "browserPlayable": true,
+      "bundled": true
+    },
+    {
+      "id": "c8d8cfca4f7c134dc0fe",
+      "application": "home",
+      "sourcePath": "Resources/ContentPacks/Retail/en-US/LEGO/QuickStartItems/1.mp4",
+      "label": "1",
+      "locale": "en-US",
+      "format": "mp4",
+      "bytes": 13491980,
+      "sha256": "e5dce6cfc5b1418a627e02f112453d22421a4600d80695268fe0115863d51115",
+      "file": "e5dce6cfc5b1418a627e02f112453d22421a4600d80695268fe0115863d51115.mp4",
+      "browserPlayable": true,
+      "bundled": true
+    }
+  ]
+}

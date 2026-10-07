@@ -2,6 +2,7 @@ import {test,expect} from '@playwright/test';
 test('editor persists, searches, exports and imports projects',async({page})=>{
   const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('');
   await page.getByRole('button',{name:'+ Crear proyecto'}).click();
+  await page.getByRole('button',{name:'JavaScript',exact:true}).click();
   await page.locator('#project-name').fill('Robot de prueba');
   await page.getByRole('button',{name:'+ Motor',exact:true}).click();
   await page.getByRole('button',{name:'Guardar',exact:true}).click();
@@ -25,7 +26,11 @@ test('tutorial has embedded video, steps and persistent completion',async({page}
 test('production base and mobile layout',async({page})=>{
   await page.setViewportSize({width:390,height:844});await page.goto('');await expect(page.getByRole('heading',{name:/Las grandes ideas/})).toBeVisible();
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
-  await page.getByRole('button',{name:'Editor de código'}).click();await expect(page.locator('.cm-editor')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+  await page.getByRole('button',{name:'Editor de código'}).click();await expect(page.locator('#blocks-editor svg.blocklySvg')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+  await expect(page.getByRole('button',{name:'Agregar bloques',exact:true})).toBeVisible();
+  await page.getByRole('button',{name:'Agregar bloques',exact:true}).click();
+  await expect(page.getByRole('button',{name:'Ocultar bloques',exact:true})).toBeVisible();
+  await page.getByRole('button',{name:'Ocultar bloques',exact:true}).click();
 });
 test('EV3 simulated serial handshake, worker execution, stop and disconnect',async({page})=>{
   await page.addInitScript(()=>{

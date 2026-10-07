@@ -2,8 +2,12 @@ import * as Scratch from 'scratch-blocks';
 import {compileBlocks,exampleXML} from './block-code.js';
 
 Scratch.ScratchMsgs.setLocale('es');
+const style=colour=>({colourPrimary:colour,colourSecondary:colour,colourTertiary:colour,hat:''});
+const blockStyles=Object.fromEntries(Object.entries(Scratch.Themes.Classic.blockStyles).map(([name,value])=>[name,{...value,colourTertiary:value.colourTertiary||value.colourPrimary||'#888888'}]));
+for(const [name,colour] of Object.entries({control:'#ffab19',data:'#ff8c1a',data_lists:'#ff661a',sounds:'#b24cd3',motion:'#4c97ff',looks:'#9966ff',event:'#ffbf00',sensing:'#42a5ce',pen:'#0fbd8c',operators:'#59c059',more:'#ff6680',textField:'#ffffff',ev3_motor:'#168b89',ev3_tone:'#b24cd3',ev3_log:'#5275d9',ev3_sensor:'#42a5ce'}))blockStyles[name]=style(colour);
+const createTheme=()=>Scratch.Theme.defineTheme('copilli',{base:Scratch.Themes.Classic,blockStyles:structuredClone(blockStyles)});
 const dropdown=(name,values)=>({type:'field_dropdown',name,options:values});
-const number=(name,value,min,max)=>({type:'field_number',name,value,min,max});
+const number=(name,value,min,max)=>({type:'field_number',name,value,text:String(value),min,max});
 const ports=dropdown('PORT',[['A','A'],['B','B'],['C','C'],['D','D']]);
 Scratch.defineBlocksWithJsonArray([
   {type:'ev3_motor',message0:'motor %1 velocidad %2 durante %3 segundos',args0:[ports,number('SPEED',30,-100,100),number('SECONDS',1,0.001,10)],colour:'#168b89',extensions:['shape_statement']},
@@ -12,7 +16,7 @@ Scratch.defineBlocksWithJsonArray([
   {type:'ev3_log',message0:'mostrar %1 en la consola',args0:[{type:'input_value',name:'VALUE'}],colour:'#5275d9',extensions:['shape_statement']},
   {type:'ev3_sensor',message0:'leer %1 en puerto %2',args0:[dropdown('KIND',[['distancia (cm)','distance'],['color (0–7)','color'],['luz reflejada (%)','reflection'],['contacto (0/1)','touch'],['giro (grados)','gyro'],['infrarrojo (%)','infrared']]),dropdown('PORT',[['1','1'],['2','2'],['3','3'],['4','4']])],colour:'#42a5ce',extensions:['output_number']},
 ]);
-const shadow=(type,field,value)=>({kind:'block',type,fields:{[field]:value});
+const shadow=(type,field,value)=>({kind:'block',type,fields:{[field]:value}});
 const block=(type,inputs)=>({kind:'block',type,...(inputs?{inputs}:{})});
 const category=(name,colour,contents)=>({kind:'category',name,colour,contents});
 const toolbox={kind:'categoryToolbox',contents:[
@@ -32,18 +36,29 @@ const toolbox={kind:'categoryToolbox',contents:[
 ]};
 
 export function createBlocks(container,{xml,onChange}){
-  const workspace=Scratch.inject(container,{toolbox,media:`${import.meta.env.BASE_URL}scratch-media/`,scrollbars:true,trashcan:true,comments:true,sounds:false,zoom:{controls:true,wheel:true,startScale:0.8,maxScale:1.5,minScale:0.4,scaleSpeed:1.1}});
+  let paletteVisible=true;
+  const workspace=Scratch.inject(container,{theme:createTheme(),toolbox,media:`${import.meta.env.BASE_URL}scratch-media/`,scrollbars:true,trashcan:true,comments:true,sounds:false,zoom:{controls:true,wheel:true,startScale:0.8,maxScale:1.5,minScale:0.4,scaleSpeed:1.1}});
+  function togglePalette(){
+    paletteVisible=!paletteVisible;
+    workspace.getToolbox().setVisible(paletteVisible);
+    if(paletteVisible)workspace.getToolbox().forceRerender();else workspace.getFlyout().hide();
+    Scratch.svgResize(workspace);workspace.scrollCenter();return paletteVisible;
+  }
   function load(value){
     const dom=Scratch.utils.xml.textToDom(value);
     Scratch.Events.disable();
     try{workspace.clear();Scratch.Xml.domToWorkspace(dom,workspace);}finally{Scratch.Events.enable();}
     Scratch.svgResize(workspace);
+    workspace.scrollCenter();
   }
   try{load(xml||exampleXML());}catch(error){workspace.dispose();throw error;}
+  if(container.clientWidth<500)togglePalette();
   workspace.addChangeListener(event=>{if(!event.isUiEvent)onChange();});
   const observer=new ResizeObserver(()=>Scratch.svgResize(workspace));observer.observe(container);
   return {
     workspace,
+    get paletteVisible(){return paletteVisible;},
+    togglePalette,
     serialize:()=>Scratch.Xml.domToText(Scratch.Xml.workspaceToDom(workspace)),
     compile:()=>compileBlocks(workspace),
     loadExample(kind){load(exampleXML(kind));onChange();},
