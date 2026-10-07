@@ -15,7 +15,7 @@ export class Runtime {
         if(inFlight){worker.postMessage({type:'reply',id:data.id,error:'Usa await para esperar cada operación del robot.'});return;}
         inFlight=true;
         try{
-          if(!['motor','tone','sensor','stop'].includes(data.method)||!Array.isArray(data.args))throw new Error('Operación EV3 no admitida.');
+          if(!['motor','motion','motorStop','tone','sensor','stop'].includes(data.method)||!Array.isArray(data.args))throw new Error('Operación EV3 no admitida.');
           const value=await this.transport[data.method](...data.args);
           if(data.method==='motor')await new Promise(resolve=>setTimeout(resolve,data.args[2]));
           if(data.method==='tone')await new Promise(resolve=>setTimeout(resolve,data.args[1]));

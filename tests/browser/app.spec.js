@@ -1,20 +1,12 @@
 import {test,expect} from '@playwright/test';
 test('browser without Web Serial shows the limitation and still runs the simulator',async({page})=>{
-  await page.addInitScript(()=>Object.defineProperty(navigator,'serial',{configurable:true,value:undefined}));
-  await page.goto('');
-  await expect(page.getByRole('button',{name:'Ver compatibilidad',exact:true})).toBeVisible();
-  await expect(page.locator('#notice')).toContainText('En iPad');
-  await page.getByRole('button',{name:'Ver compatibilidad',exact:true}).click();
-  await expect(page.locator('#hub-status')).toContainText('sin conexión');
-  await page.getByRole('button',{name:'+ Crear proyecto'}).click();
-  await page.getByRole('checkbox',{name:'Simulador (sin robot)'}).check();
-  await page.getByRole('button',{name:'Ejecutar'}).click();
-  await expect(page.locator('#console')).toContainText('[Simulador] Tono');
-  await expect(page.locator('#console')).toContainText('Programa terminado.');
+ await page.addInitScript(()=>Object.defineProperty(navigator,'serial',{configurable:true,value:undefined}));await page.goto('');await page.getByRole('button',{name:'Nuevo proyecto',exact:true}).click();
+ await page.locator('#editor-connect').click();await expect(page.locator('#connection-help')).toContainText('En iPad');await expect(page.locator('#connection-select')).toBeDisabled();await page.locator('#connection-close').click();
+ await page.getByRole('checkbox',{name:'Simulador (sin robot)'}).check();await page.getByRole('button',{name:'Ejecutar'}).click();await expect(page.locator('#console')).toContainText('[Simulador] Tono');await expect(page.locator('#console')).toContainText('Programa terminado.');
 });
 test('editor persists, searches, exports and imports projects',async({page})=>{
   const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('');
-  await page.getByRole('button',{name:'+ Crear proyecto'}).click();
+  await page.getByRole('button',{name:'Nuevo proyecto'}).click();
   await page.getByRole('button',{name:'JavaScript',exact:true}).click();
   await page.locator('#project-name').fill('Robot de prueba');
   await page.getByRole('button',{name:'+ Motor',exact:true}).click();
@@ -28,18 +20,16 @@ test('editor persists, searches, exports and imports projects',async({page})=>{
   await page.locator('#file').setInputFiles({name:'imported.js',mimeType:'text/javascript',buffer:Buffer.from('log("importado");')});await expect(page.locator('#project-name')).toHaveValue('imported');
   expect(errors).toEqual([]);
 });
-test('tutorial has embedded video, steps and persistent completion',async({page})=>{
-  await page.goto('');await page.getByRole('button',{name:/Tutoriales/}).click();
-  await page.getByRole('searchbox').fill('contacto');await expect(page.locator('.lesson-card')).toHaveCount(1);await page.locator('.lesson-card').click();
-  await expect(page.getByRole('heading',{name:'Responde al contacto'})).toBeVisible();await expect(page.locator('.lesson-layout video, .lesson-layout iframe')).toBeVisible();
-  if(await page.locator('.lesson-layout iframe').count()) await expect(page.locator('iframe')).toHaveAttribute('src',/photo_id=38679798/);
-  await expect(page.locator('.steps li')).toHaveCount(4);await page.getByRole('button',{name:'Marcar como completado'}).click();
-  await page.reload();await expect(page.locator('.progress')).toHaveText('1 / 5 completados');
+test('Classroom sessions open in the editor with construction access',async({page})=>{
+ await page.goto('');await page.locator('[data-view="units"]').click();await page.locator('[data-unit]').first().click();await page.locator('[data-activity]').first().click();
+ await expect(page.locator('.classroom-guide')).toBeVisible();await expect(page.locator('.tutorial-count')).toContainText('01');
+ await page.getByRole('button',{name:'Paso siguiente',exact:true}).click();await page.getByRole('button',{name:'CONSTRUIR',exact:true}).click();
+ await expect(page.locator('.manual-viewer video')).toBeVisible();await page.getByRole('button',{name:'Volver al tutorial',exact:true}).click();await expect(page.locator('.tutorial-count')).toContainText('02');
 });
 test('production base and mobile layout',async({page})=>{
-  await page.setViewportSize({width:390,height:844});await page.goto('');await expect(page.getByRole('heading',{name:/Las grandes ideas/})).toBeVisible();
+  await page.setViewportSize({width:390,height:844});await page.goto('');await expect(page.getByRole('heading',{name:/Qué vas a crear/})).toBeVisible();
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
-  await page.getByRole('button',{name:'Editor de código'}).click();await expect(page.locator('#blocks-editor svg.blocklySvg')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+  await page.getByRole('button',{name:'Nuevo proyecto'}).click();await expect(page.locator('#blocks-editor svg.blocklySvg')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
   await expect(page.getByRole('button',{name:'Agregar bloques',exact:true})).toBeVisible();
   await page.getByRole('button',{name:'Agregar bloques',exact:true}).click();
   await expect(page.getByRole('button',{name:'Ocultar bloques',exact:true})).toBeVisible();
@@ -54,8 +44,8 @@ test('EV3 simulated serial handshake, worker execution, stop and disconnect',asy
       writable:new WritableStream({write(bytes){sent.push(Array.from(bytes));controller.enqueue(new Uint8Array([3,0,bytes[2],bytes[3],2]));}}),
     })}});
   });
-  await page.goto('');await page.getByRole('button',{name:'Conectar hub'}).click();await expect(page.locator('#hub-status')).toContainText('EV3 conectado');
-  await page.getByRole('button',{name:'Editor de código'}).click();await page.getByRole('button',{name:'Ejecutar'}).click();
+  await page.goto('');await page.getByRole('button',{name:'Nuevo proyecto',exact:true}).click();await page.locator('#editor-connect').click();await page.locator('#connection-select').click();await expect(page.locator('#hub-status')).toContainText('EV3 conectado');
+  await page.getByRole('button',{name:'Ejecutar'}).click();
   await expect(page.locator('#console')).toContainText('Programa terminado.');expect(await page.evaluate(()=>ev3Sent.some(p=>p[7]===0x94&&p[8]===1))).toBe(true);
-  await page.getByRole('button',{name:'Desconectar EV3'}).click();await expect(page.locator('#hub-status')).toContainText('sin conexión');
+  await page.locator('#editor-connect').click();await page.locator('#connection-disconnect').click();await expect(page.locator('#hub-status')).toContainText('sin conexión');
 });

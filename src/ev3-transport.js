@@ -1,4 +1,4 @@
-import { packet, ReplyParser, stopOps, motorOps, toneOps, sensorOps } from './ev3-protocol.js';
+import { packet, ReplyParser, stopOps, motorOps, toneOps, sensorOps, motionOps, motorStopOps } from './ev3-protocol.js';
 import {connectionSupport} from './connection-support.js';
 export class LegoBluetooth {
   constructor({output,status}){this.output=output;this.status=status;this.pending=new Map();this.counter=0;this.queue=Promise.resolve();this.connected=false;this.closing=false;}
@@ -34,6 +34,20 @@ export class LegoBluetooth {
     });this.queue=operation.catch(()=>{});return operation;
   }
   async motor(port,speed,duration){await this.command(motorOps(port,speed,duration));}
+  async motion(ports,speed,turn,unit,amount,brake){
+    const {ops,mask}=motionOps(ports,speed,turn,unit,amount,brake);await this.command(ops);
+    if(unit==='start')return;
+    const deadline=Date.now()+60000;
+    while(this.connected){
+      const busy=await this.command([0xa9,0,mask,0x60],1);
+      if(busy.length!==1)throw new Error('Respuesta del motor incompleta.');
+      if(busy[0]===0)return;
+      if(Date.now()>deadline){await this.stop();throw new Error('El motor no terminó en 60 segundos.');}
+      await new Promise(resolve=>setTimeout(resolve,30));
+    }
+    throw new Error('EV3 desconectado durante el movimiento.');
+  }
+  async motorStop(ports,brake){await this.command(motorStopOps(ports,brake));}
   async tone(frequency,duration){await this.command(toneOps(frequency,duration));}
   async sensor(port,kind){const data=await this.command(sensorOps(port,kind),4);if(data.length!==4)throw new Error('Lectura EV3 incompleta.');const value=new DataView(data.buffer,data.byteOffset,4).getFloat32(0,true);if(!Number.isFinite(value))throw new Error('Sensor ausente, modo incorrecto o lectura inválida.');return value;}
   async stop(){await this.command([...stopOps(),0x94,0]);this.output('Se solicitó detener los motores y el sonido.\n');}

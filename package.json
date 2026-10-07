@@ -10,7 +10,8 @@
     "test": "node --test tests/*.test.js",
     "test:browser": "playwright test",
     "preserve:media": "node scripts/preserve-lego-media.mjs",
-    "convert:media": "node scripts/convert-lego-videos.mjs"
+    "convert:media": "node scripts/convert-lego-videos.mjs",
+    "import:content": "node scripts/import-curriculum.mjs"
   },
   "dependencies": {
     "@codemirror/commands": "^6.8.1",

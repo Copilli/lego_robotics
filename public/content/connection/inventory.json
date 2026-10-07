@@ -1,0 +1,35 @@
+{
+  "application": "EV3 Classroom 1.5.3",
+  "records": [
+    {
+      "file": "BT-Startup.webm",
+      "source": "Classroom/assets/prepacked/videos/BT-Startup.webm",
+      "bytes": 239544,
+      "sha256": "8d8af148c553add84f70f7c270a289652785b41030536bd82d0d90ae659591bf"
+    },
+    {
+      "file": "BT-Enable.webm",
+      "source": "Classroom/assets/prepacked/videos/BT-Enable.webm",
+      "bytes": 692081,
+      "sha256": "5d85f6f789018a29cf139584cddb66c269de282c840c80be5b91c78a5753049d"
+    },
+    {
+      "file": "BT-Pair.webm",
+      "source": "Classroom/assets/prepacked/videos/BT-Pair.webm",
+      "bytes": 1028388,
+      "sha256": "c3a641ec329b8cb05ac6d3909a8ec16eec5fcb3ede15eea087cc99cf0a9c0167"
+    },
+    {
+      "file": "BT-WinChrome.webm",
+      "source": "Classroom/assets/prepacked/videos/BT-WinChrome.webm",
+      "bytes": 1102699,
+      "sha256": "a26406aff85dce7ccd60f0dc2d77c2f6a8b6f45184f4e1aa00b344df1d57529e"
+    },
+    {
+      "file": "USB.webm",
+      "source": "Classroom/assets/prepacked/videos/USB.webm",
+      "bytes": 257365,
+      "sha256": "bb2e25cb799af940560fbe78f67ccb4c4e0239760959b3041d101bb613be5fca"
+    }
+  ]
+}

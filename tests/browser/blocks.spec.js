@@ -1,45 +1,13 @@
 import {test,expect} from '@playwright/test';
-
-test('first-program guide runs editable Scratch blocks and persists its project',async({page})=>{
-  const errors=[];page.on('pageerror',error=>errors.push(error.message));
-  await page.goto('');await page.getByRole('button',{name:'Iniciar',exact:true}).click();
-  await expect(page.getByRole('heading',{name:'Primeros pasos',exact:true})).toBeVisible();
-  await page.getByRole('button',{name:'Abrir guía',exact:true}).click();
-  await expect(page.locator('#blocks-editor .blocklySvg')).toBeVisible();
-  await expect(page.locator('.examples h3')).toHaveText('Conecta tu EV3');
-  await page.getByRole('button',{name:'Siguiente',exact:true}).click();
-  await expect(page.locator('#notice')).toContainText('Conecta el EV3 o activa el simulador');
-  await page.getByRole('checkbox',{name:'Simulador (sin robot)'}).check();
-  await page.getByRole('button',{name:'Siguiente',exact:true}).click();
-  await page.getByRole('button',{name:'Cargar ejemplo de este paso'}).click();
-  await page.getByRole('button',{name:'Ejecutar'}).click();
-  await expect(page.locator('#console')).toContainText('[Simulador] Tono: 440 Hz');
-  await expect(page.locator('#console')).toContainText('Programa terminado.');
-  await page.getByRole('button',{name:'Siguiente',exact:true}).click();
-  await page.getByRole('button',{name:'Cargar ejemplo de este paso'}).click();
-  // Edit a real Scratch field through its rendered input.
-  const speed=page.locator('#blocks-editor .blocklyText').filter({hasText:/^30$/}).first();
-  await speed.dblclick();await page.locator('.blocklyHtmlInput').fill('45');
-  await page.locator('.blocklyHtmlInput').press('Enter');
-  await page.getByRole('button',{name:'Ejecutar'}).click();
-  await expect(page.locator('#console')).toContainText('Motor A: velocidad 45, 1000 ms');
-  await expect.poll(()=>page.evaluate(()=>JSON.parse(localStorage.getItem('copilli-lego-projects'))[0].blocksXML)).toContain('45');
-  await page.waitForTimeout(1100);
-  await page.getByRole('button',{name:'Siguiente',exact:true}).click();
-  await page.getByRole('button',{name:'Cargar ejemplo de este paso'}).click();
-  await page.getByRole('button',{name:'Ejecutar'}).click();
-  await expect(page.locator('#console')).toContainText('Sensor distance en puerto 1: 50');
-  await page.getByRole('button',{name:'Completar',exact:true}).click();
-  await page.reload();await expect(page.locator('.progress')).toHaveText('1 / 5 completados');
-  await page.locator('[data-home-open]').first().click();
-  await expect(page.locator('#blocks-editor .blocklySvg')).toBeVisible();
-  await page.getByRole('button',{name:'JavaScript',exact:true}).click();
-  await expect(page.locator('.cm-content')).toContainText('robot.sensor(1, "distance")');
-  expect(errors).toEqual([]);
+test('tutorial palette switches to all blocks and the edited program persists',async({page})=>{
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('');await page.locator('[data-view="start"]').click();await page.locator('[data-activity]').first().click();
+ await expect(page.locator('#blocks-editor .blocklySvg')).toBeVisible();await expect(page.locator('.classroom-guide h2')).toContainText('Ladrillo EV3');
+ await expect(page.locator('.blocklyToolbox')).not.toContainText('Operadores');await page.getByRole('button',{name:'Todos los bloques de código',exact:true}).click();await expect(page.locator('.blocklyToolbox')).toContainText('Operadores');
+ for(let i=0;i<4;i++)await page.getByRole('button',{name:'Paso siguiente',exact:true}).click();page.once('dialog',d=>d.accept());await page.getByRole('button',{name:'Cargar ejemplo compatible',exact:true}).click();await page.getByRole('checkbox',{name:'Simulador (sin robot)'}).check();await page.getByRole('button',{name:'Ejecutar'}).click();await expect(page.locator('#console')).toContainText('Programa terminado.');
+ await page.getByRole('button',{name:'Paso anterior',exact:true}).click();await page.locator('#save').click();expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('copilli-lego-projects'))[0].blocksXML)).toContain('Ejemplo de práctica compatible');await page.reload();await page.locator('[data-view="projects"]').click();await page.getByRole('button',{name:'Abrir',exact:true}).click();await expect(page.locator('.tutorial-count')).toContainText('04');expect(errors).toEqual([]);
 });
-
 test('blocks backup imports and preserves the editable workspace',async({page})=>{
-  await page.goto('');await page.getByRole('button',{name:'+ Crear proyecto'}).click();
+  await page.goto('');await page.getByRole('button',{name:'Nuevo proyecto'}).click();
   await page.getByRole('button',{name:'Motor A',exact:true}).click();
   await page.getByRole('button',{name:'Guardar',exact:true}).click();
   const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('copilli-lego-projects'))[0]);

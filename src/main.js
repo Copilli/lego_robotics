@@ -13,7 +13,11 @@ import {loadLocalMedia, localMediaUrl, chooseLocalLessonVideo} from './local-med
 import {createBlocks} from './blocks.js';
 import {exampleXML} from './block-code.js';
 import {SimulatedEv3} from './simulator.js';
+import {loadCurriculum,curriculumView,mountCurriculumGuide} from './curriculum.js';
+import {createConnectionDialog} from './connection-dialog.js';
 import './style.css';
+import './classroom.css';
+import './connection-dialog.css';
 
 const $ = s => document.querySelector(s);
 const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -39,24 +43,26 @@ let connection = 'disconnected', hubName = '';
 const bluetooth = new LegoBluetooth({output, status:(state, name) => {connection = state; hubName = name || ''; if(state==='disconnected'&&runtime.transport===bluetooth) runtime.halt(); updateConnection();}});
 const runtime = new Runtime(bluetooth,output);
 const simulator = new SimulatedEv3(output);
-function updateConnection() { $('#connect').textContent = connection === 'connected' ? `Desconectar ${hubName}` : 'Conectar hub'; $('#hub-status').textContent = connection === 'connected' ? `${hubName} conectado` : 'Hub sin conexión'; $('#hub-status').classList.toggle('online', connection === 'connected'); }
+function updateConnection() { $('#connect').textContent = connection === 'connected' ? `Desconectar ${hubName}` : 'Conectar hub'; $('#hub-status').textContent = connection === 'connected' ? `${hubName} conectado` : 'Hub sin conexión'; $('#hub-status').classList.toggle('online', connection === 'connected');const button=$('#editor-connect');if(button){button.classList.toggle('online',connection==='connected');button.setAttribute('aria-label',connection==='connected'?'Conexión EV3 conectado':'Conectar EV3');button.querySelector('span').textContent=connection==='connected'?'conectado':'conectar';}connectionDialog.refresh(); }
 async function action(task) { try { await task(); } catch (error) { notify(error.name === 'NotFoundError' ? 'Selección cancelada. Puedes volver a conectar.' : error.message); } }
 $('#app').innerHTML = `<header class="topbar"><a class="brand" href="#" aria-label="Copilli Robotics inicio"><span class="logo">C</span><strong>Copilli</strong><span>Robotics</span></a><div class="top-actions"><span id="hub-status">Hub sin conexión</span><button id="connect" class="primary">Conectar hub</button><span class="avatar" aria-label="Aula local">C</span></div></header>
 <div class="layout"><aside class="sidebar"><p class="eyebrow">ESPACIO DE APRENDIZAJE</p><button data-view="class">▦ <span>Inicio</span></button><button data-view="editor">⌘ <span>Editor de código</span></button><button data-view="tutorials">▷ <span>Tutoriales</span></button><button data-view="projects">▤ <span>Mis proyectos</span></button><div class="side-note"><span class="dot"></span> LEGO · MINDSTORMS EV3<p>Aprende, construye y programa.</p></div></aside><main><div id="notice" role="status" aria-live="polite"></div><div id="content"></div><section id="console-panel" hidden><div class="console-head"><strong>Consola EV3</strong><button id="clear-console">Limpiar</button></div><pre id="console" aria-label="Salida del hub" tabindex="0">Conecta un hub para ver su salida aquí.\n</pre></section></main></div><input id="file" type="file" accept=".js,.json" hidden>`;
 $('.brand').onclick = e => {e.preventDefault(); save(); view='class'; render();};
-const libraryButton=document.createElement('button');
-libraryButton.dataset.view='library';libraryButton.innerHTML='<span>Videos locales</span>';
-$('.sidebar').insertBefore(libraryButton,$('.side-note'));
-const startButton=document.createElement('button');startButton.dataset.view='start';startButton.innerHTML='<span>Primeros pasos</span>';$('.sidebar').insertBefore(startButton,$('[data-view="editor"]'));
+$('.sidebar').innerHTML='<button data-view="class">Inicio</button><button data-view="start">Iniciar</button><button data-view="units">Unidades</button><button data-view="build">Construir</button><button data-view="projects">Mis proyectos</button>';
+for(const [view,icon] of Object.entries({class:'home',start:'start',units:'units',build:'build',projects:'projects'})){const button=document.querySelector('[data-view="'+view+'"]');button.insertAdjacentHTML('afterbegin','<img alt="" src="'+import.meta.env.BASE_URL+'content/icons/'+icon+'.svg">');}
 document.querySelectorAll('[data-view]').forEach(button => button.onclick = () => {save(); view=button.dataset.view; render();});
-$('#connect').onclick = () => action(async () => { const support=connectionSupport();if(!support.supported){notify(support.message);return;} if (bluetooth.connected) { await runtime.stop(); await bluetooth.disconnect(); } else {notify('Selecciona el puerto Bluetooth de tu EV3 previamente emparejado.'); await bluetooth.connect(); notify('Hub conectado. Abre el editor para enviar tu programa.');} });
+const connectionDialog=createConnectionDialog({connect:async()=>{await bluetooth.connect();notify('Hub conectado. Puedes ejecutar tu programa.');},disconnect:async()=>{await runtime.stop();await bluetooth.disconnect();},isConnected:()=>connection==='connected',onError:error=>notify(error.name==='NotFoundError'?'Selección cancelada. Puedes volver a conectar.':error.message)});
+$('#connect').onclick = () => connectionDialog.open();
 $('#clear-console').onclick = () => {$('#console').textContent = '';};
 function cards() { return lessons.filter(l => `${l.title} ${l.label}`.toLowerCase().includes(filter.toLowerCase())).map((l,i) => `<button class="lesson-card" data-lesson="${l.id}"><div class="card-art ${l.color}"><span class="lesson-num">0${lessons.indexOf(l)+1}</span><span class="robot-art" aria-hidden="true">▦</span><span class="pill">${l.label}</span></div><div class="card-body"><small>${l.time} · Video + práctica</small><h3>${l.title}</h3><p>${l.summary}</p><div class="card-footer">${completed.includes(l.id)?'✓ Completado':'Abrir tutorial'} <span>→</span></div></div></button>`).join('') || '<p>No se encontraron tutoriales.</p>'; }
 function render() {
   clearTimeout(saveTimer); editor?.destroy(); editor = null; blockStudio?.destroy(); blockStudio=null;
-  document.querySelectorAll('[data-view]').forEach(b => {b.classList.toggle('selected',b.dataset.view===view); b.setAttribute('aria-current',b.dataset.view===view?'page':'false');});
+  const navigationView=({unit:'units',manual:'build',library:'build'})[view]||view;
+  document.querySelectorAll('[data-view]').forEach(b => {b.classList.toggle('selected',b.dataset.view===navigationView); b.setAttribute('aria-current',b.dataset.view===navigationView?'page':'false');});
   $('#console-panel').hidden = view !== 'editor';
   const container = $('#content');
+  document.body.classList.toggle('editor-fullscreen',view==='editor');
+  if(curriculumView(view,container,{navigate:v=>{save();view=v;render();},newProject,projects,openProject:id=>{active=id;view='editor';render();}}))return;
   if (view === 'class') container.innerHTML = `<section class="hero"><div><p class="eyebrow">COPILLI · AULA DE ROBÓTICA</p><h1>Las grandes ideas<br>empiezan con una pieza.</h1><p>Tu espacio para construir, experimentar y darle vida a tus robots LEGO.</p><button id="start-project" class="white-button">+ Crear proyecto</button></div><div class="hero-robot" aria-hidden="true"><div class="robot-head"><i></i><i></i><b>• • •<br>• • •<br>• • •</b></div><div class="robot-wheels"><span></span><span></span></div><div class="orbit">&lt; / &gt;</div></div></section><div class="class-tabs"><strong>Tablón</strong><button data-go-tutorials>Trabajo de clase</button></div><div class="intro-row"><div><p class="eyebrow">TU SIGUIENTE PASO</p><h2>Construye. Programa. Descubre.</h2><p>Cinco tutoriales para comenzar, a tu propio ritmo.</p></div><span class="progress">${completed.length} / ${lessons.length} completados</span></div><div class="cards">${cards()}</div><section class="announcement"><span class="announcement-icon">i</span><div><h3>Antes de conectar tu robot</h3><p>Programa con bloques o JavaScript para controlar EV3. Empareja el EV3 por Bluetooth en tu sistema y selecciona su puerto serie desde Chrome o Edge de escritorio en HTTPS. El progreso y los proyectos se guardan en este navegador.</p><a href="https://education.lego.com/en-us/product-resources/mindstorms-ev3/" target="_blank" rel="noopener">Recursos y guía de EV3 ↗</a></div></section>`;
   if(view==='start')container.innerHTML=`<div class="page-heading"><p class="eyebrow">INICIAR</p><h1>Primeros pasos</h1><p>Elige una actividad y aprende dentro del mismo editor.</p></div><section class="start-course"><div><p class="eyebrow">01 · PROGRAMA POR PRIMERA VEZ</p><h2>Mi primer programa</h2><p>Una guía junto a tus bloques: conexión, sonido, motor y sensor.</p></div><button id="begin-guide" class="primary">Abrir guía</button></section><div class="intro-row"><div><h2>Explora motores y sensores</h2><p>Videos y prácticas ordenados por lo que quieres aprender.</p></div><span class="progress">${completed.length} / ${lessons.length} completados</span></div><div class="cards">${cards()}</div>`;
   if (view === 'tutorials') container.innerHTML = `<div class="page-heading"><p class="eyebrow">TRABAJO DE CLASE</p><h1>Aprende haciendo</h1><p>Videos oficiales de LEGO y prácticas guiadas dentro del aula.</p></div><label class="search">Buscar tutorial <input id="lesson-search" type="search" value="${escape(filter)}" placeholder="Motores, sensores, Bluetooth…"></label><div class="cards" id="lesson-cards">${cards()}</div>`;
@@ -100,7 +106,7 @@ function render() {
     $('#stop').onclick=()=>action(()=>runtime.stop());
     $('#export').onclick=()=>action(async()=>{if(blockStudio)p.code=blockStudio.compile();save();download(`${p.name.replace(/[^\p{L}\p{N}_-]/gu,'_')}.js`,p.code,'text/javascript');});
     $('#backup').onclick=()=>{save();download('copilli-lego-project.json',JSON.stringify(p,null,2),'application/json');};
-    $('#duplicate').onclick=()=>{save();newProject(p.code,`${p.name} (copia)`,{blocksXML:p.blocksXML,editorMode:p.editorMode,tutorialStep:p.tutorialStep});};
+    $('#duplicate').onclick=()=>{save();newProject(p.code,`${p.name} (copia)`,{blocksXML:p.blocksXML,editorMode:p.editorMode,tutorialStep:p.tutorialStep,activityId:p.activityId,activityStep:p.activityStep,allBlocks:p.allBlocks});};
     $('#mode-blocks').onclick=()=>{save();p.editorMode='blocks';p.blocksXML ||= exampleXML();persist();render();notify('Los bloques conservan su propio programa. JavaScript se genera al volver a abrir esa pestaña.');};
     $('#mode-js').onclick=()=>action(async()=>{if(blockStudio)p.code=blockStudio.compile();save();p.editorMode='js';persist();render();notify('Puedes editar JavaScript. Los cambios de texto no se convierten automáticamente a bloques.');});
     $('#simulation').onchange=()=>action(async()=>{await runtime.stop();simulationEnabled=$('#simulation').checked;notify(simulationEnabled?'Simulador activo: no envía comandos a un robot.':'Modo robot: conecta tu EV3 para ejecutar.');});
@@ -119,6 +125,8 @@ function render() {
       document.querySelectorAll('[data-example]').forEach(b=>b.onclick=()=>{if(!blockStudio)return;blockStudio.loadExample(b.dataset.example);save();});
     }
     mountGuide(p);
+    mountCurriculumGuide(p,{studio:blockStudio,save,render,navigate:v=>{save();view=v;render();},notify});
+    const connectButton=document.createElement('button');connectButton.id='editor-connect';connectButton.innerHTML=`<img alt="" src="${import.meta.env.BASE_URL}content/connection/ev3.svg"><span>conectar</span>`;connectButton.onclick=()=>connectionDialog.open();$('.editor-grid>section').append(connectButton);updateConnection();
     document.querySelectorAll('[data-snippet]').forEach(b=>b.onclick=()=>{const position=editor.state.doc.length;editor.dispatch({changes:{from:position,insert:'\n'+snippets[b.dataset.snippet]}});editor.focus();});
   }
   if(view==='class'){
@@ -156,8 +164,9 @@ function mountGuide(p){
 }
 function bindLessons(){document.querySelectorAll('[data-lesson]').forEach(b=>b.onclick=()=>{lessonId=b.dataset.lesson;view='lesson';render();});}
 function download(name,content,type){const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
-$('#file').onchange=()=>action(async()=>{const file=$('#file').files[0];if(!file)return;try{if(file.size>1000000)throw new Error('El archivo debe pesar menos de 1 MB.');const text=await file.text();if(file.name.endsWith('.json')){const p=JSON.parse(text);if(typeof p.code!=='string'||typeof p.name!=='string')throw new Error('El respaldo debe incluir name y code.');newProject(p.code,p.name.slice(0,80),{editorMode:p.editorMode==='blocks'&&typeof p.blocksXML==='string'?'blocks':'js',blocksXML:typeof p.blocksXML==='string'?p.blocksXML:undefined});}else newProject(text,file.name.replace(/\.js$/i,'').slice(0,80),{editorMode:'js'});notify('Proyecto importado.');}finally{$('#file').value='';}});
+$('#file').onchange=()=>action(async()=>{const file=$('#file').files[0];if(!file)return;try{if(file.size>1000000)throw new Error('El archivo debe pesar menos de 1 MB.');const text=await file.text();if(file.name.endsWith('.json')){const p=JSON.parse(text);if(typeof p.code!=='string'||typeof p.name!=='string')throw new Error('El respaldo debe incluir name y code.');newProject(p.code,p.name.slice(0,80),{editorMode:p.editorMode==='blocks'&&typeof p.blocksXML==='string'?'blocks':'js',blocksXML:typeof p.blocksXML==='string'?p.blocksXML:undefined,activityId:typeof p.activityId==='string'?p.activityId:undefined,activityStep:Number.isInteger(p.activityStep)?p.activityStep:0,allBlocks:Boolean(p.allBlocks)});}else newProject(text,file.name.replace(/\.js$/i,'').slice(0,80),{editorMode:'js'});notify('Proyecto importado.');}finally{$('#file').value='';}});
 window.addEventListener('beforeunload',save);
 render();
+loadCurriculum().then(()=>{save();render();}).catch(()=>notify('No se pudo cargar la biblioteca de unidades. Recarga el sitio.'));
 if(!connectionSupport().supported){$('#connect').textContent='Ver compatibilidad';notify(connectionSupport().message);}
 loadLocalMedia().then(entries=>{localMedia=entries;if(['library','lesson'].includes(view))render();});

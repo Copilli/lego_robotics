@@ -9,7 +9,10 @@ const createTheme=()=>Scratch.Theme.defineTheme('copilli',{base:Scratch.Themes.C
 const dropdown=(name,values)=>({type:'field_dropdown',name,options:values});
 const number=(name,value,min,max)=>({type:'field_number',name,value,text:String(value),min,max});
 const ports=dropdown('PORT',[['A','A'],['B','B'],['C','C'],['D','D']]);
+const motorPorts=()=>dropdown('PORTS',['A','B','C','D','A+B','A+C','A+D','B+C','B+D','C+D'].map(p=>[p,p]));
 Scratch.defineBlocksWithJsonArray([
+  {type:'ev3_motion',message0:'motores %1 velocidad %2 dirección %3 durante %4 %5 freno %6',args0:[motorPorts(),number('SPEED',30,-100,100),number('TURN',0,-200,200),number('AMOUNT',1,0,100000),dropdown('UNIT',[['segundos','seconds'],['grados','degrees'],['rotaciones','rotations'],['iniciar sin esperar','start']]),dropdown('BRAKE',[['sí','TRUE'],['no','FALSE']])],colour:'#168b89',extensions:['shape_statement']},
+  {type:'ev3_motor_stop',message0:'detener motores %1 freno %2',args0:[motorPorts(),dropdown('BRAKE',[['sí','TRUE'],['no','FALSE']])],colour:'#168b89',extensions:['shape_statement']},
   {type:'ev3_motor',message0:'motor %1 velocidad %2 durante %3 segundos',args0:[ports,number('SPEED',30,-100,100),number('SECONDS',1,0.001,10)],colour:'#168b89',extensions:['shape_statement']},
   {type:'ev3_tone',message0:'tocar tono %1 Hz durante %2 segundos',args0:[number('FREQUENCY',440,250,10000),number('SECONDS',0.3,0.001,5)],colour:'#b24cd3',extensions:['shape_statement']},
   {type:'ev3_stop',message0:'detener todos los motores y sonido',colour:'#168b89',extensions:['shape_statement']},
@@ -21,11 +24,11 @@ const block=(type,inputs)=>({kind:'block',type,...(inputs?{inputs}:{})});
 const category=(name,colour,contents)=>({kind:'category',name,colour,contents});
 const toolbox={kind:'categoryToolbox',contents:[
   category('Eventos','#ffbf00',[block('event_whenflagclicked')]),
-  category('Motores','#168b89',[block('ev3_motor'),block('ev3_stop')]),
+  category('Motores','#168b89',[block('ev3_motor'),block('ev3_motion'),block('ev3_motor_stop'),block('ev3_stop')]),
   category('Sonido','#b24cd3',[block('ev3_tone')]),
   category('Control','#ffab19',[
     block('control_wait',{DURATION:{shadow:{type:'math_positive_number',fields:{NUM:1}}}}),
-    block('control_repeat',{TIMES:{shadow:{type:'math_whole_number',fields:{NUM:3}}}}),block('control_forever'),block('control_if'),block('control_if_else'),
+    block('control_repeat',{TIMES:{shadow:{type:'math_whole_number',fields:{NUM:3}}}}),block('control_forever'),block('control_wait_until'),block('control_if'),block('control_if_else'),
   ]),
   category('Sensores','#42a5ce',[block('ev3_sensor')]),
   category('Operadores','#59c059',[
@@ -37,7 +40,7 @@ const toolbox={kind:'categoryToolbox',contents:[
 
 export function createBlocks(container,{xml,onChange}){
   let paletteVisible=true;
-  const workspace=Scratch.inject(container,{theme:createTheme(),toolbox,media:`${import.meta.env.BASE_URL}scratch-media/`,scrollbars:true,trashcan:true,comments:true,sounds:false,zoom:{controls:true,wheel:true,startScale:0.8,maxScale:1.5,minScale:0.4,scaleSpeed:1.1}});
+  const workspace=Scratch.inject(container,{theme:createTheme(),toolbox,media:`${import.meta.env.BASE_URL}scratch-media/`,grid:{spacing:24,length:1,colour:'#dddddd',snap:false},scrollbars:true,trashcan:true,comments:true,sounds:false,zoom:{controls:true,wheel:true,startScale:0.8,maxScale:1.5,minScale:0.4,scaleSpeed:1.1}});
   function togglePalette(){
     paletteVisible=!paletteVisible;
     workspace.getToolbox().setVisible(paletteVisible);
@@ -59,10 +62,35 @@ export function createBlocks(container,{xml,onChange}){
     workspace,
     get paletteVisible(){return paletteVisible;},
     togglePalette,
+    setLessonPalette(types){
+      if(!types?.length){workspace.updateToolbox(toolbox);workspace.getToolbox().forceRerender();if(!paletteVisible)workspace.getFlyout().hide();return;}
+      const names=new Set(['Eventos']);
+      if(types.some(t=>/^control_/.test(t)))names.add('Control');
+      if(types.some(t=>/motor|move/i.test(t)))names.add('Motores');
+      if(types.some(t=>/sound/i.test(t)))names.add('Sonido');
+      if(types.some(t=>/sensor|color|touch|distance|gyro/i.test(t)))names.add('Sensores');
+      if(types.some(t=>/display/i.test(t)))names.add('Consola');
+      if(types.some(t=>/^operator_/.test(t)))names.add('Operadores');
+      const contents=toolbox.contents.filter(c=>names.has(c.name)).map(c=>c.name==='Control'?{...c,contents:c.contents.filter(b=>types.includes(b.type))}:c);
+      workspace.updateToolbox({...toolbox,contents});
+      workspace.getToolbox().forceRerender();if(!paletteVisible)workspace.getFlyout().hide();
+    },
     serialize:()=>Scratch.Xml.domToText(Scratch.Xml.workspaceToDom(workspace)),
     compile:()=>compileBlocks(workspace),
-    loadExample(kind){load(exampleXML(kind));onChange();},
+    loadXML(value){load(value);onChange();},
+    loadExample(kind,comment){load(exampleXML(kind));if(comment)workspace.getTopBlocks(false)[0]?.setCommentText(comment);onChange();},
     undo:()=>workspace.undo(false),redo:()=>workspace.undo(true),
     destroy(){observer.disconnect();workspace.dispose();},
   };
+}
+
+// Captures use this same block renderer, without the palette or editor controls.
+export function renderBlocksPreview(container,xml){
+  const workspace=Scratch.inject(container,{theme:createTheme(),readOnly:true,media:`${import.meta.env.BASE_URL}scratch-media/`,sounds:false,scrollbars:false,zoom:{startScale:1}});
+  Scratch.Xml.domToWorkspace(Scratch.utils.xml.textToDom(xml),workspace);
+  const bounds=workspace.getBlocksBoundingBox();
+  container.style.width=Math.ceil(bounds.right-bounds.left+48)+'px';
+  container.style.height=Math.ceil(bounds.bottom-bounds.top+48)+'px';
+  Scratch.svgResize(workspace);workspace.translate(24-bounds.left,24-bounds.top);
+  return {workspace,compile:()=>compileBlocks(workspace),dispose:()=>workspace.dispose()};
 }

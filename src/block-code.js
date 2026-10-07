@@ -31,6 +31,8 @@ export function compileBlocks(workspace) {
       switch(b.type){
         case 'ev3_log':code+=`log(${input('VALUE')});\n`;break;
         case 'ev3_motor':code+=`await robot.motor(${JSON.stringify(field(b,'PORT'))}, ${Number(field(b,'SPEED'))}, ${Math.round(Number(field(b,'SECONDS'))*1000)});\n`;break;
+        case 'ev3_motion':code+=`await robot.motion(${JSON.stringify(field(b,'PORTS'))}, ${Number(field(b,'SPEED'))}, ${Number(field(b,'TURN'))}, ${JSON.stringify(field(b,'UNIT'))}, ${Number(field(b,'AMOUNT'))}, ${field(b,'BRAKE')==='TRUE'});\n`;break;
+        case 'ev3_motor_stop':code+=`await robot.motorStop(${JSON.stringify(field(b,'PORTS'))}, ${field(b,'BRAKE')==='TRUE'});\n`;break;
         case 'ev3_tone':code+=`await robot.tone(${Number(field(b,'FREQUENCY'))}, ${Math.round(Number(field(b,'SECONDS'))*1000)});\n`;break;
         case 'ev3_stop':code+='await robot.stop();\n';break;
         case 'control_wait':code+=`await wait(Math.round(Number(${input('DURATION')}) * 1000));\n`;break;
@@ -38,6 +40,7 @@ export function compileBlocks(workspace) {
           const id=++loopId;code+=`{ const count${id} = Math.max(0, Math.min(10000, Math.floor(Number(${input('TIMES')}))));\nfor (let i${id} = 0; i${id} < count${id}; i${id}++) {\n${sub('SUBSTACK')}await wait(0);\n} }\n`;break;
         }
         case 'control_forever':code+=`while (true) {\n${sub('SUBSTACK')}await wait(10);\n}\n`;break;
+        case 'control_wait_until':code+=`while (!(${input('CONDITION')})) { await wait(30); }\n`;break;
         case 'control_if':code+=`if (${input('CONDITION')}) {\n${sub('SUBSTACK')}}\n`;break;
         case 'control_if_else':code+=`if (${input('CONDITION')}) {\n${sub('SUBSTACK')}} else {\n${sub('SUBSTACK2')}}\n`;break;
         default:throw new Error(`Este bloque no está admitido: ${b.type}`);

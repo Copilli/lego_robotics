@@ -14,7 +14,7 @@ Node 22, `npm ci`, `npm run dev`. Producción: `npm run build`, `npm run preview
 
 Editor JavaScript CodeMirror: números de línea, sintaxis, autocompletado de lenguaje, sangría, plegado, búsqueda/reemplazo, deshacer/rehacer, tema, tamaño y ajuste de líneas. Los proyectos se guardan en este navegador; importación/exportación `.js`, respaldo individual `.json` y duplicación. No importa `.ev3`/`.ev3p` ni ejecuta Python o programas originales de Classroom.
 
-Cinco tutoriales con instrucciones y retos propios y videos oficiales LEGO incrustados: introducción, motores, contacto, color y distancia. Los videos muestran Scratch; las prácticas de esta aplicación usan JavaScript. Se requiere internet para los videos, con enlace alternativo y fuente por tutorial. No se importó contenido de instalaciones propietarias. No es una biblioteca completa Home/Lab/Classroom.
+La interfaz sigue las capturas de EV3 Classroom suministradas por el usuario. Iniciar, Unidades y Construir comparten el editor de bloques y los proyectos. Se importaron recursos locales de Classroom 1.5.3 y las misiones/modelos de Home y Lab. Las sesiones originales se conservan con sus imágenes, videos y manuales; sus programas completos todavía no se ejecutan sin adaptación. Ver [biblioteca y límites](classroom-content.md).
 
 ## Transporte y runtime
 

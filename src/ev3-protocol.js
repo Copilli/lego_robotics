@@ -25,6 +25,20 @@ export class ReplyParser {
   }
 }
 export const stopOps=()=>[0xa3,0,15,1];
+export function motionOps(ports,speed,turn,unit,amount,brake=true){
+  if(!/^[A-D](\+[A-D])?$/.test(ports)||new Set(ports.split('+')).size!==ports.split('+').length)throw new Error('Selecciona uno o dos motores distintos.');
+  if(!Number.isInteger(speed)||Math.abs(speed)>100||!Number.isInteger(turn)||Math.abs(turn)>200)throw new Error('Velocidad o dirección fuera de rango.');
+  if(!['seconds','degrees','rotations','start'].includes(unit)||!Number.isFinite(amount)||amount<0)throw new Error('Unidad o distancia inválida.');
+  if(ports.length===1&&turn!==0)throw new Error('La dirección necesita dos motores.');
+  const mask=ports.split('+').reduce((mask,p)=>mask|(1<<'ABCD'.indexOf(p)),0);
+  const steps=unit==='start'?0:Math.round(amount*(unit==='seconds'?1000:unit==='rotations'?360:1));
+  if(unit!=='start'&&(steps<1||steps>2147483647))throw new Error('Movimiento fuera de rango.');
+  if(unit==='seconds'&&amount>30)throw new Error('Movimiento: máximo 30 segundos.');
+  // EV3 STEP_SPEED/TIME_SPEED use degrees/ms; SYNC takes steering -200..200.
+  const ops=ports.length===1?[unit==='seconds'?0xaf:0xae,0,mask,...integer(speed),0,...integer(steps),0,brake?1:0]:[unit==='seconds'?0xb1:0xb0,0,mask,...integer(speed),...integer(turn),...integer(steps),brake?1:0];
+  return {ops,mask};
+}
+export function motorStopOps(ports,brake=true){const {mask}=motionOps(ports,0,0,'start',0,brake);return [0xa3,0,mask,brake?1:0];}
 export function motorOps(port,speed,duration){
   if(!['A','B','C','D'].includes(port))throw new Error('Puerto motor: A, B, C o D.');
   if(!Number.isInteger(speed)||speed < -100||speed>100)throw new Error('Velocidad: entero de -100 a 100.');
