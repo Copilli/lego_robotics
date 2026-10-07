@@ -1,5 +1,11 @@
 # EV3 Studio
 
+## Web prototype — October 7, 2026
+
+A runnable Copilli classroom prototype now exists: JavaScript editor, local projects, five guided EV3 tutorials with official embedded videos, and an experimental Bluetooth serial transport for desktop Chrome/Edge. Run `npm ci` and `npm run dev`. See [development and compatibility](docs/development.md) for the supported API, limitations, tests, and GitHub Pages setup from `main`.
+
+Physical EV3 connectivity has not been verified. The research notes below describe the earlier discovery phase and remain as historical evidence; the prototype does not resolve the iPad transport or proprietary content-import questions.
+
 EV3 Studio is an independent educational preservation project exploring how modern software can help schools, clubs, families, and makers continue using working LEGO MINDSTORMS EV3 hardware.
 
 ## Why this project exists

@@ -1,0 +1,42 @@
+// Independent encoding, cross-checked against Scratch's EV3 extension.
+export function integer(value) {
+  if (!Number.isInteger(value) || value < -2147483648 || value > 2147483647) throw new Error('Parámetro entero fuera de rango.');
+  if(value >= -32 && value <= 31) return [value & 0x3f];
+  if(value >= -128 && value <= 127) return [0x81, value & 255];
+  if(value >= -32768 && value <= 32767) return [0x82, value & 255, (value >> 8) & 255];
+  return [0x83,value & 255,(value >> 8) & 255,(value >> 16) & 255,(value >> 24) & 255];
+}
+export function packet(counter, ops, globals=0) {
+  if (!Number.isInteger(globals)||globals<0||globals>1023) throw new Error('Memoria global inválida.');
+  const body=[counter & 255,(counter >> 8)&255,0,globals & 255,(globals >> 8)&3,...ops];
+  return new Uint8Array([body.length & 255,body.length >> 8,...body]);
+}
+export class ReplyParser {
+  constructor(onReply){this.buffer=new Uint8Array();this.onReply=onReply;}
+  push(chunk){
+    const buffer=new Uint8Array(this.buffer.length+chunk.length);buffer.set(this.buffer);buffer.set(chunk,this.buffer.length);this.buffer=buffer;
+    while(this.buffer.length>=2){
+      const size=this.buffer[0]|(this.buffer[1]<<8);
+      if(size<3||size>1024)throw new Error('Respuesta EV3 inválida. Revisa que seleccionaste el puerto correcto.');
+      if(this.buffer.length<size+2)return;
+      const reply=this.buffer.slice(2,size+2);this.buffer=this.buffer.slice(size+2);
+      this.onReply({counter:reply[0]|(reply[1]<<8),type:reply[2],data:reply.slice(3)});
+    }
+  }
+}
+export const stopOps=()=>[0xa3,0,15,1];
+export function motorOps(port,speed,duration){
+  if(!['A','B','C','D'].includes(port))throw new Error('Puerto motor: A, B, C o D.');
+  if(!Number.isInteger(speed)||speed < -100||speed>100)throw new Error('Velocidad: entero de -100 a 100.');
+  if(!Number.isInteger(duration)||duration<1||duration>10000)throw new Error('Duración del motor: 1–10000 ms.');
+  return [0xaf,0,1<<('ABCD'.indexOf(port)),...integer(speed),0,...integer(duration),0,1];
+}
+export function toneOps(frequency,duration){
+  if(!Number.isInteger(frequency)||frequency<250||frequency>10000||!Number.isInteger(duration)||duration<1||duration>5000)throw new Error('Sonido: 250–10000 Hz y 1–5000 ms.');
+  return [0x94,1,...integer(30),...integer(frequency),...integer(duration)];
+}
+export function sensorOps(port,kind){
+  const modes={distance:[30,0],color:[29,2],reflection:[29,0],touch:[16,0],gyro:[32,0],infrared:[33,0]};
+  if(!Number.isInteger(port)||port<1||port>4||!modes[kind])throw new Error('Sensor inválido. Usa puerto 1–4 y un tipo documentado.');
+  const [type,mode]=modes[kind];return [0x9d,0,port-1,...integer(type),...integer(mode),0x60];
+}
