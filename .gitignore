@@ -5,3 +5,6 @@ playwright-report/
 *.log
 .env*
 !.env.example
+# Local preservation copies are deliberately separate from Git/publication.
+public/media/lego-local/
+.preservation/

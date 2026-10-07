@@ -15,6 +15,10 @@ These notes record what could and could not be verified in the current coding en
 
 ## Documents
 
+Actualización en Windows: [15 — Instalaciones locales y preservación](15-local-installations.md). Home y Education ya se instalaron e inspeccionaron el 7 de octubre de 2026; los límites originales de esta página corresponden a la revisión histórica en Linux.
+
+Continuación: [16 — Copias MP4 de los videos WMV](16-web-video-conversion.md), con conversión reproducible y conservación de originales.
+
 | Document | Scope | Status |
 | --- | --- | --- |
 | [01 — Installed apps](01-installed-apps.md) | Host and local installation inventory | VERIFIED for this sandbox only |

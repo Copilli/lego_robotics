@@ -17,7 +17,8 @@ test('editor persists, searches, exports and imports projects',async({page})=>{
 test('tutorial has embedded video, steps and persistent completion',async({page})=>{
   await page.goto('');await page.getByRole('button',{name:/Tutoriales/}).click();
   await page.getByRole('searchbox').fill('contacto');await expect(page.locator('.lesson-card')).toHaveCount(1);await page.locator('.lesson-card').click();
-  await expect(page.getByRole('heading',{name:'Responde al contacto'})).toBeVisible();await expect(page.locator('iframe')).toHaveAttribute('src',/photo_id=38679798/);
+  await expect(page.getByRole('heading',{name:'Responde al contacto'})).toBeVisible();await expect(page.locator('.lesson-layout video, .lesson-layout iframe')).toBeVisible();
+  if(await page.locator('.lesson-layout iframe').count()) await expect(page.locator('iframe')).toHaveAttribute('src',/photo_id=38679798/);
   await expect(page.locator('.steps li')).toHaveCount(4);await page.getByRole('button',{name:'Marcar como completado'}).click();
   await page.reload();await expect(page.locator('.progress')).toHaveText('1 / 5 completados');
 });

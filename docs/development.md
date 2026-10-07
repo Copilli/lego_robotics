@@ -1,6 +1,10 @@
 # Prototipo web EV3 · 7 de octubre de 2026
 
+Actualización de contenido: se verificaron las instalaciones Home/Education y se preservaron 146 videos originales localmente. `npm run preserve:media` reconstruye y verifica la copia; las cinco prácticas prefieren videos locales y la nueva sección **Videos locales** consulta el catálogo completo. Ver [evidencia y rutas](research/15-local-installations.md). Las copias quedan excluidas de Git y todavía no están en Pages.
+
 La investigación de `research/` es el punto de partida y se conserva. Ahora existe un prototipo ejecutable de aula estática. Su conectividad se implementó contra referencias de protocolo; no se ha probado un ladrillo físico.
+
+Conversión web: `npm run convert:media` crea copias MP4 de los WMV preservados; `npm run preserve:media` verifica y enlaza los derivados al catálogo. Configura `FFMPEG_PATH` o instala FFmpeg en PATH. Los originales permanecen disponibles por separado. Ver [ajustes, trazabilidad y verificación](research/16-web-video-conversion.md).
 
 ## Ejecutar
 

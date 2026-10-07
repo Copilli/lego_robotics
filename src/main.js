@@ -8,6 +8,7 @@ import { starter, snippets, loadProjects, saveProjects } from './projects.js';
 import { lessons } from './lessons.js';
 import { LegoBluetooth } from './ev3-transport.js';
 import { Runtime } from './runtime.js';
+import {loadLocalMedia, localMediaUrl, chooseLocalLessonVideo} from './local-media.js';
 import './style.css';
 
 const $ = s => document.querySelector(s);
@@ -16,6 +17,7 @@ let projects = loadProjects(localStorage), active = projects[0]?.id, view = 'cla
 let completed;
 try { completed = JSON.parse(localStorage.getItem('copilli-lego-progress') || '[]'); completed = Array.isArray(completed) ? [...new Set(completed)].filter(id=>lessons.some(l=>l.id===id)) : []; } catch { completed = []; }
 let editor, saveTimer;
+let localMedia=[],libraryFilter='';
 const theme = new Compartment(), wrap = new Compartment();
 function notify(message) { $('#notice').textContent = message; }
 function persist() { try { saveProjects(localStorage, projects); return true; } catch { notify('No se pudo guardar: revisa el espacio o los permisos del navegador. Exporta tu proyecto.'); return false; } }
@@ -31,6 +33,9 @@ async function action(task) { try { await task(); } catch (error) { notify(error
 $('#app').innerHTML = `<header class="topbar"><a class="brand" href="#" aria-label="Copilli Robotics inicio"><span class="logo">C</span><strong>Copilli</strong><span>Robotics</span></a><div class="top-actions"><span id="hub-status">Hub sin conexión</span><button id="connect" class="primary">Conectar hub</button><span class="avatar" aria-label="Aula local">C</span></div></header>
 <div class="layout"><aside class="sidebar"><p class="eyebrow">ESPACIO DE APRENDIZAJE</p><button data-view="class">▦ <span>Mi clase</span></button><button data-view="editor">⌘ <span>Editor de código</span></button><button data-view="tutorials">▷ <span>Tutoriales</span></button><button data-view="projects">▤ <span>Mis proyectos</span></button><div class="side-note"><span class="dot"></span> LEGO · MINDSTORMS EV3<p>Aprende, construye y programa.</p></div></aside><main><div id="notice" role="status" aria-live="polite"></div><div id="content"></div><section id="console-panel" hidden><div class="console-head"><strong>Consola EV3</strong><button id="clear-console">Limpiar</button></div><pre id="console" aria-label="Salida del hub" tabindex="0">Conecta un hub para ver su salida aquí.\n</pre></section></main></div><input id="file" type="file" accept=".js,.json" hidden>`;
 $('.brand').onclick = e => {e.preventDefault(); view='class'; render();};
+const libraryButton=document.createElement('button');
+libraryButton.dataset.view='library';libraryButton.innerHTML='<span>Videos locales</span>';
+$('.sidebar').insertBefore(libraryButton,$('.side-note'));
 document.querySelectorAll('[data-view]').forEach(button => button.onclick = () => {save(); view=button.dataset.view; render();});
 $('#connect').onclick = () => action(async () => { if (bluetooth.connected) { await runtime.stop(); await bluetooth.disconnect(); } else {notify('Selecciona el puerto Bluetooth de tu EV3 previamente emparejado.'); await bluetooth.connect(); notify('Hub conectado. Abre el editor para enviar tu programa.');} });
 $('#clear-console').onclick = () => {$('#console').textContent = '';};
@@ -47,6 +52,20 @@ function render() {
     container.innerHTML = `<button id="back">← Todos los tutoriales</button><div class="page-heading"><p class="eyebrow">${l.label} · ${l.time}</p><h1>${l.title}</h1><p>${l.summary}</p></div><div class="lesson-layout"><section><iframe title="Video oficial LEGO: ${l.title}" src="${l.video}" allow="fullscreen" allowfullscreen loading="lazy"></iframe><p class="video-note">Video de LEGO Education. Requiere internet; puede estar en inglés. <a href="${l.video}" target="_blank" rel="noopener">Abrir video ↗</a> · <a href="${l.source}" target="_blank" rel="noopener">Fuente oficial</a></p><h2>Pasos de la práctica</h2><ol class="steps">${l.steps.map(s=>`<li>${s}</li>`).join('')}</ol></section><aside class="challenge"><p class="eyebrow">TU RETO</p><h2>Ahora te toca a ti</h2><p>${l.challenge}</p><button id="practice" class="primary">Abrir editor</button><button id="complete">${completed.includes(l.id)?'✓ Completado · desmarcar':'Marcar como completado'}</button><a href="https://ev3-help-online.api.education.lego.com/Education/en-us/index.html" target="_blank" rel="noopener">Referencia de EV3 ↗</a></aside></div>`;
     $('#back').onclick=()=>{view='tutorials';render();}; $('#practice').onclick=()=>newProject(starter,l.title);
     $('#complete').onclick=()=>{completed=completed.includes(l.id)?completed.filter(id=>id!==l.id):[...completed,l.id];try{localStorage.setItem('copilli-lego-progress',JSON.stringify(completed));}catch{notify('No se pudo guardar el progreso.');}render();};
+    const preserved=chooseLocalLessonVideo(localMedia,l.id);
+    if(preserved){
+      const video=document.createElement('video');video.controls=true;video.preload='metadata';video.src=localMediaUrl(preserved);video.setAttribute('aria-label',`Video local: ${l.title}`);
+      $('.lesson-layout iframe').replaceWith(video);
+      $('.video-note').innerHTML=`Copia local de ${preserved.application==='home'?'EV3 Home':'EV3 Education / Lab'}. No necesita el servidor de LEGO. El video muestra el software original; las prácticas de esta aula usan JavaScript. <a href="${localMediaUrl(preserved,true)}" download>Descargar original</a> · <a href="${l.video}" target="_blank" rel="noopener">Video alternativo en internet</a>`;
+      video.addEventListener('error',()=>notify('El navegador no puede reproducir esta copia. Puedes descargar el original o abrir el video alternativo.'));
+    }
+  }
+  if(view==='library'){
+    container.innerHTML=`<div class="page-heading"><p class="eyebrow">PRESERVACIÓN EV3</p><h1>Videos locales</h1><p>${localMedia.length} videos de Home y Education / Lab conservados en este equipo. ${localMedia.filter(e=>e.browserPlayable).length} disponibles para reproducir aquí. Las versiones MP4 de los antiguos WMV conservan también su original para descargar.</p></div><label class="search">Buscar video <input id="media-search" type="search" placeholder="Motor, sensor, Home…" value="${escape(libraryFilter)}"></label><div id="media-list" class="media-list"></div>`;
+    const paint=()=>{
+      const results=localMedia.filter(e=>`${e.application} ${e.label} ${e.sourcePath}`.toLowerCase().includes(libraryFilter.toLowerCase()));
+      $('#media-list').innerHTML=results.map(e=>`<article class="media-item"><small>${e.application==='home'?'Home':'Education / Lab'} · ${escape(e.locale)} · ${e.webFile?'MP4 · original WMV':escape(e.format.toUpperCase())}</small><h3>${escape(e.label)}</h3>${e.browserPlayable?`<video controls preload="none" src="${localMediaUrl(e)}" aria-label="${escape(e.label)}"></video>`:'<p>Original preservado. Descárgalo para abrirlo con un reproductor compatible.</p>'}<p class="media-source">${escape(e.sourcePath)}</p>${e.webFile?`<a href="${localMediaUrl(e)}" download>Descargar MP4 (${(e.webBytes/1048576).toFixed(1)} MB)</a> · `:''}<a href="${localMediaUrl(e,true)}" download>Descargar original (${(e.bytes/1048576).toFixed(1)} MB)</a></article>`).join('')||'<p>No hay videos locales disponibles. Importa las instalaciones con npm run preserve:media, o modifica la búsqueda.</p>';
+    };paint();$('#media-search').oninput=e=>{libraryFilter=e.target.value;paint();};
   }
   if (view === 'projects') {
     container.innerHTML = `<div class="page-heading"><p class="eyebrow">TU TALLER</p><h1>Mis proyectos</h1><p>Guardados localmente. Exporta tus archivos para llevarlos a otro equipo.</p></div><div class="project-actions"><button id="start-project" class="primary">+ Crear proyecto</button><button id="import">Importar .js o .json</button></div><div class="project-list">${projects.length ? projects.map(p=>`<article><span class="file-icon">⌘</span><div><h3>${escape(p.name)}</h3><p>${new Date(p.updated).toLocaleString('es-MX')}</p></div><button data-open="${p.id}">Abrir</button><button data-delete="${p.id}" class="danger">Eliminar</button></article>`).join('') : '<div class="empty"><h2>Tu primer robot empieza aquí</h2><p>Crea un proyecto o importa tu archivo JavaScript.</p></div>'}</div>`;
@@ -80,3 +99,4 @@ function download(name,content,type){const url=URL.createObjectURL(new Blob([con
 $('#file').onchange=()=>action(async()=>{const file=$('#file').files[0];if(!file)return;try{if(file.size>1000000)throw new Error('El archivo debe pesar menos de 1 MB.');const text=await file.text();if(file.name.endsWith('.json')){const p=JSON.parse(text);if(typeof p.code!=='string'||typeof p.name!=='string')throw new Error('El respaldo debe incluir name y code.');newProject(p.code,p.name.slice(0,80));}else newProject(text,file.name.replace(/\.js$/i,'').slice(0,80));notify('Proyecto importado.');}finally{$('#file').value='';}});
 window.addEventListener('beforeunload',save);
 render();
+loadLocalMedia().then(entries=>{localMedia=entries;if(['library','lesson'].includes(view))render();});
