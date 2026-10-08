@@ -4,6 +4,7 @@ for(const [command,args] of [
   [process.execPath,['scripts/preserve-connection-media.mjs']],
   ['powershell',['-NoProfile','-ExecutionPolicy','Bypass','-File','scripts/import-legacy.ps1']],
   [process.execPath,['scripts/finalize-curriculum.mjs']],
+  [process.execPath,['scripts/prepare-robot-thumbnails.mjs']],
   [process.execPath,['scripts/prepare-building-manuals.mjs']],
   ['powershell',['-NoProfile','-ExecutionPolicy','Bypass','-File','scripts/extract-legacy-programs.ps1']],
   [process.execPath,['scripts/modernize-programs.mjs']],

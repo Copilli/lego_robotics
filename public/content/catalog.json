@@ -103,9 +103,16 @@
         "legacy-home-0-5"
       ],
       "summary": "Misiones e instrucciones conservadas de la aplicación instalada.",
-      "image": "assets/7066182803ca97b891ef.png",
+      "image": "assets/37e6140377148da4d92b.png",
       "title": "TRACK3R",
-      "group": "home"
+      "group": "home",
+      "thumbnailSprite": {
+        "source": "assets/7066182803ca97b891ef.png",
+        "frameWidth": 524,
+        "frameHeight": 355,
+        "frameIndex": 0,
+        "frameCount": 3
+      }
     },
     {
       "id": "legacy-home-1",
@@ -117,9 +124,16 @@
         "legacy-home-1-5"
       ],
       "summary": "Misiones e instrucciones conservadas de la aplicación instalada.",
-      "image": "assets/d3fcb15e12188625c292.png",
+      "image": "assets/375ca3a9655d19c82ee5.png",
       "title": "SPIK3R",
-      "group": "home"
+      "group": "home",
+      "thumbnailSprite": {
+        "source": "assets/d3fcb15e12188625c292.png",
+        "frameWidth": 773,
+        "frameHeight": 675,
+        "frameIndex": 0,
+        "frameCount": 31
+      }
     },
     {
       "id": "legacy-home-2",
@@ -132,9 +146,16 @@
         "legacy-home-2-6"
       ],
       "summary": "Misiones e instrucciones conservadas de la aplicación instalada.",
-      "image": "assets/4e6e42417f21e81c4c1f.png",
+      "image": "assets/6f0e2140de3a81471a4c.png",
       "title": "EV3RSTORM",
-      "group": "home"
+      "group": "home",
+      "thumbnailSprite": {
+        "source": "assets/4e6e42417f21e81c4c1f.png",
+        "frameWidth": 691,
+        "frameHeight": 982,
+        "frameIndex": 0,
+        "frameCount": 18
+      }
     },
     {
       "id": "legacy-home-3",
@@ -145,9 +166,16 @@
         "legacy-home-3-4"
       ],
       "summary": "Misiones e instrucciones conservadas de la aplicación instalada.",
-      "image": "assets/9676e40a4ce32853cdfa.png",
+      "image": "assets/1c8e6498b31fa9c8baed.png",
       "title": "R3PTAR",
-      "group": "home"
+      "group": "home",
+      "thumbnailSprite": {
+        "source": "assets/9676e40a4ce32853cdfa.png",
+        "frameWidth": 696,
+        "frameHeight": 904,
+        "frameIndex": 0,
+        "frameCount": 21
+      }
     },
     {
       "id": "legacy-home-4",
