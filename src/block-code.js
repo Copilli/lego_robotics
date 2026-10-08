@@ -29,11 +29,16 @@ export function compileBlocks(workspace) {
       const input=name=>expression(b.getInputTargetBlock(name));
       const sub=name=>sequence(b.getInputTargetBlock(name));
       switch(b.type){
+        case 'ev3_image_file':case 'ev3_sound_file':{
+          const extension=b.type==='ev3_image_file'?'rgf':'rsf';if(!new RegExp(`^assets/[a-f0-9]{20}\\.${extension}$`).test(b.data||''))throw new Error('Falta el archivo local del ladrillo para este bloque.');
+          code+=b.type==='ev3_image_file'?`await robot.imageFile(${JSON.stringify(b.data)}, ${Number(field(b,'X'))}, ${Number(field(b,'Y'))}, ${field(b,'CLEAR')==='TRUE'});\n`:`await robot.soundFile(${JSON.stringify(b.data)}, ${Number(field(b,'VOLUME'))}, ${Number(field(b,'MODE'))});\n`;break;
+        }
+        case 'ev3_sound_stop':code+='await robot.soundStop();\n';break;
         case 'ev3_log':code+=`log(${input('VALUE')});\n`;break;
         case 'ev3_motor':code+=`await robot.motor(${JSON.stringify(field(b,'PORT'))}, ${Number(field(b,'SPEED'))}, ${Math.round(Number(field(b,'SECONDS'))*1000)});\n`;break;
         case 'ev3_motion':code+=`await robot.motion(${JSON.stringify(field(b,'PORTS'))}, ${Number(field(b,'SPEED'))}, ${Number(field(b,'TURN'))}, ${JSON.stringify(field(b,'UNIT'))}, ${Number(field(b,'AMOUNT'))}, ${field(b,'BRAKE')==='TRUE'});\n`;break;
         case 'ev3_motor_stop':code+=`await robot.motorStop(${JSON.stringify(field(b,'PORTS'))}, ${field(b,'BRAKE')==='TRUE'});\n`;break;
-        case 'ev3_tone':code+=`await robot.tone(${Number(field(b,'FREQUENCY'))}, ${Math.round(Number(field(b,'SECONDS'))*1000)});\n`;break;
+        case 'ev3_tone':code+=`await robot.tone(${Number(field(b,'FREQUENCY'))}, ${Math.round(Number(field(b,'SECONDS'))*1000)}, ${Number(field(b,'VOLUME')??30)}, ${field(b,'WAIT')!=='FALSE'});\n`;break;
         case 'ev3_stop':code+='await robot.stop();\n';break;
         case 'control_wait':code+=`await wait(Math.round(Number(${input('DURATION')}) * 1000));\n`;break;
         case 'control_repeat':{

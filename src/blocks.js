@@ -11,10 +11,13 @@ const number=(name,value,min,max)=>({type:'field_number',name,value,text:String(
 const ports=dropdown('PORT',[['A','A'],['B','B'],['C','C'],['D','D']]);
 const motorPorts=()=>dropdown('PORTS',['A','B','C','D','A+B','A+C','A+D','B+C','B+D','C+D'].map(p=>[p,p]));
 Scratch.defineBlocksWithJsonArray([
+  {type:'ev3_image_file',message0:'mostrar imagen %1 en x %2 y %3 limpiar %4',args0:[{type:'field_label_serializable',name:'FILE',text:'imagen'},number('X',0,-178,178),number('Y',0,-128,128),dropdown('CLEAR',[['sí','TRUE'],['no','FALSE']])],colour:'#9966ff',extensions:['shape_statement']},
+  {type:'ev3_sound_file',message0:'sonido %1 volumen %2 modo %3',args0:[{type:'field_label_serializable',name:'FILE',text:'sonido'},number('VOLUME',100,0,100),dropdown('MODE',[['esperar hasta terminar','0'],['iniciar sin esperar','1'],['repetir','2']])],colour:'#b24cd3',extensions:['shape_statement']},
+  {type:'ev3_sound_stop',message0:'detener sonido',colour:'#b24cd3',extensions:['shape_statement']},
   {type:'ev3_motion',message0:'motores %1 velocidad %2 dirección %3 durante %4 %5 freno %6',args0:[motorPorts(),number('SPEED',30,-100,100),number('TURN',0,-200,200),number('AMOUNT',1,0,100000),dropdown('UNIT',[['segundos','seconds'],['grados','degrees'],['rotaciones','rotations'],['iniciar sin esperar','start']]),dropdown('BRAKE',[['sí','TRUE'],['no','FALSE']])],colour:'#168b89',extensions:['shape_statement']},
   {type:'ev3_motor_stop',message0:'detener motores %1 freno %2',args0:[motorPorts(),dropdown('BRAKE',[['sí','TRUE'],['no','FALSE']])],colour:'#168b89',extensions:['shape_statement']},
   {type:'ev3_motor',message0:'motor %1 velocidad %2 durante %3 segundos',args0:[ports,number('SPEED',30,-100,100),number('SECONDS',1,0.001,10)],colour:'#168b89',extensions:['shape_statement']},
-  {type:'ev3_tone',message0:'tocar tono %1 Hz durante %2 segundos',args0:[number('FREQUENCY',440,250,10000),number('SECONDS',0.3,0.001,5)],colour:'#b24cd3',extensions:['shape_statement']},
+  {type:'ev3_tone',message0:'tocar tono %1 Hz durante %2 segundos volumen %3 esperar %4',args0:[number('FREQUENCY',440,250,10000),number('SECONDS',0.3,0.001,5),number('VOLUME',30,0,100),dropdown('WAIT',[['sí','TRUE'],['no','FALSE']])],colour:'#b24cd3',extensions:['shape_statement']},
   {type:'ev3_stop',message0:'detener todos los motores y sonido',colour:'#168b89',extensions:['shape_statement']},
   {type:'ev3_log',message0:'mostrar %1 en la consola',args0:[{type:'input_value',name:'VALUE'}],colour:'#5275d9',extensions:['shape_statement']},
   {type:'ev3_sensor',message0:'leer %1 en puerto %2',args0:[dropdown('KIND',[['distancia (cm)','distance'],['color (0–7)','color'],['luz reflejada (%)','reflection'],['contacto (0/1)','touch'],['giro (grados)','gyro'],['infrarrojo (%)','infrared']]),dropdown('PORT',[['1','1'],['2','2'],['3','3'],['4','4']])],colour:'#42a5ce',extensions:['output_number']},
@@ -26,6 +29,7 @@ const toolbox={kind:'categoryToolbox',contents:[
   category('Eventos','#ffbf00',[block('event_whenflagclicked')]),
   category('Motores','#168b89',[block('ev3_motor'),block('ev3_motion'),block('ev3_motor_stop'),block('ev3_stop')]),
   category('Sonido','#b24cd3',[block('ev3_tone')]),
+  category('Pantalla','#9966ff',[]),
   category('Control','#ffab19',[
     block('control_wait',{DURATION:{shadow:{type:'math_positive_number',fields:{NUM:1}}}}),
     block('control_repeat',{TIMES:{shadow:{type:'math_whole_number',fields:{NUM:3}}}}),block('control_forever'),block('control_wait_until'),block('control_if'),block('control_if_else'),
@@ -37,6 +41,11 @@ const toolbox={kind:'categoryToolbox',contents:[
   ]),
   category('Consola','#5275d9',[block('ev3_log',{VALUE:{shadow:{type:'text',fields:{TEXT:'¡Hola, EV3!'}}}})]),
 ]};
+export function registerBrickAssets(assets){
+  const entry=asset=>({kind:'block',type:asset.file.endsWith('.rsf')?'ev3_sound_file':'ev3_image_file',fields:{FILE:asset.name},data:asset.file});
+  toolbox.contents.find(category=>category.name==='Sonido').contents=[block('ev3_tone'),block('ev3_sound_stop'),...assets.filter(asset=>asset.file.endsWith('.rsf')).map(entry)];
+  toolbox.contents.find(category=>category.name==='Pantalla').contents=assets.filter(asset=>asset.file.endsWith('.rgf')).map(entry);
+}
 
 export function createBlocks(container,{xml,onChange}){
   let paletteVisible=true;
@@ -69,7 +78,7 @@ export function createBlocks(container,{xml,onChange}){
       if(types.some(t=>/motor|move/i.test(t)))names.add('Motores');
       if(types.some(t=>/sound/i.test(t)))names.add('Sonido');
       if(types.some(t=>/sensor|color|touch|distance|gyro/i.test(t)))names.add('Sensores');
-      if(types.some(t=>/display/i.test(t)))names.add('Consola');
+      if(types.some(t=>/display/i.test(t)))names.add('Pantalla');
       if(types.some(t=>/^operator_/.test(t)))names.add('Operadores');
       const contents=toolbox.contents.filter(c=>names.has(c.name)).map(c=>c.name==='Control'?{...c,contents:c.contents.filter(b=>types.includes(b.type))}:c);
       workspace.updateToolbox({...toolbox,contents});

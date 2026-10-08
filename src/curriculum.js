@@ -11,7 +11,7 @@ function teacherText(value){
 }
 const image=(url,alt)=>url?`<img src="${base+url}" alt="${esc(alt)}" loading="lazy">`:'';
 function practiceKind(step){const content=step.title+' '+step.description;if(/color/i.test(content))return 'color';if(/contacto|táctil|touch/i.test(content))return 'touch';if(/girosensor|giroscopio|gyro/i.test(content))return 'gyro';if(/sensor|distancia|ultrasónico/i.test(content))return 'distance';if(/motor|motriz|movimiento/i.test(content))return 'motor';return 'hello';}
-export async function loadCurriculum(){const r=await fetch(base+'catalog.json');if(!r.ok)throw new Error('Biblioteca no disponible');catalog=await r.json();return catalog;}
+export async function loadCurriculum(){const r=await fetch(base+'catalog.json');if(!r.ok)throw new Error('Biblioteca no disponible');catalog=await r.json();registerBrickAssets(catalog.brickAssets||[]);return catalog;}
 export function curriculumView(view,container,{navigate,newProject,projects,openProject}){
   const card=(a,index)=>`<button class="curriculum-card" data-activity="${esc(a.id)}">${image(a.image,a.title)}<div class="curriculum-card-copy">${index!==undefined?`<span class="intro-number">${index+1}</span>`:''}<div><h2>${esc(text(a.title))}</h2><p>${esc(text(a.summary))}</p></div></div></button>`;
   const launch=id=>{const a=catalog.activities.find(a=>a.id===id);if(a)newProject(undefined,text(a.title),{activityId:id,activityStep:0,blocksXML:'<xml xmlns="https://developers.google.com/blockly/xml"></xml>'});};
@@ -44,6 +44,9 @@ export function mountCurriculumGuide(p,{studio,save,render,navigate,notify}){
   const index=Math.max(0,Math.min(a.steps.length-1,p.activityStep||0)),s=a.steps[index];
   const aside=document.querySelector('.examples');aside.className='examples classroom-guide';
   const originalStacks=[...(s.codeStacks||[]),...(typeof s.sourceXML==='string'?[{xml:s.sourceXML,comments:[]}]:[])];
+  const sourcePrograms=s.modernXML?[{name:s.title,xml:s.modernXML,image:s.image,diagnostics:[]}]:a.modernPrograms||[];
+  const readyPrograms=sourcePrograms.filter(program=>program.xml);
+  const programStep=Boolean(s.modernXML)||/program|código|bloque|pruébalo|modifícalo|animación|recrea/i.test(s.title+' '+s.description);
   aside.innerHTML=`<div class="tutorial-count"><strong>${String(index+1).padStart(2,'0')}</strong><span>/${String(a.steps.length).padStart(2,'0')}</span><button id="expand-tutorial" aria-label="Ampliar tutorial">⤢</button></div>${s.video?`<video controls preload="metadata" src="${base+s.video}"></video>`:image(s.image,s.title)}<h2>${esc(text(s.title)||text(a.title))}</h2><p class="tutorial-description">${esc(text(s.description))}</p>${originalStacks.length?`<details><summary>Programa original y comentarios</summary>${originalStacks.map(c=>`<p>${(c.comments||[]).map(esc).join('<br>')}</p><pre>${esc(c.xml)}</pre>`).join('')}<p>Este programa utiliza bloques originales de LEGO. Su ejecución requiere adaptar los bloques que aún no admite el editor.</p></details>`:''}<button id="tutorial-example">Cargar ejemplo compatible</button><p class="example-caption">Ejemplo de práctica del editor: ${({hello:'saludo y tono',motor:'motor A durante un segundo',distance:'sensor de distancia en puerto 1',color:'sensor de color en puerto 1',touch:'sensor de contacto en puerto 1',gyro:'giroscopio en puerto 1'})[practiceKind(s)]}. No reemplaza el programa original.</p><div class="tutorial-nav"><button id="tutorial-prev" aria-label="Paso anterior" ${index===0?'disabled':''}>❮</button>${s.manualIds?.length?`<button id="tutorial-build" class="outline">CONSTRUIR</button>`:''}<button id="tutorial-next" aria-label="Paso siguiente">${index===a.steps.length-1?'Terminar':'❯'}</button></div><button id="tutorial-close">Cerrar tutorial</button>`;
   const palette=[...a.steps.slice(0,index+1)].reverse().find(step=>step.toolbox?.length)?.toolbox||a.toolbox||[];
   studio?.setLessonPalette(palette);
@@ -56,6 +59,27 @@ export function mountCurriculumGuide(p,{studio,save,render,navigate,notify}){
   if(!originalStacks.length&&(!/program|código|motor|sensor/i.test(s.title)||s.manualIds?.length)){
     aside.querySelector('#tutorial-example').hidden=true;aside.querySelector('.example-caption').hidden=true;
   }
+  if(sourcePrograms.length&&programStep){
+    const button=aside.querySelector('#tutorial-example'),caption=aside.querySelector('.example-caption');
+    button.hidden=!readyPrograms.length;caption.hidden=false;
+    caption.textContent=readyPrograms.length?'Estos bloques conservan los puertos, valores y unidades del programa original.':'Este ejemplo todavía requiere operaciones que el editor no admite. La carga estará disponible cuando se complete su conversión.';
+    button.textContent='Cargar programa del tutorial';
+    if(readyPrograms.length){
+      const select=document.createElement('select');select.id='tutorial-program';select.setAttribute('aria-label','Programa del tutorial');
+      for(const program of sourcePrograms){const option=document.createElement('option');option.value=program.name;option.disabled=!program.xml;option.textContent=program.name.replace(/\.ev3p$/,'')+(program.xml?'':' — pendiente');select.append(option);}
+      const key=a.id+':'+s.id;
+      select.value=p.tutorialPrograms?.[key]||readyPrograms.find(program=>/^02\.ev3p$/i.test(program.name)&&/modif/i.test(s.title))?.name||readyPrograms[0].name;
+      if(!readyPrograms.some(program=>program.name===select.value))select.value=readyPrograms[0].name;
+      const preview=document.createElement('div');preview.className='modern-program-preview';
+      const update=()=>{const program=readyPrograms.find(program=>program.name===select.value);preview.innerHTML=image(program.image,'Programa '+program.name+' en bloques modernos');};
+      select.onchange=()=>{p.tutorialPrograms={...p.tutorialPrograms,[key]:select.value};save();update();};update();
+      button.before(select);if(!s.modernXML)button.before(preview);
+      button.onclick=()=>{if(!studio){notify('Abre Bloques para cargar el programa.');return;}if(!confirm('¿Reemplazar los bloques actuales con el programa del tutorial?'))return;studio.loadXML(readyPrograms.find(program=>program.name===select.value).xml);save();};
+    }
+  }else if(sourcePrograms.length){
+    aside.querySelector('#tutorial-example').hidden=true;aside.querySelector('.example-caption').hidden=true;
+  }
   aside.querySelector('#tutorial-build')?.addEventListener('click',()=>{save();selectedManual=s.manualIds[0];manualPage=0;returnToEditor=true;navigate('manual');});
   aside.querySelector('#expand-tutorial').onclick=()=>aside.classList.toggle('expanded');
 }
+import {registerBrickAssets} from './blocks.js';

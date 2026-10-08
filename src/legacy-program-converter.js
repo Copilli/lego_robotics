@@ -9,7 +9,7 @@ const chain=blocks=>blocks.length?`<block type="${blocks[0].type}">${blocks[0].c
 
 // Follow sequence wires rather than file order. Never silently omit an instruction,
 // replace a wired value with its stale constant, or approximate rotations by time.
-export function convertLegacyProgram(program){
+export function convertLegacyProgram(program,assets={}){
   const diagnostics=[];
   function argument(node,name,fallback){
     const arg=node.args.find(a=>clean(a.name)===name);
@@ -22,6 +22,7 @@ export function convertLegacyProgram(program){
   const ports=node=>{const value=argument(node,node.args.some(a=>clean(a.name)==='Ports')?'Ports':'MotorPort');if(/^\d\./.test(value)&&!value.startsWith('1.'))throw new Error('Motores de una cadena de ladrillos');return value.replace(/^1\./,'');};
   function instruction(node){
     const target=clean(node.target);
+    if(node.args.some(arg=>arg.direction==='Input'&&/^Interrupt/.test(clean(arg.name))&&(arg.wire||Number(arg.value)!==0)))throw new Error('Interrupción del programa pendiente de convertir');
     if(node.kind==='StartBlock'||node.role==='LoopIndex')return null;
     if(node.kind==='ConfigurableWhileLoop'){
       const body=node.diagrams[0];if(!body)throw new Error('Bucle sin cuerpo');
@@ -51,11 +52,26 @@ export function convertLegacyProgram(program){
     }
     if(target==='PlayTone'){
       const frequency=numeric(node,'Frequency'),seconds=numeric(node,'Duration');
-      // The current tone block has a fixed volume. A different source volume is
-      // rejected instead of claiming an exact conversion.
-      if(numeric(node,'Volume')!==30)throw new Error('Volumen de tono diferente de 30');
-      toneOps(frequency,Math.round(seconds*1000));
-      return block('ev3_tone',fields({FREQUENCY:frequency,SECONDS:seconds}));
+      const volume=numeric(node,'Volume'),playType=numeric(node,'Play Type',0);
+      if(![0,1].includes(playType))throw new Error('Repetición de sonido pendiente de convertir');
+      toneOps(frequency,Math.round(seconds*1000),volume);
+      return block('ev3_tone',fields({FREQUENCY:frequency,SECONDS:seconds,VOLUME:volume,WAIT:playType===0?'TRUE':'FALSE'}));
+    }
+    if(target==='DisplayFile'||target==='PlaySoundFile'){
+      const name=argument(node,target==='DisplayFile'?'Filename':'Name'),asset=assets[name];
+      if(!asset)throw new Error(`Archivo del ladrillo no conservado: ${name}`);
+      if(target==='DisplayFile')return block('ev3_image_file',fields({FILE:name,X:numeric(node,'X'),Y:numeric(node,'Y'),CLEAR:boolean(node,'Clear Screen')?'TRUE':'FALSE'})+`<data>${escape(asset)}</data>`);
+      const volume=numeric(node,'Volume'),playType=numeric(node,'Play Type');
+      if(!Number.isInteger(volume)||volume<0||volume>100||![0,1,2].includes(playType))throw new Error('Parámetros de sonido inválidos');
+      return block('ev3_sound_file',fields({FILE:name,VOLUME:volume,MODE:String(playType)})+`<data>${escape(asset)}</data>`);
+    }
+    if(target==='PlaySoundStop')return block('ev3_sound_stop');
+    if(target==='TouchCompare'&&node.kind==='ConfigurableWaitFor'){
+      const portValue=argument(node,'Port');if(/^\d\./.test(portValue)&&!portValue.startsWith('1.'))throw new Error('Sensor de una cadena de ladrillos');
+      const port=Number(portValue.replace(/^1\./,'')),pressed=numeric(node,'Pressed, Released or Bumped');
+      if(!Number.isInteger(port)||port<1||port>4||![0,1].includes(pressed))throw new Error('Espera de contacto: modo o puerto pendiente');
+      const sensor=`<value name="OPERAND1"><block type="ev3_sensor">${fields({PORT:port,KIND:'touch'})}</block></value>`;
+      return block('control_wait_until',`<value name="CONDITION"><block type="operator_equals">${sensor}${number('OPERAND2',pressed)}</block></value>`);
     }
     throw new Error(`Operación pendiente: ${target||node.kind}`);
   }

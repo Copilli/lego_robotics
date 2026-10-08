@@ -4335,6 +4335,116 @@
           ]
         },
         {
+          "id": "modern-code-1",
+          "title": "Programa en bloques: paso 1",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/afed1aad2b0acee02a28.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "TRACK3R 01.ev3p",
+          "programPrefix": 1,
+          "sourceCodeImages": [
+            "pi_1_1.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">TRACK3R 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch left</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/4630b8908854dbbd43d2.rgf</data></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-2",
+          "title": "Programa en bloques: paso 2",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/0494c4e6687d948e2104.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "TRACK3R 01.ev3p",
+          "programPrefix": 2,
+          "sourceCodeImages": [
+            "pi_1_2.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">TRACK3R 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch left</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/4630b8908854dbbd43d2.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-3",
+          "title": "Programa en bloques: paso 3",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/c601df07874dc8662bae.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "TRACK3R 01.ev3p",
+          "programPrefix": 3,
+          "sourceCodeImages": [
+            "pi_1_3.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">TRACK3R 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch left</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/4630b8908854dbbd43d2.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-4",
+          "title": "Programa en bloques: paso 4",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/d26b91efcb1a564eb309.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "TRACK3R 01.ev3p",
+          "programPrefix": 4,
+          "sourceCodeImages": [
+            "pi_1_4.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">TRACK3R 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch left</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/4630b8908854dbbd43d2.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-5",
+          "title": "Programa en bloques: paso 5",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/713ff6d4670f194aba0f.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "TRACK3R 01.ev3p",
+          "programPrefix": 5,
+          "sourceCodeImages": [
+            "pi_1_5.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">TRACK3R 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch left</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/4630b8908854dbbd43d2.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Fanfare</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/cde4602cd39d4fb4aa93.rsf</data></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
           "id": "step-3",
           "video": null,
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;",
@@ -4353,10 +4463,10 @@
       "modernPrograms": [
         {
           "name": "TRACK3R 01.ev3p",
-          "xml": null,
-          "diagnostics": [
-            "Operación pendiente: DisplayFile"
-          ]
+          "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">TRACK3R 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch left</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/4630b8908854dbbd43d2.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Fanfare</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/cde4602cd39d4fb4aa93.rsf</data></block></next></block></next></block></next></block></next></block></next></block></xml>",
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.imageFile(\"assets/4630b8908854dbbd43d2.rgf\", 0, 0, true);\nawait robot.motion(\"B+C\", 75, 0, \"rotations\", 2, true);\nawait robot.motion(\"A\", 75, 0, \"rotations\", 3, true);\nawait robot.motion(\"B+C\", -75, 0, \"rotations\", 2, true);\nawait robot.soundFile(\"assets/cde4602cd39d4fb4aa93.rsf\", 100, 0);\n",
+          "image": "programs/713ff6d4670f194aba0f.png"
         }
       ]
     },
@@ -4397,6 +4507,204 @@
           ]
         },
         {
+          "id": "modern-code-1",
+          "title": "Programa en bloques: paso 1",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/c1910fd4cc32c04f353b.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "TRACK3R 02.ev3p",
+          "programPrefix": 1,
+          "sourceCodeImages": [
+            "pi_2_1.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">TRACK3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch right</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/9e7959079fa0049493dd.rgf</data></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-2",
+          "title": "Programa en bloques: paso 2",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/5fca9697d2b77154eea2.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "TRACK3R 02.ev3p",
+          "programPrefix": 2,
+          "sourceCodeImages": [
+            "pi_2_2.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">TRACK3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch right</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/9e7959079fa0049493dd.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">25</field><field name=\"TURN\">-100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">50</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-3",
+          "title": "Programa en bloques: paso 3",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/1d30599e84fb3d15133d.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "TRACK3R 02.ev3p",
+          "programPrefix": 3,
+          "sourceCodeImages": [
+            "pi_2_3.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">TRACK3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch right</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/9e7959079fa0049493dd.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">25</field><field name=\"TURN\">-100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">50</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-4",
+          "title": "Programa en bloques: paso 4",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/4c3c5ef99873124f0cda.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "TRACK3R 02.ev3p",
+          "programPrefix": 4,
+          "sourceCodeImages": [
+            "pi_2_4.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">TRACK3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch right</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/9e7959079fa0049493dd.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">25</field><field name=\"TURN\">-100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">50</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch left</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/4630b8908854dbbd43d2.rgf</data></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-5",
+          "title": "Programa en bloques: paso 5",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/0ae3522834ec55453882.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "TRACK3R 02.ev3p",
+          "programPrefix": 5,
+          "sourceCodeImages": [
+            "pi_2_5.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">TRACK3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch right</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/9e7959079fa0049493dd.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">25</field><field name=\"TURN\">-100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">50</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch left</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/4630b8908854dbbd43d2.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">25</field><field name=\"TURN\">100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">100</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-6",
+          "title": "Programa en bloques: paso 6",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/1925c33dee7a6346150b.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "TRACK3R 02.ev3p",
+          "programPrefix": 6,
+          "sourceCodeImages": [
+            "pi_2_6.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">TRACK3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch right</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/9e7959079fa0049493dd.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">25</field><field name=\"TURN\">-100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">50</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch left</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/4630b8908854dbbd43d2.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">25</field><field name=\"TURN\">100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">100</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">6</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-7",
+          "title": "Programa en bloques: paso 7",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/ba2b6e131a09fd206a75.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "TRACK3R 02.ev3p",
+          "programPrefix": 7,
+          "sourceCodeImages": [
+            "pi_2_7.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">TRACK3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch right</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/9e7959079fa0049493dd.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">25</field><field name=\"TURN\">-100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">50</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch left</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/4630b8908854dbbd43d2.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">25</field><field name=\"TURN\">100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">100</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">6</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch middle</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/2258f1a9fa1afa028dd6.rgf</data></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-8",
+          "title": "Programa en bloques: paso 8",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/bf493fc5c55fad8b7bdb.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "TRACK3R 02.ev3p",
+          "programPrefix": 8,
+          "sourceCodeImages": [
+            "pi_2_8.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">TRACK3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch right</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/9e7959079fa0049493dd.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">25</field><field name=\"TURN\">-100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">50</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch left</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/4630b8908854dbbd43d2.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">25</field><field name=\"TURN\">100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">100</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">6</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch middle</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/2258f1a9fa1afa028dd6.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">25</field><field name=\"TURN\">-100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">50</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-9",
+          "title": "Programa en bloques: paso 9",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/f3bda198069539a748d7.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "TRACK3R 02.ev3p",
+          "programPrefix": 9,
+          "sourceCodeImages": [
+            "pi_2_9.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">TRACK3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch right</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/9e7959079fa0049493dd.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">25</field><field name=\"TURN\">-100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">50</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch left</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/4630b8908854dbbd43d2.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">25</field><field name=\"TURN\">100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">100</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">6</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch middle</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/2258f1a9fa1afa028dd6.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">25</field><field name=\"TURN\">-100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">50</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Laughing 1</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/6f3619b3f07c6a2a0c74.rsf</data></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
           "id": "step-3",
           "video": null,
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;",
@@ -4415,10 +4723,10 @@
       "modernPrograms": [
         {
           "name": "TRACK3R 02.ev3p",
-          "xml": null,
-          "diagnostics": [
-            "Operación pendiente: DisplayFile"
-          ]
+          "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">TRACK3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch right</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/9e7959079fa0049493dd.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">25</field><field name=\"TURN\">-100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">50</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch left</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/4630b8908854dbbd43d2.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">25</field><field name=\"TURN\">100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">100</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">6</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Pinch middle</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/2258f1a9fa1afa028dd6.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">25</field><field name=\"TURN\">-100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">50</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Laughing 1</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/6f3619b3f07c6a2a0c74.rsf</data></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.imageFile(\"assets/9e7959079fa0049493dd.rgf\", 0, 0, true);\nawait robot.motion(\"B+C\", 25, -100, \"degrees\", 50, true);\nawait robot.motion(\"A\", 100, 0, \"rotations\", 3, true);\nawait robot.imageFile(\"assets/4630b8908854dbbd43d2.rgf\", 0, 0, true);\nawait robot.motion(\"B+C\", 25, 100, \"degrees\", 100, true);\nawait robot.motion(\"A\", 100, 0, \"rotations\", 6, true);\nawait robot.imageFile(\"assets/2258f1a9fa1afa028dd6.rgf\", 0, 0, true);\nawait robot.motion(\"B+C\", 25, -100, \"degrees\", 50, true);\nawait robot.soundFile(\"assets/6f3619b3f07c6a2a0c74.rsf\", 100, 0);\n",
+          "image": "programs/f3bda198069539a748d7.png"
         }
       ]
     },
@@ -4459,6 +4767,40 @@
           ]
         },
         {
+          "id": "modern-code-1",
+          "title": "Programa completo en bloques",
+          "description": "Este es el programa completo de la misión, convertido a bloques modernos. Incluye sus bucles y valores originales. Cárgalo en el editor para explorar cada operación.",
+          "image": "programs/91b4cf9fb5fe7a46df53.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "TRACK3R 03.ev3p",
+          "programPrefix": null,
+          "sourceCodeImages": [
+            "pi_3_1.png",
+            "pi_3_2.png",
+            "pi_3_3.png",
+            "pi_3_4.png",
+            "pi_3_5.png",
+            "pi_3_6.png",
+            "pi_3_7.png",
+            "pi_3_8.png",
+            "pi_3_9.png",
+            "pi_3_10.png",
+            "pi_3_11.png",
+            "pi_3_12.png",
+            "pi_3_13.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">TRACK3R 03.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">start</field><field name=\"AMOUNT\">0</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_repeat\"><value name=\"TIMES\"><shadow type=\"math_number\"><field name=\"NUM\">2</field></shadow></value><statement name=\"SUBSTACK\"><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">start</field><field name=\"AMOUNT\">0</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Airbrake</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/76f7e57f372e1837b113.rsf</data><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">0.5</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">35</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">start</field><field name=\"AMOUNT\">0</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Air release</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/24a325742755e0e89ea5.rsf</data><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">0.5</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">-75</field><field name=\"TURN\">35</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">4</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Cheering</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/dab73b3d556a3bb83139.rsf</data></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
           "id": "step-3",
           "video": null,
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;",
@@ -4477,10 +4819,10 @@
       "modernPrograms": [
         {
           "name": "TRACK3R 03.ev3p",
-          "xml": null,
-          "diagnostics": [
-            "Operación pendiente: PlaySoundFile"
-          ]
+          "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">TRACK3R 03.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">start</field><field name=\"AMOUNT\">0</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_repeat\"><value name=\"TIMES\"><shadow type=\"math_number\"><field name=\"NUM\">2</field></shadow></value><statement name=\"SUBSTACK\"><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">start</field><field name=\"AMOUNT\">0</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Airbrake</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/76f7e57f372e1837b113.rsf</data><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">0.5</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">35</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">start</field><field name=\"AMOUNT\">0</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Air release</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/24a325742755e0e89ea5.rsf</data><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">0.5</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">-75</field><field name=\"TURN\">35</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">4</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Cheering</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/dab73b3d556a3bb83139.rsf</data></block></next></block></next></block></next></block></next></block></xml>",
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.motion(\"A\", -75, 0, \"start\", 0, true);\n{ const count1 = Math.max(0, Math.min(10000, Math.floor(Number(2))));\nfor (let i1 = 0; i1 < count1; i1++) {\nawait robot.motion(\"B+C\", 75, 0, \"rotations\", 2, true);\nawait robot.motion(\"A\", 75, 0, \"start\", 0, true);\nawait robot.soundFile(\"assets/76f7e57f372e1837b113.rsf\", 100, 0);\nawait wait(Math.round(Number(0.5) * 1000));\nawait robot.motion(\"B+C\", 75, 35, \"rotations\", 3, true);\nawait robot.motion(\"A\", -75, 0, \"start\", 0, true);\nawait robot.soundFile(\"assets/24a325742755e0e89ea5.rsf\", 100, 0);\nawait wait(Math.round(Number(0.5) * 1000));\nawait robot.motion(\"B+C\", -75, 35, \"rotations\", 3, true);\nawait wait(0);\n} }\nawait robot.motion(\"B+C\", -75, 0, \"rotations\", 4, true);\nawait robot.soundFile(\"assets/dab73b3d556a3bb83139.rsf\", 100, 0);\n",
+          "image": "programs/91b4cf9fb5fe7a46df53.png"
         }
       ]
     },
@@ -4652,6 +4994,116 @@
           ]
         },
         {
+          "id": "modern-code-1",
+          "title": "Programa en bloques: paso 1",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/d720c507ca34c50abbc1.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "SPIK3R 01.ev3p",
+          "programPrefix": 1,
+          "sourceCodeImages": [
+            "pi_1_1.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">SPIK3R 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">40</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-2",
+          "title": "Programa en bloques: paso 2",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/0808b426849470db68ac.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "SPIK3R 01.ev3p",
+          "programPrefix": 2,
+          "sourceCodeImages": [
+            "pi_1_2.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">SPIK3R 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">40</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">220</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-3",
+          "title": "Programa en bloques: paso 3",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/402e64ef2ed4d22af803.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "SPIK3R 01.ev3p",
+          "programPrefix": 3,
+          "sourceCodeImages": [
+            "pi_1_3.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">SPIK3R 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">40</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">220</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 3</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/d9eebb784e4292927f79.rsf</data></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-4",
+          "title": "Programa en bloques: paso 4",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/7984b396b5de47088c6c.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "SPIK3R 01.ev3p",
+          "programPrefix": 4,
+          "sourceCodeImages": [
+            "pi_1_4.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">SPIK3R 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">40</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">220</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 3</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/d9eebb784e4292927f79.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">-100</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-5",
+          "title": "Programa en bloques: paso 5",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/58b162fb199f15598967.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "SPIK3R 01.ev3p",
+          "programPrefix": 5,
+          "sourceCodeImages": [
+            "pi_1_5.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">SPIK3R 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">40</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">220</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 3</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/d9eebb784e4292927f79.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">-100</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">40</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
           "id": "step-3",
           "video": null,
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;",
@@ -4670,10 +5122,10 @@
       "modernPrograms": [
         {
           "name": "SPIK3R 01.ev3p",
-          "xml": null,
-          "diagnostics": [
-            "Operación pendiente: PlaySoundFile"
-          ]
+          "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">SPIK3R 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">40</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">220</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 3</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/d9eebb784e4292927f79.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">-100</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">40</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.motion(\"D\", 40, 0, \"seconds\", 1, true);\nawait robot.motion(\"D\", -75, 0, \"degrees\", 220, true);\nawait robot.soundFile(\"assets/d9eebb784e4292927f79.rsf\", 100, 0);\nawait robot.motion(\"D\", -100, 0, \"seconds\", 1, true);\nawait robot.motion(\"D\", 40, 0, \"seconds\", 1, true);\n",
+          "image": "programs/58b162fb199f15598967.png"
         }
       ]
     },
@@ -4714,6 +5166,204 @@
           ]
         },
         {
+          "id": "modern-code-1",
+          "title": "Programa en bloques: paso 1",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/9bd228a39ddd8243ccc9.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "SPIK3R 02.ev3p",
+          "programPrefix": 1,
+          "sourceCodeImages": [
+            "pi_2_1.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">SPIK3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">40</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-2",
+          "title": "Programa en bloques: paso 2",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/5fbb04dcaf4e7cf37a40.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "SPIK3R 02.ev3p",
+          "programPrefix": 2,
+          "sourceCodeImages": [
+            "pi_2_2.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">SPIK3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">40</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-3",
+          "title": "Programa en bloques: paso 3",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/15f010c24435529642ac.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "SPIK3R 02.ev3p",
+          "programPrefix": 3,
+          "sourceCodeImages": [
+            "pi_2_3.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">SPIK3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">40</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 2</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/35e7cfb70517430671a1.rsf</data></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-4",
+          "title": "Programa en bloques: paso 4",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/a3089f57882352ef08e3.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "SPIK3R 02.ev3p",
+          "programPrefix": 4,
+          "sourceCodeImages": [
+            "pi_2_4.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">SPIK3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">40</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 2</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/35e7cfb70517430671a1.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">-100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-5",
+          "title": "Programa en bloques: paso 5",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/60b9b80722a54536a4da.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "SPIK3R 02.ev3p",
+          "programPrefix": 5,
+          "sourceCodeImages": [
+            "pi_2_5.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">SPIK3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">40</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 2</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/35e7cfb70517430671a1.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">-100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 4</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/0c808c601361626293e1.rsf</data></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-6",
+          "title": "Programa en bloques: paso 6",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/536a1c9b0e931f54e922.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "SPIK3R 02.ev3p",
+          "programPrefix": 6,
+          "sourceCodeImages": [
+            "pi_2_6.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">SPIK3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">40</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 2</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/35e7cfb70517430671a1.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">-100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 4</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/0c808c601361626293e1.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">220</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-7",
+          "title": "Programa en bloques: paso 7",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/c3527dff016b3af1110e.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "SPIK3R 02.ev3p",
+          "programPrefix": 7,
+          "sourceCodeImages": [
+            "pi_2_7.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">SPIK3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">40</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 2</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/35e7cfb70517430671a1.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">-100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 4</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/0c808c601361626293e1.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">220</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 3</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/d9eebb784e4292927f79.rsf</data></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-8",
+          "title": "Programa en bloques: paso 8",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/72960628916ede89dc5f.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "SPIK3R 02.ev3p",
+          "programPrefix": 8,
+          "sourceCodeImages": [
+            "pi_2_8.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">SPIK3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">40</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 2</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/35e7cfb70517430671a1.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">-100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 4</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/0c808c601361626293e1.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">220</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 3</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/d9eebb784e4292927f79.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">-100</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-9",
+          "title": "Programa en bloques: paso 9",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/cea4925e50acf4fb8f0f.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "SPIK3R 02.ev3p",
+          "programPrefix": 9,
+          "sourceCodeImages": [
+            "pi_2_9.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">SPIK3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">40</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 2</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/35e7cfb70517430671a1.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">-100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 4</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/0c808c601361626293e1.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">220</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 3</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/d9eebb784e4292927f79.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">-100</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">40</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
           "id": "step-3",
           "video": null,
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;",
@@ -4732,10 +5382,10 @@
       "modernPrograms": [
         {
           "name": "SPIK3R 02.ev3p",
-          "xml": null,
-          "diagnostics": [
-            "Operación pendiente: PlaySoundFile"
-          ]
+          "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">SPIK3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">40</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 2</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/35e7cfb70517430671a1.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">-100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 4</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/0c808c601361626293e1.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">220</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 3</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/d9eebb784e4292927f79.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">-100</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">40</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.motion(\"D\", 40, 0, \"seconds\", 1, true);\nawait robot.motion(\"B\", 100, 0, \"rotations\", 3, true);\nawait robot.soundFile(\"assets/35e7cfb70517430671a1.rsf\", 100, 0);\nawait robot.motion(\"B\", -100, 0, \"rotations\", 2, true);\nawait robot.soundFile(\"assets/0c808c601361626293e1.rsf\", 100, 0);\nawait robot.motion(\"D\", -75, 0, \"degrees\", 220, true);\nawait robot.soundFile(\"assets/d9eebb784e4292927f79.rsf\", 100, 0);\nawait robot.motion(\"D\", -100, 0, \"seconds\", 1, true);\nawait robot.motion(\"D\", 40, 0, \"seconds\", 1, true);\n",
+          "image": "programs/cea4925e50acf4fb8f0f.png"
         }
       ]
     },
@@ -4776,6 +5426,39 @@
           ]
         },
         {
+          "id": "modern-code-1",
+          "title": "Programa completo en bloques",
+          "description": "Este es el programa completo de la misión, convertido a bloques modernos. Incluye sus bucles y valores originales. Cárgalo en el editor para explorar cada operación.",
+          "image": "programs/8c7a1141d9f6f329dd72.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "SPIK3R 03.ev3p",
+          "programPrefix": null,
+          "sourceCodeImages": [
+            "pi_3_1.png",
+            "pi_3_2.png",
+            "pi_3_3.png",
+            "pi_3_4.png",
+            "pi_3_5.png",
+            "pi_3_6.png",
+            "pi_3_7.png",
+            "pi_3_8.png",
+            "pi_3_9.png",
+            "pi_3_10.png",
+            "pi_3_11.png",
+            "pi_3_12.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">SPIK3R 03.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">50</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-50</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">0.3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_repeat\"><value name=\"TIMES\"><shadow type=\"math_number\"><field name=\"NUM\">2</field></shadow></value><statement name=\"SUBSTACK\"><block type=\"control_repeat\"><value name=\"TIMES\"><shadow type=\"math_number\"><field name=\"NUM\">3</field></shadow></value><statement name=\"SUBSTACK\"><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">0.2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">0.2</field><field name=\"BRAKE\">TRUE</field></block></next></block></statement><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 2</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/35e7cfb70517430671a1.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">-100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 4</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/0c808c601361626293e1.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">25</field><field name=\"TURN\">0</field><field name=\"UNIT\">start</field><field name=\"AMOUNT\">0</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 1</field><field name=\"VOLUME\">100</field><field name=\"MODE\">1</field><data>assets/80866f4370b606775fd4.rsf</data></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block></next></block></next></block></next></block></xml>"
+        },
+        {
           "id": "step-3",
           "video": null,
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;",
@@ -4794,10 +5477,10 @@
       "modernPrograms": [
         {
           "name": "SPIK3R 03.ev3p",
-          "xml": null,
-          "diagnostics": [
-            "Operación pendiente: PlaySoundFile"
-          ]
+          "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">SPIK3R 03.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">50</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-50</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">0.3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_repeat\"><value name=\"TIMES\"><shadow type=\"math_number\"><field name=\"NUM\">2</field></shadow></value><statement name=\"SUBSTACK\"><block type=\"control_repeat\"><value name=\"TIMES\"><shadow type=\"math_number\"><field name=\"NUM\">3</field></shadow></value><statement name=\"SUBSTACK\"><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">0.2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">0.2</field><field name=\"BRAKE\">TRUE</field></block></next></block></statement><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 2</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/35e7cfb70517430671a1.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">-100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 4</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/0c808c601361626293e1.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">25</field><field name=\"TURN\">0</field><field name=\"UNIT\">start</field><field name=\"AMOUNT\">0</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Blip 1</field><field name=\"VOLUME\">100</field><field name=\"MODE\">1</field><data>assets/80866f4370b606775fd4.rsf</data></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block></next></block></next></block></next></block></xml>",
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.motion(\"A\", 50, 0, \"seconds\", 1, true);\nawait robot.motion(\"A\", -50, 0, \"seconds\", 0.3, true);\n{ const count1 = Math.max(0, Math.min(10000, Math.floor(Number(2))));\nfor (let i1 = 0; i1 < count1; i1++) {\n{ const count2 = Math.max(0, Math.min(10000, Math.floor(Number(3))));\nfor (let i2 = 0; i2 < count2; i2++) {\nawait robot.motion(\"A\", 75, 0, \"seconds\", 0.2, true);\nawait robot.motion(\"A\", -75, 0, \"seconds\", 0.2, true);\nawait wait(0);\n} }\nawait robot.motion(\"B\", 100, 0, \"rotations\", 3, true);\nawait robot.soundFile(\"assets/35e7cfb70517430671a1.rsf\", 100, 0);\nawait robot.motion(\"B\", -100, 0, \"rotations\", 2, true);\nawait robot.soundFile(\"assets/0c808c601361626293e1.rsf\", 100, 0);\nawait robot.motion(\"B\", 25, 0, \"start\", 0, true);\nawait robot.soundFile(\"assets/80866f4370b606775fd4.rsf\", 100, 1);\nawait wait(0);\n} }\n",
+          "image": "programs/8c7a1141d9f6f329dd72.png"
         }
       ]
     },
@@ -4858,7 +5541,7 @@
           "name": "SPIK3R 04.ev3p",
           "xml": null,
           "diagnostics": [
-            "Operación pendiente: PlaySoundFile"
+            "Operación pendiente: IRProximityCompare"
           ]
         }
       ]
@@ -4920,7 +5603,7 @@
           "name": "SPIK3R 05.ev3p",
           "xml": null,
           "diagnostics": [
-            "Operación pendiente: PlaySoundFile"
+            "Operación pendiente: IRTrackerCompareProximity"
           ]
         }
       ]
@@ -4962,6 +5645,182 @@
           ]
         },
         {
+          "id": "modern-code-1",
+          "title": "Programa en bloques: paso 1",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/672a05c835271ce9b247.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "EV3RSTORM 01.ev3p",
+          "programPrefix": 1,
+          "sourceCodeImages": [
+            "pi_1_1.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">EV3RSTORM 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Neutral</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/046e3e03fd9b5c8ee0be.rgf</data></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-2",
+          "title": "Programa en bloques: paso 2",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/4f51d81a4acca4ec621d.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "EV3RSTORM 01.ev3p",
+          "programPrefix": 2,
+          "sourceCodeImages": [
+            "pi_1_2.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">EV3RSTORM 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Neutral</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/046e3e03fd9b5c8ee0be.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">5</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-3",
+          "title": "Programa en bloques: paso 3",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/3661b3110abbf37256a6.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "EV3RSTORM 01.ev3p",
+          "programPrefix": 3,
+          "sourceCodeImages": [
+            "pi_1_3.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">EV3RSTORM 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Neutral</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/046e3e03fd9b5c8ee0be.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">5</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Middle left</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/75b0882ece4ccd71c2f8.rgf</data></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-4",
+          "title": "Programa en bloques: paso 4",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/56a8303f198712380ec6.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "EV3RSTORM 01.ev3p",
+          "programPrefix": 4,
+          "sourceCodeImages": [
+            "pi_1_4.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">EV3RSTORM 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Neutral</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/046e3e03fd9b5c8ee0be.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">5</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Middle left</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/75b0882ece4ccd71c2f8.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">50</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">5</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-5",
+          "title": "Programa en bloques: paso 5",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/bd7b13e8397af886e582.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "EV3RSTORM 01.ev3p",
+          "programPrefix": 5,
+          "sourceCodeImages": [
+            "pi_1_5.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">EV3RSTORM 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Neutral</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/046e3e03fd9b5c8ee0be.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">5</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Middle left</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/75b0882ece4ccd71c2f8.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">50</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">5</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Neutral</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/046e3e03fd9b5c8ee0be.rgf</data></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-6",
+          "title": "Programa en bloques: paso 6",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/48bcd7e9dd697980f6e5.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "EV3RSTORM 01.ev3p",
+          "programPrefix": 6,
+          "sourceCodeImages": [
+            "pi_1_6.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">EV3RSTORM 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Neutral</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/046e3e03fd9b5c8ee0be.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">5</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Middle left</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/75b0882ece4ccd71c2f8.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">50</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">5</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Neutral</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/046e3e03fd9b5c8ee0be.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">5</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-7",
+          "title": "Programa en bloques: paso 7",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/c6b060ea3dabd4619184.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "EV3RSTORM 01.ev3p",
+          "programPrefix": 7,
+          "sourceCodeImages": [
+            "pi_1_7.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">EV3RSTORM 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Neutral</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/046e3e03fd9b5c8ee0be.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">5</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Middle left</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/75b0882ece4ccd71c2f8.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">50</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">5</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Neutral</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/046e3e03fd9b5c8ee0be.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">5</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Middle right</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/0a1a6c47be4d712b4f4a.rgf</data></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-8",
+          "title": "Programa en bloques: paso 8",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/7359e848600d3d578bb7.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "EV3RSTORM 01.ev3p",
+          "programPrefix": 8,
+          "sourceCodeImages": [
+            "pi_1_8.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">EV3RSTORM 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Neutral</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/046e3e03fd9b5c8ee0be.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">5</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Middle left</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/75b0882ece4ccd71c2f8.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">50</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">5</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Neutral</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/046e3e03fd9b5c8ee0be.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">5</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Middle right</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/0a1a6c47be4d712b4f4a.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">-50</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">5</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
           "id": "step-3",
           "video": null,
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;",
@@ -4980,10 +5839,10 @@
       "modernPrograms": [
         {
           "name": "EV3RSTORM 01.ev3p",
-          "xml": null,
-          "diagnostics": [
-            "Operación pendiente: DisplayFile"
-          ]
+          "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">EV3RSTORM 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_image_file\"><field name=\"FILE\">Neutral</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/046e3e03fd9b5c8ee0be.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">5</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Middle left</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/75b0882ece4ccd71c2f8.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">50</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">5</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Neutral</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/046e3e03fd9b5c8ee0be.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">5</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_image_file\"><field name=\"FILE\">Middle right</field><field name=\"X\">0</field><field name=\"Y\">0</field><field name=\"CLEAR\">TRUE</field><data>assets/0a1a6c47be4d712b4f4a.rgf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">-50</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">5</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.imageFile(\"assets/046e3e03fd9b5c8ee0be.rgf\", 0, 0, true);\nawait robot.motion(\"B+C\", 75, 0, \"rotations\", 5, true);\nawait robot.imageFile(\"assets/75b0882ece4ccd71c2f8.rgf\", 0, 0, true);\nawait robot.motion(\"B+C\", 75, 50, \"rotations\", 5, true);\nawait robot.imageFile(\"assets/046e3e03fd9b5c8ee0be.rgf\", 0, 0, true);\nawait robot.motion(\"B+C\", 75, 0, \"rotations\", 5, true);\nawait robot.imageFile(\"assets/0a1a6c47be4d712b4f4a.rgf\", 0, 0, true);\nawait robot.motion(\"B+C\", 75, -50, \"rotations\", 5, true);\n",
+          "image": "programs/7359e848600d3d578bb7.png"
         }
       ]
     },
@@ -5044,7 +5903,7 @@
           "name": "EV3RSTORM 02.ev3p",
           "xml": null,
           "diagnostics": [
-            "Operación pendiente: DisplayFile"
+            "Operación pendiente: LedOn"
           ]
         }
       ]
@@ -5369,6 +6228,31 @@
           ]
         },
         {
+          "id": "modern-code-1",
+          "title": "Programa completo en bloques",
+          "description": "Este es el programa completo de la misión, convertido a bloques modernos. Incluye sus bucles y valores originales. Cárgalo en el editor para explorar cada operación.",
+          "image": "programs/e0b9a7c68ea192584e1e.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "R3PTAR 01.ev3p",
+          "programPrefix": null,
+          "sourceCodeImages": [
+            "pi_1_1.png",
+            "pi_1_2.png",
+            "pi_1_3.png",
+            "pi_1_4.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">R3PTAR 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">start</field><field name=\"AMOUNT\">0</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_repeat\"><value name=\"TIMES\"><shadow type=\"math_number\"><field name=\"NUM\">3</field></shadow></value><statement name=\"SUBSTACK\"><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">10</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">FALSE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-10</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">FALSE</field></block></next></block></statement></block></next></block></next></block></xml>"
+        },
+        {
           "id": "step-3",
           "video": null,
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;",
@@ -5388,7 +6272,9 @@
         {
           "name": "R3PTAR 01.ev3p",
           "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">R3PTAR 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">B</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">start</field><field name=\"AMOUNT\">0</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_repeat\"><value name=\"TIMES\"><shadow type=\"math_number\"><field name=\"NUM\">3</field></shadow></value><statement name=\"SUBSTACK\"><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">10</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">FALSE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-10</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">FALSE</field></block></next></block></statement></block></next></block></next></block></xml>",
-          "diagnostics": []
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.motion(\"B\", 75, 0, \"start\", 0, true);\n{ const count1 = Math.max(0, Math.min(10000, Math.floor(Number(3))));\nfor (let i1 = 0; i1 < count1; i1++) {\nawait robot.motion(\"A\", 10, 0, \"seconds\", 1, false);\nawait robot.motion(\"A\", -10, 0, \"seconds\", 1, false);\nawait wait(0);\n} }\n",
+          "image": "programs/e0b9a7c68ea192584e1e.png"
         }
       ]
     },
@@ -5581,6 +6467,138 @@
           ]
         },
         {
+          "id": "modern-code-1",
+          "title": "Programa en bloques: paso 1",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/6ebf3f2cc065a9feba60.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "GRIPP3R 01.ev3p",
+          "programPrefix": 1,
+          "sourceCodeImages": [
+            "pi_1_1.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">GRIPP3R 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-2",
+          "title": "Programa en bloques: paso 2",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/723542679a7c5b5ad23e.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "GRIPP3R 01.ev3p",
+          "programPrefix": 2,
+          "sourceCodeImages": [
+            "pi_1_2.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">GRIPP3R 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Airbrake</field><field name=\"VOLUME\">100</field><field name=\"MODE\">1</field><data>assets/76f7e57f372e1837b113.rsf</data></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-3",
+          "title": "Programa en bloques: paso 3",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/153c0dc23e796bb5c5dd.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "GRIPP3R 01.ev3p",
+          "programPrefix": 3,
+          "sourceCodeImages": [
+            "pi_1_3.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">GRIPP3R 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Airbrake</field><field name=\"VOLUME\">100</field><field name=\"MODE\">1</field><data>assets/76f7e57f372e1837b113.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-4",
+          "title": "Programa en bloques: paso 4",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/3a4d79ee662338ae0f3c.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "GRIPP3R 01.ev3p",
+          "programPrefix": 4,
+          "sourceCodeImages": [
+            "pi_1_4.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">GRIPP3R 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Airbrake</field><field name=\"VOLUME\">100</field><field name=\"MODE\">1</field><data>assets/76f7e57f372e1837b113.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-5",
+          "title": "Programa en bloques: paso 5",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/4586e3e3d4b367e48536.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "GRIPP3R 01.ev3p",
+          "programPrefix": 5,
+          "sourceCodeImages": [
+            "pi_1_5.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">GRIPP3R 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Airbrake</field><field name=\"VOLUME\">100</field><field name=\"MODE\">1</field><data>assets/76f7e57f372e1837b113.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Air release</field><field name=\"VOLUME\">100</field><field name=\"MODE\">1</field><data>assets/24a325742755e0e89ea5.rsf</data></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-6",
+          "title": "Programa en bloques: paso 6",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/abb54d6a65a52a4ef51c.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "GRIPP3R 01.ev3p",
+          "programPrefix": 6,
+          "sourceCodeImages": [
+            "pi_1_6.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">GRIPP3R 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Airbrake</field><field name=\"VOLUME\">100</field><field name=\"MODE\">1</field><data>assets/76f7e57f372e1837b113.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Air release</field><field name=\"VOLUME\">100</field><field name=\"MODE\">1</field><data>assets/24a325742755e0e89ea5.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
           "id": "step-3",
           "video": null,
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;",
@@ -5599,10 +6617,10 @@
       "modernPrograms": [
         {
           "name": "GRIPP3R 01.ev3p",
-          "xml": null,
-          "diagnostics": [
-            "Operación pendiente: PlaySoundFile"
-          ]
+          "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">GRIPP3R 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Airbrake</field><field name=\"VOLUME\">100</field><field name=\"MODE\">1</field><data>assets/76f7e57f372e1837b113.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Air release</field><field name=\"VOLUME\">100</field><field name=\"MODE\">1</field><data>assets/24a325742755e0e89ea5.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.motion(\"A\", -75, 0, \"seconds\", 1, true);\nawait robot.soundFile(\"assets/76f7e57f372e1837b113.rsf\", 100, 1);\nawait robot.motion(\"A\", 75, 0, \"seconds\", 1, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.soundFile(\"assets/24a325742755e0e89ea5.rsf\", 100, 1);\nawait robot.motion(\"A\", -75, 0, \"seconds\", 1, true);\n",
+          "image": "programs/abb54d6a65a52a4ef51c.png"
         }
       ]
     },
@@ -5643,6 +6661,182 @@
           ]
         },
         {
+          "id": "modern-code-1",
+          "title": "Programa en bloques: paso 1",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/2ce011a0e918c9839454.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "GRIPP3R 02.ev3p",
+          "programPrefix": 1,
+          "sourceCodeImages": [
+            "pi_2_1.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">GRIPP3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-2",
+          "title": "Programa en bloques: paso 2",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/75da46463f7192e6cbdf.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "GRIPP3R 02.ev3p",
+          "programPrefix": 2,
+          "sourceCodeImages": [
+            "pi_2_2.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">GRIPP3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-3",
+          "title": "Programa en bloques: paso 3",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/2e6a4e5bf6bfa1288135.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "GRIPP3R 02.ev3p",
+          "programPrefix": 3,
+          "sourceCodeImages": [
+            "pi_2_3.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">GRIPP3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Airbrake</field><field name=\"VOLUME\">100</field><field name=\"MODE\">1</field><data>assets/76f7e57f372e1837b113.rsf</data></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-4",
+          "title": "Programa en bloques: paso 4",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/b08cfeafef0244cd190b.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "GRIPP3R 02.ev3p",
+          "programPrefix": 4,
+          "sourceCodeImages": [
+            "pi_2_4.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">GRIPP3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Airbrake</field><field name=\"VOLUME\">100</field><field name=\"MODE\">1</field><data>assets/76f7e57f372e1837b113.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-5",
+          "title": "Programa en bloques: paso 5",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/5cda4c58ab759643d68e.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "GRIPP3R 02.ev3p",
+          "programPrefix": 5,
+          "sourceCodeImages": [
+            "pi_2_5.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">GRIPP3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Airbrake</field><field name=\"VOLUME\">100</field><field name=\"MODE\">1</field><data>assets/76f7e57f372e1837b113.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">850</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-6",
+          "title": "Programa en bloques: paso 6",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/85d86a226218dbc62987.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "GRIPP3R 02.ev3p",
+          "programPrefix": 6,
+          "sourceCodeImages": [
+            "pi_2_6.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">GRIPP3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Airbrake</field><field name=\"VOLUME\">100</field><field name=\"MODE\">1</field><data>assets/76f7e57f372e1837b113.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">850</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-7",
+          "title": "Programa en bloques: paso 7",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/c78d474827ea2d6bb171.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "GRIPP3R 02.ev3p",
+          "programPrefix": 7,
+          "sourceCodeImages": [
+            "pi_2_7.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">GRIPP3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Airbrake</field><field name=\"VOLUME\">100</field><field name=\"MODE\">1</field><data>assets/76f7e57f372e1837b113.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">850</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">start</field><field name=\"AMOUNT\">0</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
+          "id": "modern-code-8",
+          "title": "Programa en bloques: paso 8",
+          "description": "Construye esta secuencia con los bloques modernos. Puedes cargarla, revisar sus valores y modificarla en el editor.",
+          "image": "programs/7991cb9d5e6a4f7b199c.png",
+          "video": null,
+          "toolbox": [
+            "ev3motor_motorTurnFor",
+            "control_wait",
+            "control_repeat",
+            "ev3sound_playSoundUntilDone",
+            "ev3display_displayImage"
+          ],
+          "manualIds": [],
+          "generatedModernProgram": true,
+          "programName": "GRIPP3R 02.ev3p",
+          "programPrefix": 8,
+          "sourceCodeImages": [
+            "pi_2_8.png"
+          ],
+          "modernXML": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">GRIPP3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Airbrake</field><field name=\"VOLUME\">100</field><field name=\"MODE\">1</field><data>assets/76f7e57f372e1837b113.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">850</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">start</field><field name=\"AMOUNT\">0</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Air release</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/24a325742755e0e89ea5.rsf</data></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        {
           "id": "step-3",
           "video": null,
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;",
@@ -5661,10 +6855,10 @@
       "modernPrograms": [
         {
           "name": "GRIPP3R 02.ev3p",
-          "xml": null,
-          "diagnostics": [
-            "Operación pendiente: PlaySoundFile"
-          ]
+          "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">GRIPP3R 02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Airbrake</field><field name=\"VOLUME\">100</field><field name=\"MODE\">1</field><data>assets/76f7e57f372e1837b113.rsf</data><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">850</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">75</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">3</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">-75</field><field name=\"TURN\">0</field><field name=\"UNIT\">start</field><field name=\"AMOUNT\">0</field><field name=\"BRAKE\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Air release</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/24a325742755e0e89ea5.rsf</data></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.motion(\"A\", -75, 0, \"seconds\", 1, true);\nawait robot.motion(\"B+C\", 75, 0, \"rotations\", 3, true);\nawait robot.soundFile(\"assets/76f7e57f372e1837b113.rsf\", 100, 1);\nawait robot.motion(\"A\", 100, 0, \"seconds\", 1, true);\nawait robot.motion(\"B+C\", 75, 100, \"degrees\", 850, true);\nawait robot.motion(\"B+C\", 75, 0, \"rotations\", 3, true);\nawait robot.motion(\"A\", -75, 0, \"start\", 0, true);\nawait robot.soundFile(\"assets/24a325742755e0e89ea5.rsf\", 100, 0);\n",
+          "image": "programs/7991cb9d5e6a4f7b199c.png"
         }
       ]
     },
@@ -5838,7 +7032,7 @@
           "name": "002.ev3p",
           "xml": null,
           "diagnostics": [
-            "Operación pendiente: TouchCompare"
+            "Operación pendiente: RotationReset"
           ]
         }
       ]
@@ -6059,7 +7253,7 @@
           "name": "MNRH.ev3p",
           "xml": null,
           "diagnostics": [
-            "Operación pendiente: DisplayFile"
+            "Operación pendiente: LedOn"
           ]
         },
         {
@@ -6551,12 +7745,16 @@
         {
           "name": "01.ev3p",
           "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">40</field><field name=\"TURN\">100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">685</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">40</field><field name=\"TURN\">50</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">1380</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">50</field><field name=\"TURN\">25</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
-          "diagnostics": []
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.motion(\"B+C\", 40, 100, \"degrees\", 685, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"B+C\", 40, 50, \"degrees\", 1380, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"B+C\", 50, 25, \"rotations\", 2, true);\n",
+          "image": "programs/9418b9a6c85833414653.png"
         },
         {
           "name": "02.ev3p",
           "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">40</field><field name=\"TURN\">100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">685</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">40</field><field name=\"TURN\">50</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">1380</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">50</field><field name=\"TURN\">25</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">-40</field><field name=\"TURN\">25</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">-40</field><field name=\"TURN\">50</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">1380</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">-40</field><field name=\"TURN\">100</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">685</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
-          "diagnostics": []
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.motion(\"B+C\", 40, 100, \"degrees\", 685, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"B+C\", 40, 50, \"degrees\", 1380, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"B+C\", 50, 25, \"rotations\", 2, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"B+C\", -40, 25, \"rotations\", 2, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"B+C\", -40, 50, \"degrees\", 1380, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"B+C\", -40, 100, \"degrees\", 685, true);\n",
+          "image": "programs/a4abf67fc4d2529dd559.png"
         }
       ]
     },
@@ -7076,7 +8274,9 @@
         {
           "name": "01.ev3p",
           "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">50</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">-50</field><field name=\"TURN\">0</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">720</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">50</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
-          "diagnostics": []
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.motion(\"B+C\", 50, 0, \"rotations\", 2, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"B+C\", -50, 0, \"degrees\", 720, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"B+C\", 50, 0, \"seconds\", 1, true);\n",
+          "image": "programs/0ca249924efdfaf28fb2.png"
         },
         {
           "name": "02.ev3p",
@@ -7088,12 +8288,16 @@
         {
           "name": "Program 01.ev3p",
           "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">Program 01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">50</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">-50</field><field name=\"TURN\">0</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">720</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">50</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">-50</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">FALSE</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
-          "diagnostics": []
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.motion(\"B+C\", 50, 0, \"rotations\", 2, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"B+C\", -50, 0, \"degrees\", 720, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"B+C\", 50, 0, \"seconds\", 1, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"B+C\", -50, 0, \"rotations\", 1, false);\n",
+          "image": "programs/62ce7219009af53ea4d0.png"
         },
         {
           "name": "Test it.ev3p",
           "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">Test it.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">50</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">2</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">-50</field><field name=\"TURN\">0</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">720</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">B+C</field><field name=\"SPEED\">50</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
-          "diagnostics": []
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.motion(\"B+C\", 50, 0, \"rotations\", 2, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"B+C\", -50, 0, \"degrees\", 720, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"B+C\", 50, 0, \"seconds\", 1, true);\n",
+          "image": "programs/ff8dc847c9817745e86a.png"
         },
         {
           "name": "Untitled.ev3p",
@@ -7277,21 +8481,21 @@
           "name": "01.ev3p",
           "xml": null,
           "diagnostics": [
-            "Operación pendiente: TouchCompare"
+            "Espera de contacto: modo o puerto pendiente"
           ]
         },
         {
           "name": "02.ev3p",
           "xml": null,
           "diagnostics": [
-            "Operación pendiente: TouchCompare"
+            "Espera de contacto: modo o puerto pendiente"
           ]
         },
         {
           "name": "myvi.ev3p",
           "xml": null,
           "diagnostics": [
-            "Operación pendiente: TouchCompare"
+            "Espera de contacto: modo o puerto pendiente"
           ]
         }
       ]
@@ -9256,7 +10460,7 @@
           "name": "Untitled2.ev3p",
           "xml": null,
           "diagnostics": [
-            "Operación pendiente: TouchCompare"
+            "Espera de contacto: modo o puerto pendiente"
           ]
         }
       ]
@@ -10708,14 +11912,14 @@
           "name": "01.ev3p",
           "xml": null,
           "diagnostics": [
-            "Operación pendiente: DisplayFile"
+            "DisplayFile: falta X"
           ]
         },
         {
           "name": "Test it.ev3p",
           "xml": null,
           "diagnostics": [
-            "Operación pendiente: DisplayFile"
+            "Archivo del ladrillo no conservado: like"
           ]
         }
       ]
@@ -10794,17 +11998,17 @@
       "modernPrograms": [
         {
           "name": "01.ev3p",
-          "xml": null,
-          "diagnostics": [
-            "Operación pendiente: PlaySoundFile"
-          ]
+          "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Fanfare</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/cde4602cd39d4fb4aa93.rsf</data><next><block type=\"ev3_tone\"><field name=\"FREQUENCY\">440</field><field name=\"SECONDS\">1</field><field name=\"VOLUME\">100</field><field name=\"WAIT\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Boing</field><field name=\"VOLUME\">100</field><field name=\"MODE\">2</field><data>assets/2d3e79659ef226be3fc9.rsf</data><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">3</field></shadow></value><next><block type=\"ev3_sound_stop\"></block></next></block></next></block></next></block></next></block></next></block></xml>",
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.soundFile(\"assets/cde4602cd39d4fb4aa93.rsf\", 100, 0);\nawait robot.tone(440, 1000, 100, true);\nawait robot.soundFile(\"assets/2d3e79659ef226be3fc9.rsf\", 100, 2);\nawait wait(Math.round(Number(3) * 1000));\nawait robot.soundStop();\n",
+          "image": "programs/ed037bef81cdec796f6c.png"
         },
         {
           "name": "Test it.ev3p",
-          "xml": null,
-          "diagnostics": [
-            "Operación pendiente: PlaySoundFile"
-          ]
+          "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">Test it.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Fanfare</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/cde4602cd39d4fb4aa93.rsf</data><next><block type=\"ev3_tone\"><field name=\"FREQUENCY\">440</field><field name=\"SECONDS\">1</field><field name=\"VOLUME\">100</field><field name=\"WAIT\">TRUE</field><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Boing</field><field name=\"VOLUME\">100</field><field name=\"MODE\">2</field><data>assets/2d3e79659ef226be3fc9.rsf</data><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">3</field></shadow></value><next><block type=\"ev3_sound_stop\"></block></next></block></next></block></next></block></next></block></next></block></xml>",
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.soundFile(\"assets/cde4602cd39d4fb4aa93.rsf\", 100, 0);\nawait robot.tone(440, 1000, 100, true);\nawait robot.soundFile(\"assets/2d3e79659ef226be3fc9.rsf\", 100, 2);\nawait wait(Math.round(Number(3) * 1000));\nawait robot.soundStop();\n",
+          "image": "programs/02e0dee3728f1c743a90.png"
         }
       ]
     },
@@ -11378,17 +12582,23 @@
         {
           "name": "01.ev3p",
           "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">50</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">-50</field><field name=\"TURN\">0</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">360</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">18</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
-          "diagnostics": []
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.motion(\"D\", 50, 0, \"rotations\", 1, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"D\", -50, 0, \"degrees\", 360, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"D\", 18, 0, \"seconds\", 1, true);\n",
+          "image": "programs/c74de851735bebbd2750.png"
         },
         {
           "name": "02.ev3p",
           "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">100</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">-100</field><field name=\"TURN\">0</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">360</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">40</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
-          "diagnostics": []
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.motion(\"D\", 100, 0, \"rotations\", 1, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"D\", -100, 0, \"degrees\", 360, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"D\", 40, 0, \"seconds\", 1, true);\n",
+          "image": "programs/7ca4f6bba467080c618e.png"
         },
         {
           "name": "Test it.ev3p",
           "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">Test it.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">50</field><field name=\"TURN\">0</field><field name=\"UNIT\">rotations</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">-50</field><field name=\"TURN\">0</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">360</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">D</field><field name=\"SPEED\">20</field><field name=\"TURN\">0</field><field name=\"UNIT\">seconds</field><field name=\"AMOUNT\">1</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
-          "diagnostics": []
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.motion(\"D\", 50, 0, \"rotations\", 1, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"D\", -50, 0, \"degrees\", 360, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"D\", 20, 0, \"seconds\", 1, true);\n",
+          "image": "programs/7a36cc945b17341b79d9.png"
         }
       ]
     },
@@ -11467,12 +12677,16 @@
         {
           "name": "01.ev3p",
           "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">12</field><field name=\"TURN\">0</field><field name=\"UNIT\">start</field><field name=\"AMOUNT\">0</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motor_stop\"><field name=\"PORTS\">A</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">50</field><field name=\"TURN\">0</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">360</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
-          "diagnostics": []
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.motion(\"A\", 12, 0, \"start\", 0, true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motorStop(\"A\", true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"A\", 50, 0, \"degrees\", 360, true);\n",
+          "image": "programs/29a723c1907d0e74662b.png"
         },
         {
           "name": "02.ev3p",
           "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">02.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">12</field><field name=\"TURN\">0</field><field name=\"UNIT\">start</field><field name=\"AMOUNT\">0</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">2</field></shadow></value><next><block type=\"ev3_motor_stop\"><field name=\"PORTS\">A</field><field name=\"BRAKE\">TRUE</field><next><block type=\"control_wait\"><value name=\"DURATION\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value><next><block type=\"ev3_motion\"><field name=\"PORTS\">A</field><field name=\"SPEED\">50</field><field name=\"TURN\">0</field><field name=\"UNIT\">degrees</field><field name=\"AMOUNT\">720</field><field name=\"BRAKE\">TRUE</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
-          "diagnostics": []
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nawait robot.motion(\"A\", 12, 0, \"start\", 0, true);\nawait wait(Math.round(Number(2) * 1000));\nawait robot.motorStop(\"A\", true);\nawait wait(Math.round(Number(1) * 1000));\nawait robot.motion(\"A\", 50, 0, \"degrees\", 720, true);\n",
+          "image": "programs/af089ddd490ee0a99a7a.png"
         }
       ]
     },
@@ -11550,37 +12764,37 @@
       "modernPrograms": [
         {
           "name": "01.ev3p",
-          "xml": null,
-          "diagnostics": [
-            "Operación pendiente: TouchCompare"
-          ]
+          "xml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_whenflagclicked\" x=\"24\" y=\"24\"><comment pinned=\"false\">01.ev3p: conserva los puertos y valores del programa original.</comment><next><block type=\"control_wait_until\"><value name=\"CONDITION\"><block type=\"operator_equals\"><value name=\"OPERAND1\"><block type=\"ev3_sensor\"><field name=\"PORT\">1</field><field name=\"KIND\">touch</field></block></value><value name=\"OPERAND2\"><shadow type=\"math_number\"><field name=\"NUM\">1</field></shadow></value></block></value><next><block type=\"ev3_sound_file\"><field name=\"FILE\">Ouch</field><field name=\"VOLUME\">100</field><field name=\"MODE\">0</field><data>assets/d06b4fa6a1188ac7c680.rsf</data></block></next></block></next></block></xml>",
+          "diagnostics": [],
+          "code": "// Generado desde bloques Scratch · Copilli EV3\nwhile (!((Number((await robot.sensor(1, \"touch\"))) === Number(1)))) { await wait(30); }\nawait robot.soundFile(\"assets/d06b4fa6a1188ac7c680.rsf\", 100, 0);\n",
+          "image": "programs/124f224044e4e0968d80.png"
         },
         {
           "name": "02.ev3p",
           "xml": null,
           "diagnostics": [
-            "Operación pendiente: TouchCompare"
+            "Espera de contacto: modo o puerto pendiente"
           ]
         },
         {
           "name": "Modify it.ev3p",
           "xml": null,
           "diagnostics": [
-            "Operación pendiente: TouchCompare"
+            "Archivo del ladrillo no conservado: Ouchh"
           ]
         },
         {
           "name": "Program 01.ev3p",
           "xml": null,
           "diagnostics": [
-            "Operación pendiente: TouchCompare"
+            "TouchCompare: falta Pressed, Released or Bumped"
           ]
         },
         {
           "name": "Test it.ev3p",
           "xml": null,
           "diagnostics": [
-            "Operación pendiente: TouchCompare"
+            "Archivo del ladrillo no conservado: Ouchh"
           ]
         }
       ]
@@ -11888,7 +13102,7 @@
           "name": "02.ev3p",
           "xml": null,
           "diagnostics": [
-            "Volumen de tono diferente de 30"
+            "Sonido: 250–10000 Hz y 1–5000 ms."
           ]
         }
       ]
@@ -12042,7 +13256,7 @@
           "name": "Lift and roar.ev3p",
           "xml": null,
           "diagnostics": [
-            "Operación pendiente: TouchCompare"
+            "Cable de secuencia ambiguo o incompleto"
           ]
         },
         {
@@ -15548,5 +16762,371 @@
       "image": "assets/69e78c376ff8034d4608.jpg"
     }
   ],
-  "missing": []
+  "missing": [],
+  "brickAssets": [
+    {
+      "name": "Accept3",
+      "file": "assets/ade951ce95d5bd6aba70.rgf"
+    },
+    {
+      "name": "Activate",
+      "file": "assets/fcc0b3120bc4fa9c6046.rsf"
+    },
+    {
+      "name": "Air release",
+      "file": "assets/24a325742755e0e89ea5.rsf"
+    },
+    {
+      "name": "Airbrake",
+      "file": "assets/76f7e57f372e1837b113.rsf"
+    },
+    {
+      "name": "Angry",
+      "file": "assets/c8b2709fef5cd72b7f02.rgf"
+    },
+    {
+      "name": "Awake",
+      "file": "assets/265203980982ca873310.rgf"
+    },
+    {
+      "name": "Backing alert",
+      "file": "assets/7290d70fc90d26aebb6d.rsf"
+    },
+    {
+      "name": "Backward3",
+      "file": "assets/c192e005890939370cde.rgf"
+    },
+    {
+      "name": "Bar 0",
+      "file": "assets/5d78959fc106fb70a1ef.rgf"
+    },
+    {
+      "name": "Bar 1",
+      "file": "assets/e923112d8e3bcbad7e41.rgf"
+    },
+    {
+      "name": "Bar 2",
+      "file": "assets/183899f8a33adfaceec1.rgf"
+    },
+    {
+      "name": "Bar 3",
+      "file": "assets/1f03e4be09faca4617d6.rgf"
+    },
+    {
+      "name": "Bar 4",
+      "file": "assets/551fafb9c92f960c6950.rgf"
+    },
+    {
+      "name": "Blip 1",
+      "file": "assets/80866f4370b606775fd4.rsf"
+    },
+    {
+      "name": "Blip 2",
+      "file": "assets/35e7cfb70517430671a1.rsf"
+    },
+    {
+      "name": "Blip 3",
+      "file": "assets/d9eebb784e4292927f79.rsf"
+    },
+    {
+      "name": "Blip 4",
+      "file": "assets/0c808c601361626293e1.rsf"
+    },
+    {
+      "name": "Blue",
+      "file": "assets/345257e59ae2175f4144.rsf"
+    },
+    {
+      "name": "Boing",
+      "file": "assets/2d3e79659ef226be3fc9.rsf"
+    },
+    {
+      "name": "Cheering",
+      "file": "assets/dab73b3d556a3bb83139.rsf"
+    },
+    {
+      "name": "Click",
+      "file": "assets/cc45de442089a6e534d5.rsf"
+    },
+    {
+      "name": "Color sensor",
+      "file": "assets/39075f2c9dc307b8abd5.rgf"
+    },
+    {
+      "name": "Crazy 1",
+      "file": "assets/99226e9021d6637bfb0a.rgf"
+    },
+    {
+      "name": "Crazy 2",
+      "file": "assets/fa4e18b45f19dc41893f.rgf"
+    },
+    {
+      "name": "Crunching",
+      "file": "assets/c16ec366d868b4dbbcfc.rsf"
+    },
+    {
+      "name": "Crying",
+      "file": "assets/e5a7ecf005d0e4643428.rsf"
+    },
+    {
+      "name": "Detected",
+      "file": "assets/542e17d51005a4cd2ae4.rsf"
+    },
+    {
+      "name": "Dog bark 1",
+      "file": "assets/325ebf652d99e0c88d8c.rsf"
+    },
+    {
+      "name": "Dog bark 2",
+      "file": "assets/6fd56e2ef68942593996.rsf"
+    },
+    {
+      "name": "Dog growl",
+      "file": "assets/aa38f30d3f032e1afa0e.rsf"
+    },
+    {
+      "name": "Dog sniff",
+      "file": "assets/1c0c719f867a0434403b.rsf"
+    },
+    {
+      "name": "Dog whine",
+      "file": "assets/8c86fc698b7f573cbb39.rsf"
+    },
+    {
+      "name": "Down",
+      "file": "assets/c89c6a0efb69b3a51680.rsf"
+    },
+    {
+      "name": "Elephant",
+      "file": "assets/02d5809a128ea62b9587.rsf"
+    },
+    {
+      "name": "Error alarm",
+      "file": "assets/bd8eb9c12c3fe69f81d0.rsf"
+    },
+    {
+      "name": "EV3",
+      "file": "assets/d15529854584359e9f9f.rsf"
+    },
+    {
+      "name": "EV3",
+      "file": "assets/b79b6c13036a66edede6.rgf"
+    },
+    {
+      "name": "EV3 icon",
+      "file": "assets/f837809c1b3e79dccb21.rgf"
+    },
+    {
+      "name": "Fanfare",
+      "file": "assets/cde4602cd39d4fb4aa93.rsf"
+    },
+    {
+      "name": "Forward3",
+      "file": "assets/cbe7c2587a837e4f3cb0.rgf"
+    },
+    {
+      "name": "Goodbye",
+      "file": "assets/33e11e572e566ab91989.rsf"
+    },
+    {
+      "name": "Green",
+      "file": "assets/69b56edd9603a028330f.rsf"
+    },
+    {
+      "name": "Horn 1",
+      "file": "assets/3ebbb972eddaffc44b7c.rsf"
+    },
+    {
+      "name": "Horn 2",
+      "file": "assets/15d65e6e67a15497650e.rsf"
+    },
+    {
+      "name": "Hurt",
+      "file": "assets/bba32437e2b1617e0e78.rgf"
+    },
+    {
+      "name": "Knocked out",
+      "file": "assets/c3ed381af656d5c4390d.rgf"
+    },
+    {
+      "name": "Kung fu",
+      "file": "assets/09b342ef070ae1a72109.rsf"
+    },
+    {
+      "name": "Laser",
+      "file": "assets/4530f2a294507d16bab4.rsf"
+    },
+    {
+      "name": "Laughing 1",
+      "file": "assets/6f3619b3f07c6a2a0c74.rsf"
+    },
+    {
+      "name": "Laughing 2",
+      "file": "assets/290064d17ffd57407fa3.rsf"
+    },
+    {
+      "name": "Left",
+      "file": "assets/0e80141b2f71c4400f8d.rgf"
+    },
+    {
+      "name": "Love",
+      "file": "assets/104d7c67f2800f3cbfe0.rgf"
+    },
+    {
+      "name": "Middle left",
+      "file": "assets/75b0882ece4ccd71c2f8.rgf"
+    },
+    {
+      "name": "Middle right",
+      "file": "assets/0a1a6c47be4d712b4f4a.rgf"
+    },
+    {
+      "name": "Motor idle",
+      "file": "assets/9ec7244d2b3a108921c3.rsf"
+    },
+    {
+      "name": "Neutral",
+      "file": "assets/046e3e03fd9b5c8ee0be.rgf"
+    },
+    {
+      "name": "Object",
+      "file": "assets/4008634eb7675d204151.rsf"
+    },
+    {
+      "name": "Ouch",
+      "file": "assets/d06b4fa6a1188ac7c680.rsf"
+    },
+    {
+      "name": "Pinch left",
+      "file": "assets/4630b8908854dbbd43d2.rgf"
+    },
+    {
+      "name": "Pinch middle",
+      "file": "assets/2258f1a9fa1afa028dd6.rgf"
+    },
+    {
+      "name": "Pinch right",
+      "file": "assets/9e7959079fa0049493dd.rgf"
+    },
+    {
+      "name": "Question mark",
+      "file": "assets/be22c0f3f8ba2c261c45.rgf"
+    },
+    {
+      "name": "Ready",
+      "file": "assets/b015ab12798d9214be4b.rsf"
+    },
+    {
+      "name": "Red",
+      "file": "assets/ab869a1e9b682ae04613.rsf"
+    },
+    {
+      "name": "Right",
+      "file": "assets/8e4a900387e458d00801.rgf"
+    },
+    {
+      "name": "Sad",
+      "file": "assets/ecac3ccffc1de9c4fd7f.rgf"
+    },
+    {
+      "name": "Servo 2",
+      "file": "assets/f9f37b8151b7153c5247.rsf"
+    },
+    {
+      "name": "Sick",
+      "file": "assets/d8499d783ee9d3d93e58.rgf"
+    },
+    {
+      "name": "Sleeping",
+      "file": "assets/f55af1d2da6870e7f18d.rgf"
+    },
+    {
+      "name": "Smile",
+      "file": "assets/05f52bb587b419031112.rgf"
+    },
+    {
+      "name": "Snake hiss",
+      "file": "assets/63319b3554c84c395963.rsf"
+    },
+    {
+      "name": "Snake rattle",
+      "file": "assets/b3626c6d54517a6bb7e6.rsf"
+    },
+    {
+      "name": "Snoring",
+      "file": "assets/d78e6a9558b34a9f2041.rsf"
+    },
+    {
+      "name": "Snoring",
+      "file": "assets/a1d24c8b3a2a985be680.rsf"
+    },
+    {
+      "name": "Speed down",
+      "file": "assets/708e21ee033d1f7e85f5.rsf"
+    },
+    {
+      "name": "Speed up",
+      "file": "assets/1b7c27f472f2d43aa795.rsf"
+    },
+    {
+      "name": "Start up",
+      "file": "assets/28247f78840398905236.rsf"
+    },
+    {
+      "name": "Stop 1",
+      "file": "assets/a178a84841223a3e983f.rgf"
+    },
+    {
+      "name": "T-rex roar",
+      "file": "assets/be370a3696d904aeaa2b.rsf"
+    },
+    {
+      "name": "Target",
+      "file": "assets/ec55e8d87990608cb512.rgf"
+    },
+    {
+      "name": "Tear",
+      "file": "assets/84f8f1e1e9645585b4b6.rgf"
+    },
+    {
+      "name": "Thank you",
+      "file": "assets/2fed8022d3ad71582720.rsf"
+    },
+    {
+      "name": "Thumbs up",
+      "file": "assets/2a109dc47f8457a07394.rgf"
+    },
+    {
+      "name": "Tired left",
+      "file": "assets/92b3ecdfe83b1b19ffdf.rgf"
+    },
+    {
+      "name": "Tired middle",
+      "file": "assets/dadea3110c03b203862f.rgf"
+    },
+    {
+      "name": "Tired right",
+      "file": "assets/aed6fc8e4f0f39f9be44.rgf"
+    },
+    {
+      "name": "Up",
+      "file": "assets/c9843b3346859b7f1e7b.rsf"
+    },
+    {
+      "name": "Up",
+      "file": "assets/9c4db03ff1e80a976637.rgf"
+    },
+    {
+      "name": "Winking",
+      "file": "assets/0287233ba9ce3d95af01.rgf"
+    },
+    {
+      "name": "Yellow",
+      "file": "assets/46c231f2dd0ee9ee7b5f.rsf"
+    },
+    {
+      "name": "Yes",
+      "file": "assets/c72572ecb5c36e3b00cb.rsf"
+    }
+  ]
 }

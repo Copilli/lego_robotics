@@ -34,6 +34,11 @@ $results=@()
 foreach($activity in $inventory.activities | Where-Object {$_.source -and $_.id -like 'legacy-*'}){
   $zip=[IO.Compression.ZipFile]::OpenRead($activity.source)
   try{
+    $brickAssets=@{}
+    foreach($asset in $zip.Entries | Where-Object {$_.FullName -match '\.(rsf|rgf)$'}){
+      $stream=$asset.Open();$memory=[IO.MemoryStream]::new()
+      try{$stream.CopyTo($memory);$bytes=$memory.ToArray();$hasher=[Security.Cryptography.SHA256]::Create();try{$hash=([BitConverter]::ToString($hasher.ComputeHash($bytes))).Replace('-','').ToLower()}finally{$hasher.Dispose()};$relative='assets/'+$hash.Substring(0,20)+[IO.Path]::GetExtension($asset.FullName).ToLower();[IO.File]::WriteAllBytes((Join-Path $PSScriptRoot ('../public/content/'+$relative)),$bytes);$brickAssets[[IO.Path]::GetFileNameWithoutExtension($asset.FullName)]=$relative}finally{$stream.Dispose();$memory.Dispose()}
+    }
     $programs=@()
     foreach($entry in $zip.Entries | Where-Object {$_.FullName -like '*.ev3p'}){
       [xml]$xml=Read-Entry $zip $entry
@@ -45,7 +50,7 @@ foreach($activity in $inventory.activities | Where-Object {$_.source -and $_.id 
     if($activityEntry){[xml]$x=Read-Entry $zip $activityEntry;foreach($slide in $x.SelectNodes('//*[local-name()="Slide"]')){
       $slides+=@{name=$slide.GetAttribute('SlideName');images=@($slide.SelectNodes('.//*[local-name()="img"]') | ForEach-Object {$_.GetAttribute('src')});actions=@($slide.SelectNodes('.//*[local-name()="buttonimage"]') | ForEach-Object {$_.GetAttribute('action')});text=$slide.InnerText}
     }}
-    $results+=@{activityId=$activity.id;programs=$programs;slides=$slides}
+    $results+=@{activityId=$activity.id;programs=$programs;slides=$slides;brickAssets=$brickAssets}
   }finally{$zip.Dispose()}
 }
 $target=Join-Path $PSScriptRoot '../.preservation/legacy-programs.json'

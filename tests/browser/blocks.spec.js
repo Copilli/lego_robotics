@@ -1,4 +1,22 @@
 import {test,expect} from '@playwright/test';
+import fs from 'node:fs';
+test('Home tutorial loads the converted sequence and preserves its editable media blocks',async({page})=>{
+ const errors=[];page.on('pageerror',error=>errors.push(error.message));
+ const catalog=JSON.parse(fs.readFileSync('public/content/catalog.json','utf8'));
+ const activity=catalog.activities.find(a=>a.id==='legacy-home-0-1');
+ const step=activity.steps.findIndex(s=>s.id==='modern-code-5');
+ await page.addInitScript(({activityId,step})=>{if(!localStorage.getItem('copilli-lego-projects'))localStorage.setItem('copilli-lego-projects',JSON.stringify([{id:'modern-test',name:'TRACK3R',code:'',blocksXML:'<xml></xml>',editorMode:'blocks',activityId,activityStep:step,updated:Date.now()}]));},{activityId:activity.id,step});
+ await page.goto('');await page.locator('[data-view="projects"]').click();await page.getByRole('button',{name:'Abrir',exact:true}).click();
+ const screenshot=page.locator('.classroom-guide > img');await expect(screenshot).toHaveAttribute('src',/content\/programs\//);await expect(screenshot).toBeVisible();
+ page.once('dialog',dialog=>dialog.accept());await page.getByRole('button',{name:'Cargar programa del tutorial',exact:true}).click();
+ await page.getByRole('button',{name:'Guardar',exact:true}).click();
+ const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('copilli-lego-projects'))[0]);
+ expect(saved.blocksXML).toContain('ev3_sound_file');expect(saved.code).toContain('robot.imageFile');expect(saved.code).toContain('"B+C", 75, 0, "rotations", 2');expect(saved.code).toContain('robot.soundFile');
+ await page.getByRole('checkbox',{name:'Simulador (sin robot)'}).check();await page.getByRole('button',{name:'Ejecutar'}).click();await expect(page.locator('#console')).toContainText('Programa terminado.');
+ await page.getByRole('button',{name:'Ampliar tutorial',exact:true}).click();await page.screenshot({path:'.preservation/modern-track3r-editor.png'});
+ await page.reload();await page.locator('[data-view="projects"]').click();await page.getByRole('button',{name:'Abrir',exact:true}).click();
+ await page.getByRole('button',{name:'JavaScript',exact:true}).click();await expect(page.locator('.cm-content')).toContainText('robot.soundFile');expect(errors).toEqual([]);
+});
 test('tutorial palette switches to all blocks and the edited program persists',async({page})=>{
  const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('');await page.locator('[data-view="start"]').click();await page.locator('[data-activity]').first().click();
  await expect(page.locator('#blocks-editor .blocklySvg')).toBeVisible();await expect(page.locator('.classroom-guide h2')).toContainText('Ladrillo EV3');

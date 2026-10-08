@@ -1,6 +1,6 @@
 let counter=0;const pending=new Map();
 const request=(method,args=[])=>new Promise((resolve,reject)=>{const id=++counter;pending.set(id,{resolve,reject});postMessage({type:'call',id,method,args});});
-const robot=Object.freeze({motor:(...args)=>request('motor',args),motion:(...args)=>request('motion',args),motorStop:(...args)=>request('motorStop',args),tone:(...args)=>request('tone',args),sensor:(...args)=>request('sensor',args),stop:()=>request('stop')});
+const robot=Object.freeze({motor:(...args)=>request('motor',args),motion:(...args)=>request('motion',args),motorStop:(...args)=>request('motorStop',args),imageFile:(...args)=>request('imageFile',args),soundFile:(...args)=>request('soundFile',args),soundStop:()=>request('soundStop'),tone:(...args)=>request('tone',args),sensor:(...args)=>request('sensor',args),stop:()=>request('stop')});
 const wait=async ms=>{if(!Number.isInteger(ms)||ms<0||ms>30000)throw new Error('Espera: 0–30000 ms.');await new Promise(resolve=>setTimeout(resolve,ms));};
 onmessage=async ({data})=>{
   if(data.type==='reply'){const p=pending.get(data.id);if(!p)return;pending.delete(data.id);data.error?p.reject(new Error(data.error)):p.resolve(data.value);return;}

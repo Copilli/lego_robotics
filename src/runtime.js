@@ -15,10 +15,10 @@ export class Runtime {
         if(inFlight){worker.postMessage({type:'reply',id:data.id,error:'Usa await para esperar cada operación del robot.'});return;}
         inFlight=true;
         try{
-          if(!['motor','motion','motorStop','tone','sensor','stop'].includes(data.method)||!Array.isArray(data.args))throw new Error('Operación EV3 no admitida.');
+          if(!['motor','motion','motorStop','imageFile','soundFile','soundStop','tone','sensor','stop'].includes(data.method)||!Array.isArray(data.args))throw new Error('Operación EV3 no admitida.');
           const value=await this.transport[data.method](...data.args);
           if(data.method==='motor')await new Promise(resolve=>setTimeout(resolve,data.args[2]));
-          if(data.method==='tone')await new Promise(resolve=>setTimeout(resolve,data.args[1]));
+          if(data.method==='tone'&&data.args[3]!==false)await new Promise(resolve=>setTimeout(resolve,data.args[1]));
           if(worker===this.worker)worker.postMessage({type:'reply',id:data.id,value});
         }catch(error){if(worker===this.worker)worker.postMessage({type:'reply',id:data.id,error:error.message});}
         finally{inFlight=false;}

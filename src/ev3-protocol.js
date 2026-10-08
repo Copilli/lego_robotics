@@ -11,6 +11,14 @@ export function packet(counter, ops, globals=0) {
   const body=[counter & 255,(counter >> 8)&255,0,globals & 255,(globals >> 8)&3,...ops];
   return new Uint8Array([body.length & 255,body.length >> 8,...body]);
 }
+export function systemPacket(counter,ops){const body=[counter&255,(counter>>8)&255,1,...ops];return new Uint8Array([body.length&255,body.length>>8,...body]);}
+export const ev3String=value=>[0x84,...new TextEncoder().encode(value),0];
+export function brickAssetPath(asset,extension){if(!new RegExp(`^assets/[a-f0-9]{20}\\.${extension}$`).test(asset))throw new Error('Archivo local del ladrillo inválido.');return '../prjs/copilli/'+asset.slice(7);}
+export function imageFileOps(asset,x,y,clear){
+  const path=brickAssetPath(asset,'rgf');if(!Number.isInteger(x)||!Number.isInteger(y)||Math.abs(x)>178||Math.abs(y)>128)throw new Error('Coordenadas de pantalla fuera de rango.');
+  return [...(clear?[0x84,19,0,0,0]:[]),0x84,28,1,...integer(x),...integer(y),...ev3String(path),0x84,0];
+}
+export function soundFileOps(asset,volume,mode){const path=brickAssetPath(asset,'rsf');if(!Number.isInteger(volume)||volume<0||volume>100||![0,1,2].includes(mode))throw new Error('Parámetros de sonido inválidos.');return [0x94,mode===2?3:2,...integer(volume),...ev3String(path.slice(0,-4))];}
 export class ReplyParser {
   constructor(onReply){this.buffer=new Uint8Array();this.onReply=onReply;}
   push(chunk){
@@ -45,9 +53,10 @@ export function motorOps(port,speed,duration){
   if(!Number.isInteger(duration)||duration<1||duration>10000)throw new Error('Duración del motor: 1–10000 ms.');
   return [0xaf,0,1<<('ABCD'.indexOf(port)),...integer(speed),0,...integer(duration),0,1];
 }
-export function toneOps(frequency,duration){
+export function toneOps(frequency,duration,volume=30){
+  if(!Number.isInteger(volume)||volume<0||volume>100)throw new Error('Volumen: entero de 0 a 100.');
   if(!Number.isInteger(frequency)||frequency<250||frequency>10000||!Number.isInteger(duration)||duration<1||duration>5000)throw new Error('Sonido: 250–10000 Hz y 1–5000 ms.');
-  return [0x94,1,...integer(30),...integer(frequency),...integer(duration)];
+  return [0x94,1,...integer(volume),...integer(frequency),...integer(duration)];
 }
 export function sensorOps(port,kind){
   const modes={distance:[30,0],color:[29,2],reflection:[29,0],touch:[16,0],gyro:[32,0],infrared:[33,0]};

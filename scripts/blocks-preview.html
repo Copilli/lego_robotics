@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Captura de bloques</title>
+<style>html,body{margin:0;background:white}#preview{width:1800px;height:1200px}.blocklyMainBackground{stroke:none;fill:white}</style></head>
+<body><div id="preview"></div><script type="module">
+import {renderBlocksPreview} from '../src/blocks.js';
+let current;
+window.captureProgram=xml=>{current?.dispose();current=renderBlocksPreview(document.querySelector('#preview'),xml);return current.compile();};
+</script></body></html>
