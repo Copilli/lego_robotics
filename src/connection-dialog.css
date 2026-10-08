@@ -14,3 +14,4 @@
 .editor-grid>section>.run-actions #stop:hover{background:#db3048}
 .editor-grid>section>.run-actions img{width:26px;height:26px;display:block}
 @media(max-width:650px){.editor-grid>section>.run-actions{right:58px;bottom:14px;gap:8px}.editor-grid>section>.run-actions button{width:52px;height:52px;padding:15px}.editor-grid>section>.run-actions img{width:22px;height:22px}}
+#blocks-editor{isolation:isolate}
