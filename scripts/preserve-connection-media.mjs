@@ -3,7 +3,13 @@ import crypto from 'node:crypto';
 const source='.preservation/classroom/extracted/assets';
 const target='public/content/connection';
 fs.mkdirSync(target,{recursive:true});
+fs.mkdirSync('public/content/editor-audio',{recursive:true});
 const records=[];
+for(const name of ['click.wav','click.mp3','click.ogg','delete.wav','delete.mp3','delete.ogg']){
+  const bytes=fs.readFileSync(`${source}/webapp/renderer/static/media/${name}`);
+  fs.writeFileSync(`public/content/editor-audio/${name}`,bytes);
+  records.push({file:`../editor-audio/${name}`,source:`Classroom/assets/webapp/renderer/static/media/${name}`,bytes:bytes.length,sha256:crypto.createHash('sha256').update(bytes).digest('hex')});
+}
 for(const name of ['BT-Startup.webm','BT-Enable.webm','BT-Pair.webm','BT-WinChrome.webm','USB.webm']){
   const bytes=fs.readFileSync(`${source}/prepacked/videos/${name}`);
   fs.writeFileSync(`${target}/${name}`,bytes);

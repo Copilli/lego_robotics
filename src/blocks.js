@@ -50,6 +50,10 @@ export function registerBrickAssets(assets){
 export function createBlocks(container,{xml,onChange}){
   let paletteVisible=true;
   const workspace=Scratch.inject(container,{theme:createTheme(),toolbox,media:`${import.meta.env.BASE_URL}scratch-media/`,grid:{spacing:24,length:1,colour:'#dddddd',snap:false},scrollbars:true,trashcan:true,comments:true,sounds:false,zoom:{controls:true,wheel:true,startScale:0.8,maxScale:1.5,minScale:0.4,scaleSpeed:1.1}});
+  // Load only the two sounds shipped by Classroom; Blockly also requests a
+  // disconnect sound that Scratch does not ship (and would decode HTML).
+  workspace.options.hasSounds=true;
+  for(const name of ['click','delete'])workspace.getAudioManager().load([`${import.meta.env.BASE_URL}content/editor-audio/${name}.mp3`],name).catch(()=>{});
   // The flyout cache keys by block type, but our media entries have different
   // fields and file data. Recycling them leaves orphan blocks and wrong assets.
   workspace.getFlyout().setRecyclingEnabled(false);

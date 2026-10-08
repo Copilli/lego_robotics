@@ -2,6 +2,42 @@
   "application": "EV3 Classroom 1.5.3",
   "records": [
     {
+      "file": "../editor-audio/click.wav",
+      "source": "Classroom/assets/webapp/renderer/static/media/click.wav",
+      "bytes": 3190,
+      "sha256": "34bff46f4007f165827369caa16653c270e418bcb1f60f474c89d9e65830b63e"
+    },
+    {
+      "file": "../editor-audio/click.mp3",
+      "source": "Classroom/assets/webapp/renderer/static/media/click.mp3",
+      "bytes": 8128,
+      "sha256": "dda948dac7015a5e094cf5f24b57e7e5a2af71168b8a2038ba2a41eef85781ce"
+    },
+    {
+      "file": "../editor-audio/click.ogg",
+      "source": "Classroom/assets/webapp/renderer/static/media/click.ogg",
+      "bytes": 5446,
+      "sha256": "3a4fe50302b7c3209256abbb0d1b68cf34674dd311f18dd0eea1c545a667b8c9"
+    },
+    {
+      "file": "../editor-audio/delete.wav",
+      "source": "Classroom/assets/webapp/renderer/static/media/delete.wav",
+      "bytes": 11938,
+      "sha256": "26c23f763da1abf3dc5e1529424ca0bc524e98e027fc91f6e5ce3edd72eb604d"
+    },
+    {
+      "file": "../editor-audio/delete.mp3",
+      "source": "Classroom/assets/webapp/renderer/static/media/delete.mp3",
+      "bytes": 9796,
+      "sha256": "144fb5e6071c7140fc37390fbbf327d4f0b876a4aec5658a8880a59e000cfad7"
+    },
+    {
+      "file": "../editor-audio/delete.ogg",
+      "source": "Classroom/assets/webapp/renderer/static/media/delete.ogg",
+      "bytes": 8624,
+      "sha256": "a2f4ea57a0abe4441471c4557063d6e0e90fd71af707b15c0c91513e7f29583e"
+    },
+    {
       "file": "BT-Startup.webm",
       "source": "Classroom/assets/prepacked/videos/BT-Startup.webm",
       "bytes": 239544,
