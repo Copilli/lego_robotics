@@ -1,6 +1,16 @@
 # 10 — Browser and desktop connectivity
 
-**Status: UNTESTED.** No supported browser, desktop host, EV3 brick, or transport test was available. Browser socket or Bluetooth capability must not be assumed.
+**Estado actual (2026-10-08):** Bluetooth por Web Serial y USB por WebHID implementados en la aplicación. Probados con dispositivos simulados; falta validar ambos transportes con un EV3 físico. Las notas históricas siguientes corresponden a la investigación inicial.
+
+## Conexión USB implementada
+
+En Chrome o Edge de escritorio, abre la web en HTTPS o localhost. Cierra otras aplicaciones LEGO, enciende el EV3 con firmware original y conecta el cable al puerto mini-USB del ladrillo. Dentro del editor pulsa **conectar → CONECTAR MEDIANTE CABLE USB → Seleccionar EV3**. Autoriza el dispositivo en el selector del navegador. La aplicación confirma la conexión únicamente después de recibir una respuesta del EV3, sin mover motores durante esa comprobación.
+
+La implementación usa WebHID; no requiere instalar un servidor local ni sustituir el controlador USB. La disponibilidad depende del navegador y de que el sistema permita abrir el dispositivo. Consulta la [documentación de WebHID de Chrome](https://developer.chrome.com/docs/capabilities/hid). Si el navegador no expone WebHID, el modal explica la limitación y deshabilita la selección USB.
+
+Se verificaron los identificadores `0694:0005` contra el [controlador original de LEGO](https://github.com/mindboards/ev3sources/blob/master/lms2012/d_usbdev/Linuxmod_AM1808/d_usbdev.c). Sus [descriptores HID](https://github.com/mindboards/ev3sources/blob/master/lms2012/d_usbdev/Linuxmod_AM1808/computil.c) definen informes sin identificador, de 64 o 1024 bytes. La aplicación usa ID 0, rellena los informes de salida, recorta el relleno de entrada según la longitud EV3 y reutiliza los comandos y contadores existentes. La desconexión USB rechaza operaciones pendientes y termina el programa del navegador.
+
+Pruebas pendientes con hardware: detección en Windows, autorización, sonido inicial, motor A a velocidad baja, sensor conectado, transferencia de imágenes/sonidos y desconexión durante ejecución. No se ha confirmado el funcionamiento físico.
 
 Web Bluetooth is BLE-oriented; it is not a solution to the Classic Bluetooth RFCOMM path used by the cited EV3 implementation. Consult the [MDN Web Bluetooth API reference](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API) and verify its support on each exact target browser. The page could not be fetched here, and iPad Safari support is UNKNOWN.
 

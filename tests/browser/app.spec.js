@@ -24,7 +24,7 @@ test('Classroom sessions open in the editor with construction access',async({pag
  await page.goto('');await page.locator('[data-view="units"]').click();await page.locator('[data-unit]').first().click();await page.locator('[data-activity]').first().click();
  await expect(page.locator('.classroom-guide')).toBeVisible();await expect(page.locator('.tutorial-count')).toContainText('01');
  await page.getByRole('button',{name:'Paso siguiente',exact:true}).click();await page.getByRole('button',{name:'CONSTRUIR',exact:true}).click();
- await expect(page.locator('.manual-viewer video')).toBeVisible();await page.getByRole('button',{name:'Volver al tutorial',exact:true}).click();await expect(page.locator('.tutorial-count')).toContainText('02');
+ await expect(page.locator('.manual-viewer img')).toBeVisible();await expect(page.locator('.manual-viewer video')).toHaveCount(0);await page.getByRole('button',{name:'Volver al tutorial',exact:true}).click();await expect(page.locator('.tutorial-count')).toContainText('02');
 });
 test('production base and mobile layout',async({page})=>{
   await page.setViewportSize({width:390,height:844});await page.goto('');await expect(page.getByRole('heading',{name:/Qué vas a crear/})).toBeVisible();

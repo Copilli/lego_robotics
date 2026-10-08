@@ -10,15 +10,15 @@ export function createConnectionDialog({connect,disconnect,isConnected,onError})
   const files=['BT-Startup.webm','BT-Enable.webm','BT-Pair.webm'];
   function showStep(index){step=index;dialog.querySelectorAll('[data-connection-step]').forEach(b=>{const active=Number(b.dataset.connectionStep)===step;b.classList.toggle('active',active);b.setAttribute('aria-current',active?'step':'false');});video.loop=step===2||usb;video.src=base+(usb?'USB.webm':files[step]);video.play().catch(()=>{$('#connection-help').textContent='Pulsa uno de los pasos para reproducir la animación.';});}
   function refresh(){
-    const support=connectionSupport(),connected=isConnected();
-    $('#connection-select').hidden=connected||usb;
+    const support=connectionSupport(globalThis,usb?'usb':'bluetooth'),connected=isConnected();
+    $('#connection-select').hidden=connected;
     $('#connection-select').disabled=busy||!support.supported;
     $('#connection-disconnect').hidden=!connected;
     $('#connection-disconnect').disabled=busy;
     $('#connection-method').disabled=busy;
     $('.connection-spinner').hidden=!busy;
     $('#connection-state').textContent=busy?'Buscando…':connected?'Ladrillo EV3 conectado':usb?'Conexión USB':'Prepara tu Ladrillo EV3';
-    $('#connection-help').textContent=usb?'La conexión USB directa del EV3 aún no está implementada en esta web. Puedes conectarlo mediante Bluetooth.':!support.supported?support.message:'Empareja el EV3 en Windows. Después selecciona aquí su puerto Bluetooth de salida.';
+    $('#connection-help').textContent=usb||!support.supported?support.message:'Empareja el EV3 en Windows. Después selecciona aquí su puerto Bluetooth de salida.';
   }
   video.addEventListener('ended',()=>{if(!usb&&step<2)showStep(step+1);});
   video.addEventListener('error',()=>{$('#connection-help').textContent='No se pudo reproducir la animación local. Puedes seguir los tres pasos y seleccionar tu EV3.';});
@@ -28,9 +28,9 @@ export function createConnectionDialog({connect,disconnect,isConnected,onError})
   $('#connection-method').onclick=()=>{usb=!usb;dialog.classList.toggle('usb',usb);$('#connection-title').textContent=usb?'Conectar mediante cable USB':'Conectar mediante Bluetooth';$('#connection-method').textContent=usb?'CONECTAR MEDIANTE BLUETOOTH':'CONECTAR MEDIANTE CABLE USB';showStep(0);refresh();};
   $('#connection-select').onclick=async()=>{
     if(busy)return;busy=true;refresh();
-    try{await connect();if(isConnected())dialog.close();}
+    try{await connect(usb?'usb':'bluetooth');if(isConnected())dialog.close();}
     catch(error){onError(error);$('#connection-state').textContent=error.name==='NotFoundError'?'Selección cancelada':error.message;}
-    finally{busy=false;$('.connection-spinner').hidden=true;$('#connection-select').disabled=!connectionSupport().supported;$('#connection-method').disabled=false;$('#connection-disconnect').disabled=false;if(!dialog.open)video.pause();}
+    finally{busy=false;$('.connection-spinner').hidden=true;$('#connection-select').disabled=!connectionSupport(globalThis,usb?'usb':'bluetooth').supported;$('#connection-method').disabled=false;$('#connection-disconnect').disabled=false;if(!dialog.open)video.pause();}
   };
   $('#connection-disconnect').onclick=async()=>{if(busy)return;busy=true;refresh();try{await disconnect();}catch(error){onError(error);}finally{busy=false;refresh();}};
   return {open(){if(dialog.open){refresh();return;}usb=false;dialog.classList.remove('usb');$('#connection-title').textContent='Conectar mediante Bluetooth';$('#connection-method').textContent='CONECTAR MEDIANTE CABLE USB';refresh();dialog.showModal();showStep(0);},refresh(){if(dialog.open)refresh();}};

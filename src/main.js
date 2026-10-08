@@ -7,6 +7,7 @@ import { openSearchPanel } from '@codemirror/search';
 import { starter, snippets, loadProjects, saveProjects } from './projects.js';
 import { lessons } from './lessons.js';
 import { LegoBluetooth } from './ev3-transport.js';
+import {LegoUsb} from './ev3-usb.js';
 import { Runtime } from './runtime.js';
 import {connectionSupport} from './connection-support.js';
 import {loadLocalMedia, localMediaUrl, chooseLocalLessonVideo} from './local-media.js';
@@ -25,6 +26,17 @@ let projects = loadProjects(localStorage), active = projects[0]?.id, view = 'cla
 let completed;
 try { completed = JSON.parse(localStorage.getItem('copilli-lego-progress') || '[]'); completed = Array.isArray(completed) ? [...new Set(completed)].filter(id=>lessons.some(l=>l.id===id)) : []; } catch { completed = []; }
 let editor, blockStudio, saveTimer;
+let editorExpanded=false;
+function setEditorExpanded(expanded){
+  editorExpanded=expanded;
+  document.body.classList.toggle('editor-expanded',expanded);
+  const button=$('#expand-editor');
+  if(button){button.textContent=expanded?'Restaurar editor':'Ampliar editor';button.setAttribute('aria-pressed',String(expanded));}
+  requestAnimationFrame(()=>{blockStudio?.workspace.resize();editor?.requestMeasure();});
+}
+document.addEventListener('keydown',event=>{
+  if(event.key==='Escape'&&editorExpanded&&!document.querySelector('dialog[open]'))setEditorExpanded(false);
+});
 let simulationEnabled=false;
 let localMedia=[],libraryFilter='';
 const theme = new Compartment(), wrap = new Compartment();
@@ -40,7 +52,10 @@ function save() {
 }
 function output(text) { const console = $('#console'); console.textContent = (console.textContent + text).slice(-30000); console.scrollTop = console.scrollHeight; }
 let connection = 'disconnected', hubName = '';
-const bluetooth = new LegoBluetooth({output, status:(state, name) => {connection = state; hubName = name || ''; if(state==='disconnected'&&runtime.transport===bluetooth) runtime.halt(); updateConnection();}});
+const hardwareStatus=(state,name)=>{connection=state;hubName=name||'';if(state==='disconnected'&&runtime.transport===hardware)runtime.halt();updateConnection();};
+const bluetooth = new LegoBluetooth({output,status:hardwareStatus});
+const usb=new LegoUsb({output,status:hardwareStatus});
+let hardware=bluetooth;
 const runtime = new Runtime(bluetooth,output);
 const simulator = new SimulatedEv3(output);
 function updateConnection() { $('#connect').textContent = connection === 'connected' ? `Desconectar ${hubName}` : 'Conectar hub'; $('#hub-status').textContent = connection === 'connected' ? `${hubName} conectado` : 'Hub sin conexión'; $('#hub-status').classList.toggle('online', connection === 'connected');const button=$('#editor-connect');if(button){button.classList.toggle('online',connection==='connected');button.setAttribute('aria-label',connection==='connected'?'Conexión EV3 conectado':'Conectar EV3');button.querySelector('span').textContent=connection==='connected'?'conectado':'conectar';}connectionDialog.refresh(); }
@@ -51,7 +66,7 @@ $('.brand').onclick = e => {e.preventDefault(); save(); view='class'; render();}
 $('.sidebar').innerHTML='<button data-view="class">Inicio</button><button data-view="start">Iniciar</button><button data-view="units">Unidades</button><button data-view="build">Construir</button><button data-view="projects">Mis proyectos</button>';
 for(const [view,icon] of Object.entries({class:'home',start:'start',units:'units',build:'build',projects:'projects'})){const button=document.querySelector('[data-view="'+view+'"]');button.insertAdjacentHTML('afterbegin','<img alt="" src="'+import.meta.env.BASE_URL+'content/icons/'+icon+'.svg">');}
 document.querySelectorAll('[data-view]').forEach(button => button.onclick = () => {save(); view=button.dataset.view; render();});
-const connectionDialog=createConnectionDialog({connect:async()=>{await bluetooth.connect();notify('Hub conectado. Puedes ejecutar tu programa.');},disconnect:async()=>{await runtime.stop();await bluetooth.disconnect();},isConnected:()=>connection==='connected',onError:error=>notify(error.name==='NotFoundError'?'Selección cancelada. Puedes volver a conectar.':error.message)});
+const connectionDialog=createConnectionDialog({connect:async method=>{hardware=method==='usb'?usb:bluetooth;await hardware.connect();notify('Hub conectado. Puedes ejecutar tu programa.');},disconnect:async()=>{await runtime.stop();await hardware.disconnect();},isConnected:()=>connection==='connected',onError:error=>notify(error.name==='NotFoundError'?'Selección cancelada. Puedes volver a conectar.':error.message)});
 $('#connect').onclick = () => connectionDialog.open();
 $('#clear-console').onclick = () => {$('#console').textContent = '';};
 function cards() { return lessons.filter(l => `${l.title} ${l.label}`.toLowerCase().includes(filter.toLowerCase())).map((l,i) => `<button class="lesson-card" data-lesson="${l.id}"><div class="card-art ${l.color}"><span class="lesson-num">0${lessons.indexOf(l)+1}</span><span class="robot-art" aria-hidden="true">▦</span><span class="pill">${l.label}</span></div><div class="card-body"><small>${l.time} · Video + práctica</small><h3>${l.title}</h3><p>${l.summary}</p><div class="card-footer">${completed.includes(l.id)?'✓ Completado':'Abrir tutorial'} <span>→</span></div></div></button>`).join('') || '<p>No se encontraron tutoriales.</p>'; }
@@ -62,6 +77,8 @@ function render() {
   $('#console-panel').hidden = view !== 'editor';
   const container = $('#content');
   document.body.classList.toggle('editor-fullscreen',view==='editor');
+  if(view!=='editor')editorExpanded=false;
+  document.body.classList.toggle('editor-expanded',editorExpanded);
   if(curriculumView(view,container,{navigate:v=>{save();view=v;render();},newProject,projects,openProject:id=>{active=id;view='editor';render();}}))return;
   if (view === 'class') container.innerHTML = `<section class="hero"><div><p class="eyebrow">COPILLI · AULA DE ROBÓTICA</p><h1>Las grandes ideas<br>empiezan con una pieza.</h1><p>Tu espacio para construir, experimentar y darle vida a tus robots LEGO.</p><button id="start-project" class="white-button">+ Crear proyecto</button></div><div class="hero-robot" aria-hidden="true"><div class="robot-head"><i></i><i></i><b>• • •<br>• • •<br>• • •</b></div><div class="robot-wheels"><span></span><span></span></div><div class="orbit">&lt; / &gt;</div></div></section><div class="class-tabs"><strong>Tablón</strong><button data-go-tutorials>Trabajo de clase</button></div><div class="intro-row"><div><p class="eyebrow">TU SIGUIENTE PASO</p><h2>Construye. Programa. Descubre.</h2><p>Cinco tutoriales para comenzar, a tu propio ritmo.</p></div><span class="progress">${completed.length} / ${lessons.length} completados</span></div><div class="cards">${cards()}</div><section class="announcement"><span class="announcement-icon">i</span><div><h3>Antes de conectar tu robot</h3><p>Programa con bloques o JavaScript para controlar EV3. Empareja el EV3 por Bluetooth en tu sistema y selecciona su puerto serie desde Chrome o Edge de escritorio en HTTPS. El progreso y los proyectos se guardan en este navegador.</p><a href="https://education.lego.com/en-us/product-resources/mindstorms-ev3/" target="_blank" rel="noopener">Recursos y guía de EV3 ↗</a></div></section>`;
   if(view==='start')container.innerHTML=`<div class="page-heading"><p class="eyebrow">INICIAR</p><h1>Primeros pasos</h1><p>Elige una actividad y aprende dentro del mismo editor.</p></div><section class="start-course"><div><p class="eyebrow">01 · PROGRAMA POR PRIMERA VEZ</p><h2>Mi primer programa</h2><p>Una guía junto a tus bloques: conexión, sonido, motor y sensor.</p></div><button id="begin-guide" class="primary">Abrir guía</button></section><div class="intro-row"><div><h2>Explora motores y sensores</h2><p>Videos y prácticas ordenados por lo que quieres aprender.</p></div><span class="progress">${completed.length} / ${lessons.length} completados</span></div><div class="cards">${cards()}</div>`;
@@ -96,13 +113,19 @@ function render() {
     const p=current();
     const inBlocks=p.editorMode==='blocks';
     container.innerHTML = `<div class="editor-heading"><div><p class="eyebrow">TALLER DE PROGRAMACIÓN</p><label>Proyecto <input id="project-name" value="${escape(p.name)}" maxlength="80"></label><small id="saved">Guardado en este navegador</small></div><div class="run-actions"><button id="run" class="primary">▶ Ejecutar</button><button id="stop" class="danger">■ Detener</button></div></div><div class="editor-modes"><button id="mode-blocks" aria-pressed="${inBlocks}">Bloques</button><button id="mode-js" aria-pressed="${!inBlocks}">JavaScript</button><label><input id="simulation" type="checkbox" ${simulationEnabled?'checked':''}> Simulador (sin robot)</label></div><div class="editor-toolbar"><button id="save">Guardar</button><button id="undo" title="Ctrl+Z">Deshacer</button><button id="redo">Rehacer</button><button id="search-code">Buscar / reemplazar</button><button id="import">Importar</button><button id="export">Exportar .js</button><button id="backup">Respaldo .json</button><button id="duplicate">Duplicar</button><button id="theme">Tema</button><label>Tamaño <select id="font"><option>14</option><option selected>16</option><option>18</option><option>20</option></select></label><label><input id="wrap" type="checkbox" checked> Ajustar líneas</label></div><div class="editor-grid"><section><div class="file-tab">${escape(p.name)}.js <span>JavaScript · EV3</span></div><div id="${inBlocks?'blocks-editor':'code-editor'}"></div></section><aside class="examples"><p class="eyebrow">CAJA DE HERRAMIENTAS</p><h3>Agrega un ejemplo</h3>${Object.keys(snippets).map(k=>`<button data-snippet="${k}">+ ${k}</button>`).join('')}<hr><h3>Conexión real</h3><p>Firmware EV3 original y puerto Bluetooth serie. El programa se ejecuta en el navegador y envía comandos al robot. iPad no admite esta conexión.</p><a href="https://education.lego.com/en-us/product-resources/mindstorms-ev3/" target="_blank" rel="noopener">Preparar mi EV3 ↗</a><p>Comprueba los puertos y despeja el área antes de ejecutar motores.</p></aside></div>`;
+    const runActions=$('.run-actions');runActions.setAttribute('role','group');runActions.setAttribute('aria-label','Controles del programa');
+    $('.editor-grid>section').append(runActions);
+    for(const [id,label,icon] of [['run','Ejecutar','play'],['stop','Detener','stop']]){
+      const button=$('#'+id);button.setAttribute('aria-label',label);button.title=label;
+      button.innerHTML=`<img alt="" src="${import.meta.env.BASE_URL}content/connection/${icon}.svg">`;
+    }
     if(!inBlocks) editor=new EditorView({doc:p.code,extensions:[basicSetup,javascript(),theme.of(dark?oneDark:[]),wrap.of(EditorView.lineWrapping),EditorView.contentAttributes.of({'aria-label':'Código JavaScript'}),EditorView.updateListener.of(update=>{if(update.docChanged){$('#saved').textContent='Guardando…';clearTimeout(saveTimer);saveTimer=setTimeout(save,400);}})],parent:$('#code-editor')});
     $('#project-name').oninput=e=>{p.name=e.target.value.trim()||'Mi robot';persist();};
     $('#save').onclick=save; $('#undo').onclick=()=>blockStudio?blockStudio.undo():undo(editor); $('#redo').onclick=()=>blockStudio?blockStudio.redo():redo(editor); $('#search-code').onclick=()=>openSearchPanel(editor);
     $('#theme').onclick=()=>{dark=!dark;editor.dispatch({effects:theme.reconfigure(dark?oneDark:[])});};
     $('#font').onchange=e=>$('#code-editor').style.fontSize=`${e.target.value}px`;
     $('#wrap').onchange=e=>editor.dispatch({effects:wrap.reconfigure(e.target.checked?EditorView.lineWrapping:[])});
-    $('#run').onclick=()=>action(async()=>{save();$('#run').disabled=true;try{if(p.editorMode==='blocks'&&!blockStudio)throw new Error('No se pudo abrir el programa de bloques. Revisa el respaldo importado.');if(blockStudio)p.code=blockStudio.compile();runtime.transport=simulationEnabled?simulator:bluetooth;await runtime.run(p.code);}finally{$('#run') && ($('#run').disabled=false);}});
+    $('#run').onclick=()=>action(async()=>{save();$('#run').disabled=true;try{if(p.editorMode==='blocks'&&!blockStudio)throw new Error('No se pudo abrir el programa de bloques. Revisa el respaldo importado.');if(blockStudio)p.code=blockStudio.compile();runtime.transport=simulationEnabled?simulator:hardware;await runtime.run(p.code);}finally{$('#run') && ($('#run').disabled=false);}});
     $('#stop').onclick=()=>action(()=>runtime.stop());
     $('#export').onclick=()=>action(async()=>{if(blockStudio)p.code=blockStudio.compile();save();download(`${p.name.replace(/[^\p{L}\p{N}_-]/gu,'_')}.js`,p.code,'text/javascript');});
     $('#backup').onclick=()=>{save();download('copilli-lego-project.json',JSON.stringify(p,null,2),'application/json');};
@@ -124,6 +147,15 @@ function render() {
       $('.examples').innerHTML='<p class="eyebrow">EMPEZAR</p><h3>Ejemplos editables</h3>'+[['hello','Mi primer programa'],['motor','Motor A'],['distance','Distancia'],['color','Color'],['touch','Contacto'],['gyro','Giroscopio']].map(([id,label])=>'<button data-example="'+id+'">'+label+'</button>').join('')+'<p>Los ejemplos reemplazan los bloques actuales. Guarda una copia para conservar tu programa.</p>';
       document.querySelectorAll('[data-example]').forEach(b=>b.onclick=()=>{if(!blockStudio)return;blockStudio.loadExample(b.dataset.example);save();});
     }
+    const expandButton=document.createElement('button');expandButton.id='expand-editor';
+    expandButton.onclick=()=>setEditorExpanded(!editorExpanded);
+    $('.editor-toolbar').prepend(expandButton);
+    if(blockStudio){
+      const fitButton=document.createElement('button');fitButton.id='fit-program';fitButton.textContent='Ajustar programa';
+      fitButton.onclick=()=>blockStudio.workspace.zoomToFit();
+      expandButton.after(fitButton);
+    }
+    setEditorExpanded(editorExpanded);
     mountGuide(p);
     mountCurriculumGuide(p,{studio:blockStudio,save,render,navigate:v=>{save();view=v;render();},notify});
     const connectButton=document.createElement('button');connectButton.id='editor-connect';connectButton.innerHTML=`<img alt="" src="${import.meta.env.BASE_URL}content/connection/ev3.svg"><span>conectar</span>`;connectButton.onclick=()=>connectionDialog.open();$('.editor-grid>section').append(connectButton);updateConnection();
@@ -155,7 +187,7 @@ function mountGuide(p){
   $('#guide-example')?.addEventListener('click',()=>{if(blockStudio){blockStudio.loadExample(step[2]);save();}else notify('Abre la pestaña Bloques para cargar este ejemplo.');});
   $('#guide-prev').onclick=()=>{save();p.tutorialStep=index-1;persist();render();};
   $('#guide-next').onclick=()=>{
-    if(index===0&&!bluetooth.connected&&!simulationEnabled){notify('Conecta el EV3 o activa el simulador antes de continuar.');return;}
+    if(index===0&&!hardware.connected&&!simulationEnabled){notify('Conecta el EV3 o activa el simulador antes de continuar.');return;}
     save();
     if(index===3){if(!completed.includes('start'))completed.push('start');try{localStorage.setItem('copilli-lego-progress',JSON.stringify(completed));}catch{notify('No se pudo guardar el progreso.');}delete p.tutorialStep;persist();render();notify('Tutorial completado. Sigue experimentando con tus bloques.');}
     else{p.tutorialStep=index+1;persist();render();}

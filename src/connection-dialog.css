@@ -6,3 +6,11 @@
 @media(prefers-reduced-motion:reduce){.connection-spinner{animation:none}}
 
 .connection-dialog-top #connection-close img{width:38px;height:38px;display:block;opacity:.55}@media(max-width:750px){.connection-dialog-top #connection-close img{width:30px;height:30px}}
+.editor-grid>section>.run-actions{position:absolute;right:84px;bottom:18px;z-index:4;gap:12px}
+.editor-grid>section>.run-actions button{width:64px;height:64px;border-radius:50%;padding:19px;border:0;display:grid;place-items:center;box-shadow:0 3px 9px #0002}
+.editor-grid>section>.run-actions #run{background:#5dbbf4;order:2}
+.editor-grid>section>.run-actions #run:hover{background:#399fdf}
+.editor-grid>section>.run-actions #stop{background:#f04d62}
+.editor-grid>section>.run-actions #stop:hover{background:#db3048}
+.editor-grid>section>.run-actions img{width:26px;height:26px;display:block}
+@media(max-width:650px){.editor-grid>section>.run-actions{right:58px;bottom:14px;gap:8px}.editor-grid>section>.run-actions button{width:52px;height:52px;padding:15px}.editor-grid>section>.run-actions img{width:22px;height:22px}}

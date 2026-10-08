@@ -13,6 +13,7 @@ const image=(url,alt)=>url?`<img src="${base+url}" alt="${esc(alt)}" loading="la
 function practiceKind(step){const content=step.title+' '+step.description;if(/color/i.test(content))return 'color';if(/contacto|táctil|touch/i.test(content))return 'touch';if(/girosensor|giroscopio|gyro/i.test(content))return 'gyro';if(/sensor|distancia|ultrasónico/i.test(content))return 'distance';if(/motor|motriz|movimiento/i.test(content))return 'motor';return 'hello';}
 export async function loadCurriculum(){const r=await fetch(base+'catalog.json');if(!r.ok)throw new Error('Biblioteca no disponible');catalog=await r.json();registerBrickAssets(catalog.brickAssets||[]);return catalog;}
 export function curriculumView(view,container,{navigate,newProject,projects,openProject}){
+  container.onkeydown=null;
   const card=(a,index)=>`<button class="curriculum-card" data-activity="${esc(a.id)}">${image(a.image,a.title)}<div class="curriculum-card-copy">${index!==undefined?`<span class="intro-number">${index+1}</span>`:''}<div><h2>${esc(text(a.title))}</h2><p>${esc(text(a.summary))}</p></div></div></button>`;
   const launch=id=>{const a=catalog.activities.find(a=>a.id===id);if(a)newProject(undefined,text(a.title),{activityId:id,activityStep:0,blocksXML:'<xml xmlns="https://developers.google.com/blockly/xml"></xml>'});};
   if(view==='start')container.innerHTML=`<h1 class="classroom-title">Introducción</h1><div class="introduction-cards">${catalog.activities.filter(a=>a.unitId==='introduction').map(card).join('')}</div>`;
@@ -26,9 +27,14 @@ export function curriculumView(view,container,{navigate,newProject,projects,open
   else if(view==='build')container.innerHTML=`<h1 class="classroom-title">Construir</h1><p>Instrucciones conservadas en este sitio. Elige tu modelo.</p><button data-destination="library">Videos locales</button><div class="unit-cards">${catalog.manuals.map(m=>`<button class="curriculum-card" data-manual="${m.id}">${image(m.image||m.images?.[0],m.title)}<div class="curriculum-card-copy"><div><h2>${esc(text(m.title))}</h2><p>${m.stepCount||m.images?.length||''} pasos</p></div></div></button>`).join('')}</div>`;
   else if(view==='manual'){
     const m=catalog.manuals.find(m=>m.id===selectedManual);if(!m){navigate('build');return true;}
-    container.innerHTML=`<div class="manual-heading"><button id="manual-back">${returnToEditor?'Volver al tutorial':'Volver a Construir'}</button><h1>${esc(text(m.title))}</h1></div><div class="manual-viewer">${m.video?`<video controls preload="metadata" src="${base+m.video}" aria-label="Instrucciones de ${esc(text(m.title))}"></video>`:image(m.images?.[manualPage],`Paso ${manualPage+1}`)}</div>${m.images?`<div class="manual-navigation"><button id="manual-prev" ${manualPage===0?'disabled':''}>Anterior</button><span>${manualPage+1} / ${m.images.length}</span><button id="manual-next" ${manualPage===m.images.length-1?'disabled':''}>Siguiente</button></div>`:`<p class="manual-caption">${m.stepCount} pasos de construcción. Usa los controles del video para pausar y revisar cada paso.</p>`}`;
+    container.innerHTML=`<div class="manual-heading"><button id="manual-back">${returnToEditor?'Volver al tutorial':'Volver a Construir'}</button><h1>${esc(text(m.title))}</h1></div><div class="manual-viewer" tabindex="0" aria-label="Pasos de construcción. Usa las flechas izquierda y derecha.">${image(m.images?.[manualPage],`Paso ${manualPage+1} de ${m.images?.length||0}: ${text(m.title)}`)}</div>${m.images?.length?`<div class="manual-navigation"><button id="manual-prev" aria-label="Paso de construcción anterior" ${manualPage===0?'disabled':''}>‹ Anterior</button><span aria-live="polite">${manualPage+1} / ${m.images.length}</span><button id="manual-next" aria-label="Paso de construcción siguiente" ${manualPage===m.images.length-1?'disabled':''}>Siguiente ›</button></div>`:'<p>No se encontraron las páginas de este manual.</p>'}`;
     container.querySelector('#manual-back').onclick=()=>navigate(returnToEditor?'editor':'build');
-    container.querySelector('#manual-prev')?.addEventListener('click',()=>{manualPage--;navigate('manual');});container.querySelector('#manual-next')?.addEventListener('click',()=>{manualPage++;navigate('manual');});
+    const move=direction=>{const next=manualPage+direction;if(next<0||next>=(m.images?.length||0))return;manualPage=next;navigate('manual');document.querySelector('.manual-viewer')?.focus({preventScroll:true});};
+    container.querySelector('#manual-prev')?.addEventListener('click',()=>move(-1));container.querySelector('#manual-next')?.addEventListener('click',()=>move(1));
+    container.onkeydown=event=>{if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();move(event.key==='ArrowLeft'?-1:1);}};
+    const viewer=container.querySelector('.manual-viewer');let touch;
+    viewer.addEventListener('touchstart',event=>{touch=event.touches[0];},{passive:true});
+    viewer.addEventListener('touchend',event=>{if(!touch)return;const end=event.changedTouches[0],dx=end.clientX-touch.clientX,dy=end.clientY-touch.clientY;touch=null;if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy))move(dx<0?1:-1);},{passive:true});
   }else return false;
   container.querySelectorAll('[data-activity]').forEach(b=>b.onclick=()=>launch(b.dataset.activity));
   container.querySelectorAll('[data-unit]').forEach(b=>b.onclick=()=>{selectedUnit=b.dataset.unit;navigate('unit');});
@@ -62,7 +68,7 @@ export function mountCurriculumGuide(p,{studio,save,render,navigate,notify}){
   if(sourcePrograms.length&&programStep){
     const button=aside.querySelector('#tutorial-example'),caption=aside.querySelector('.example-caption');
     button.hidden=!readyPrograms.length;caption.hidden=false;
-    caption.textContent=readyPrograms.length?'Estos bloques conservan los puertos, valores y unidades del programa original.':'Este ejemplo todavía requiere operaciones que el editor no admite. La carga estará disponible cuando se complete su conversión.';
+    caption.textContent=readyPrograms.length?(a.webEditorAdaptation?'Actividad adaptada al editor web. Revisa los puertos y valores antes de ejecutar.':'Estos bloques conservan los puertos, valores y unidades del programa original.'):'Este ejemplo todavía requiere operaciones que el editor no admite. La carga estará disponible cuando se complete su conversión.';
     button.textContent='Cargar programa del tutorial';
     if(readyPrograms.length){
       const select=document.createElement('select');select.id='tutorial-program';select.setAttribute('aria-label','Programa del tutorial');

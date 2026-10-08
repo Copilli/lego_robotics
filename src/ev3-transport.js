@@ -9,13 +9,14 @@ export class LegoBluetooth {
     try{
       await this.port.open({baudRate:115200});this.closing=false;
       this.writer=this.port.writable.getWriter();this.reader=this.port.readable.getReader();this.connected=true;
-      this.parser=new ReplyParser(reply=>{const pending=this.pending.get(reply.counter);if(!pending)return;this.pending.delete(reply.counter);clearTimeout(pending.timer);(pending.system?[3,5].includes(reply.type):reply.type===2)?pending.resolve(reply.data):pending.reject(new Error(`EV3 rechazó el comando (0x${reply.type.toString(16)}).`));});
+      this.initializeParser();
       this.readTask=this.readLoop();
       // A tone-stop reply proves this serial device speaks EV3 without moving motors.
       await this.command([0x94,0]);
       this.status('connected','EV3');this.output('EV3 conectado por puerto serie Bluetooth.\n');
     }catch(error){await this.disconnect();throw error;}
   }
+  initializeParser(){this.parser=new ReplyParser(reply=>{const pending=this.pending.get(reply.counter);if(!pending)return;this.pending.delete(reply.counter);clearTimeout(pending.timer);(pending.system?[3,5].includes(reply.type):reply.type===2)?pending.resolve(reply.data):pending.reject(new Error(`EV3 rechazó el comando (0x${reply.type.toString(16)}).`));});}
   async readLoop(){
     try{while(!this.closing){const {value,done}=await this.reader.read();if(done)break;if(value)this.parser.push(value);}}
     catch(error){if(!this.closing)this.output(`\nError de conexión: ${error.message}\n`);}
@@ -26,7 +27,7 @@ export class LegoBluetooth {
     const operation=this.queue.then(async()=>{
       if(!this.connected)throw new Error('Conecta el EV3 primero.');
       this.counter=(this.counter+1)&65535;const counter=this.counter;
-      const response=new Promise((resolve,reject)=>{const timer=setTimeout(()=>{this.pending.delete(counter);reject(new Error('EV3 no respondió en 4 segundos. Comprueba el puerto Bluetooth.'));},4000);this.pending.set(counter,{resolve,reject,timer,system});});
+      const response=new Promise((resolve,reject)=>{const timer=setTimeout(()=>{this.pending.delete(counter);reject(new Error('EV3 no respondió en 4 segundos. Comprueba la conexión y cierra otras aplicaciones LEGO.'));},4000);this.pending.set(counter,{resolve,reject,timer,system});});
       // Observe rejection immediately, including when the serial write itself fails.
       response.catch(()=>{});
       try{await this.writer.write(system?systemPacket(counter,ops):packet(counter,ops,globals));return await response;}
@@ -59,8 +60,9 @@ export class LegoBluetooth {
     if(begin.length!==3||begin[0]!==0x92||begin[1]!==0)throw new Error('EV3 no aceptó el archivo del tutorial.');
     const handle=begin[2];
     try{
-      for(let offset=0;offset<size;offset+=480){
-        active();const end=Math.min(size,offset+480),reply=await this.command([0x93,handle,...bytes.slice(offset,end)],0,true);
+      const chunkSize=this.transferChunkSize||480;
+      for(let offset=0;offset<size;offset+=chunkSize){
+        active();const end=Math.min(size,offset+chunkSize),reply=await this.command([0x93,handle,...bytes.slice(offset,end)],0,true);
         if(reply.length<2||reply[0]!==0x93||(reply[1]!==0&&!(end===size&&reply[1]===8)))throw new Error('EV3 rechazó una parte del archivo del tutorial.');
       }
       active();this.assets.add(asset);

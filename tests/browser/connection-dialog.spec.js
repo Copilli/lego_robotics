@@ -18,7 +18,7 @@ test('editor connection modal plays local Classroom steps and waits for a real s
   await page.locator('#connection-select').click();await expect(page.locator('#connection-state')).toHaveText('Buscando…');await expect(page.locator('.connection-spinner')).toBeVisible();
   expect(await page.evaluate(()=>window.portRequests)).toBe(1);await page.evaluate(()=>window.cancelPort());
   await expect(page.locator('#connection-state')).toHaveText('Selección cancelada');await expect(page.locator('.connection-spinner')).toBeHidden();await expect(page.locator('#connection-select')).toBeEnabled();
-  await page.locator('#connection-method').click();await expect(page.locator('#connection-animation')).toHaveAttribute('src',/USB\.webm$/);await expect(page.locator('#connection-select')).toBeHidden();await expect(page.locator('#connection-help')).toContainText('aún no está implementada');
+  await page.locator('#connection-method').click();await expect(page.locator('#connection-animation')).toHaveAttribute('src',/USB\.webm$/);await expect(page.locator('#connection-select')).toBeVisible();await expect(page.locator('#connection-help')).toContainText('USB');
   await page.locator('#connection-method').click();await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).toBeHidden();
   await expect(page.locator('#editor-connect')).toBeFocused();expect(errors).toEqual([]);
 });

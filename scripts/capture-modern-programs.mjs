@@ -42,6 +42,12 @@ try{
       captures++;
     }
   }
+  for(const activity of catalog.activities){
+    if(activity.modernThumbnailProgram)activity.image=activity.modernPrograms.find(p=>p.name===activity.modernThumbnailProgram).image;
+  }
+  for(const unit of catalog.units){
+    if(unit.modernThumbnailActivity)unit.image=catalog.activities.find(a=>a.id===unit.modernThumbnailActivity).image;
+  }
   await fs.writeFile(catalogFile,JSON.stringify(catalog,null,2)+'\n');
   const images=new Set(catalog.activities.flatMap(activity=>[...(activity.modernPrograms||[]).map(p=>p.image),...activity.steps.map(step=>step.image)]).filter(path=>path?.startsWith('programs/')));
   const directory=new URL('public/content/programs/',root);

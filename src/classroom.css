@@ -21,3 +21,12 @@ main{max-width:1600px;padding:52px 48px 70px;margin:0 auto}.classroom-title{font
 .modern-program-preview img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;cursor:zoom-in}
 #tutorial-program{width:100%;max-width:100%;padding:10px;font:inherit;border:1px solid #ddd;border-radius:8px}
 .classroom-guide.expanded>img{height:auto;max-height:none;object-fit:contain}
+.manual-viewer{touch-action:pan-y}.manual-viewer:focus-visible{outline:3px solid #4b91fa;outline-offset:3px}.manual-navigation{gap:12px;flex-wrap:wrap}
+.editor-expanded{overflow:hidden}
+.editor-expanded #content{position:fixed;inset:0;z-index:20;background:white;padding:10px;display:flex;flex-direction:column;overflow:hidden}
+.editor-expanded .editor-heading,.editor-expanded .editor-modes,.editor-expanded .editor-toolbar{flex-shrink:0}
+.editor-expanded .editor-grid,.editor-expanded .editor-grid:has(#blocks-editor){grid-template-columns:minmax(0,1fr);flex:1;min-height:0}
+.editor-expanded .editor-grid>section{min-height:0;position:relative;overflow:hidden}
+.editor-expanded .editor-grid>.examples{display:none}
+.editor-expanded #blocks-editor,.editor-expanded #code-editor,.editor-expanded .cm-editor{height:100%;min-height:0}
+#expand-editor[aria-pressed=true]{background:#e8f0fe;color:#1967d2;border-color:#1967d2}
