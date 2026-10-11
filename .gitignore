@@ -8,3 +8,7 @@ playwright-report/
 # Local preservation copies are deliberately separate from Git/publication.
 public/media/lego-local/
 .preservation/
+# Retained Python research tools and private local material.
+__pycache__/
+*.py[cod]
+.private/

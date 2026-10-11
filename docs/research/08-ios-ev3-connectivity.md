@@ -1,5 +1,35 @@
 # 08 — iOS / iPad connectivity
 
+> Historical research snapshot (2026-10-04/05), recovered onto main on 2026-10-11. Evidence and proposals below retain their original dates; they do not describe the current implementation. See [current development](../development.md), [content and conversion limits](../classroom-content.md) and [hardware validation](../manual-connection-validation.md). Hardware behavior remains UNTESTED unless a later recorded test establishes it.
+
+## Current findings — 2026-10-04
+
+**VERIFIED documentation/source observations; native adapter EXPERIMENTAL;
+EV3 Studio connection UNTESTED.** The detailed follow-up is
+[18 — iPad accessory Bluetooth](18-ipad-accessory-bluetooth.md).
+
+The strongest candidate is the EV3 iOS accessory mode through
+ExternalAccessory/EASession, potentially inside a Capacitor + Swift host. It fits
+one installed app without a student-managed bridge. A pinned Swift SDK declares
+`COM.LEGO.MINDSTORMS.EV3` and opens EASession; this is source corroboration, not our
+hardware result. Manufacturer authorization and current-device operation remain
+UNKNOWN/UNTESTED. Apple documents that app developers do not need MFi membership
+solely to communicate with accessories, while accessory manufacturers control
+third-party authorization.
+
+CoreBluetooth supports **GATT over BR/EDR as well as BLE**; that does not establish
+SPP/RFCOMM access. Firmware source shows Mode2 on Classic/RFCOMM with a separate
+decoding layer. Exact iAP generation/handshake on target firmware remains UNKNOWN.
+Do not claim Web Bluetooth compatibility or assume a BLE plugin works.
+
+Bluetooth gates hardware release/host commitment, not transport-independent
+content, lesson, library or UI research. See [transport matrix](10-web-connectivity.md).
+
+## Superseded discovery note — 2026-10-03
+
+The following records the earlier Ubuntu evidence boundary. Its unavailable-source
+statements and tentative BLE-only description are not current conclusions.
+
 **Status: UNTESTED.** No iPad, EV3 brick, official app installation, Bluetooth capture, or current Apple platform documentation was available. There is no verified iPad-to-EV3 transport in this repository.
 
 ## Current evidence and constraints

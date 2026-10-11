@@ -1,5 +1,26 @@
 # 07 — EV3 protocol
 
+> Historical research snapshot (2026-10-04/05), recovered onto main on 2026-10-11. Evidence and proposals below retain their original dates; they do not describe the current implementation. See [current development](../development.md), [content and conversion limits](../classroom-content.md) and [hardware validation](../manual-connection-validation.md). Hardware behavior remains UNTESTED unless a later recorded test establishes it.
+
+## Primary-document follow-up ? 2026-10-04
+
+**VERIFIED documentary framing; all brick behavior UNTESTED.** The official
+[LEGO Communication Developer Kit](https://www.lego.com/cdn/cs/set/assets/blt6879b00ae6951482/LEGO_MINDSTORMS_EV3_Communication_Developer_Kit.pdf)
+was retrieved and inspected (31 pages). Page 3 documents Bluetooth 2.1 EDR and
+primary SPP usage; page 4 describes common EV3 command data across Bluetooth,
+USB and Wi-Fi and warns about direct VM interactions/deadlock. Pages 5?6 specify
+little-endian message size/counter and direct/system request/reply categories.
+The iOS accessory path adds transport-specific handling; do not send arbitrary
+raw SPP bytes through a guessed iPad API. See [18](18-ipad-accessory-bluetooth.md).
+
+This establishes framing evidence, not a complete opcode/runtime implementation.
+Before execution, validate selected commands, reply sizing, counters, partial
+streams, timeouts and motor/sensor semantics against the relevant specification
+and controlled brick captures. Keep transport-independent protocol tests and
+brick safety tests separate. No protocol module has been implemented here.
+
+## Superseded discovery note ? 2026-10-03
+
 **Status: EXPERIMENTAL (secondary-source review); not verified against a brick or the official kit.** No EV3 brick, transport, or official Communication Developer Kit PDF was available to inspect. External DNS was unavailable, but source references found during research provide independently inspectable leads.
 
 ## Findings and evidence

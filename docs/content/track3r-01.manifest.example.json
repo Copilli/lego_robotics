@@ -1,0 +1,3256 @@
+{
+  "schemaVersion": "0.1-draft",
+  "profile": "reference-example",
+  "status": "PLANNED",
+  "id": "ev3-home.track3r.mission-01.en-US",
+  "kind": "mission",
+  "robotId": "track3r",
+  "title": {
+    "en-US": "TRACK3R Mission 01"
+  },
+  "locale": "en-US",
+  "entryStep": "s00",
+  "source": {
+    "type": "lego-original",
+    "product": "EV3 Home",
+    "sourceAppVersion": "1.4.4",
+    "robot": "TRACK3R",
+    "mission": "01",
+    "installationRoot": "${EV3_HOME_INSTALLATION}",
+    "originalPath": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3",
+    "originalResourceId": "Retail/en-US/LEGO/pack0/projects/1.ev3",
+    "sha256": "f654be9e041f46e54e196c75e4a72587d5add2ae76de4d5e44f9afeaa9ce927f"
+  },
+  "rights": {
+    "redistribution": "UNKNOWN",
+    "assetPayloadsIncluded": false
+  },
+  "runtime": {
+    "executionAllowed": false,
+    "workspace": null,
+    "programConversion": "REFERENCE_ONLY"
+  },
+  "hardware": {
+    "outputs": [
+      {
+        "ports": [
+          "B",
+          "C"
+        ],
+        "type": "large-motor",
+        "status": "EXPERIMENTAL",
+        "basis": "MoveDistanceRotations B+C and robot description"
+      },
+      {
+        "ports": [
+          "A"
+        ],
+        "type": "medium-motor",
+        "status": "VERIFIED_STATIC",
+        "basis": "MediumMotorDistanceRotations A"
+      }
+    ],
+    "sensorOperations": [],
+    "physicalSensorInventory": "UNKNOWN",
+    "brickFeatures": [
+      "display",
+      "sound"
+    ],
+    "materials": [
+      "mission-pad",
+      "tire",
+      "bi-blade-attachment"
+    ],
+    "materialsBasis": "activity-text"
+  },
+  "robotContext": {
+    "introVideo": "sha256:a9d6595869e2a9733312d7e4439a009ea3b387f961062c0aacd33a6ec8bb8bee",
+    "thumbnail": "sha256:507ccc83e7fd15891a990b7450ab04d9efe14c7d674dcf91d32020213131a8a4",
+    "includedInMissionFlow": false
+  },
+  "missionMedia": {
+    "video": "sha256:31609a0bc9798fc4de94584221434532bab4d5b0de3c1fa172383c3025410aaf",
+    "thumbnail": "sha256:d4339d3cf22d45c6ea022bc161e86b4fbfd1da60815614a4c1f1e9e5b1612dc4"
+  },
+  "steps": [
+    {
+      "id": "s00",
+      "type": "VIDEO",
+      "label": "Mission objective",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 0,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[0]",
+      "assetIds": [
+        "sha256:6b879b916aee640fff1da842190e9906297d8e53f53c16fc0784839ea3bca743",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:6a10205bfd872ed4eb7c1aaaac4a1f305ae758aa0344e0469ed25b370c8d460a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:ea530f06b97bd8bd78c5dacf8a520f8a0c50ac58dc7c8166edd8171d4b074f57",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+        "sha256:b9813ced271a269125bb837624e441aae4797096b38332e1dcd1a14cd093d023",
+        "sha256:31609a0bc9798fc4de94584221434532bab4d5b0de3c1fa172383c3025410aaf",
+        "sha256:139b86b9aa806b0bd257f3d14b64e20f537929d3ea6575d4c4f9d0d8803b33f9",
+        "sha256:89a78c0d554b8b7b3df27e882bcde52abd6da836d9d7c3124d46a6aba1ac1fc7",
+        "sha256:0dc9e4a81f12e732b71f17dc595fb3bf10fdf450a5410f2875c1da7a5ce79e2a",
+        "sha256:887ebca5935f5e4821bd5bb116377d668e7979a7762c4c46a73694f9e57edcee"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[0]/SimpleData[0]",
+          "sha256": "4508872d28a465e22bf1cf6984841c38b4390893228bb4b250e0a618de0c488a",
+          "characters": 64,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        },
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[0]/SimpleData[2]",
+          "sha256": "a27023276a2be3192c3c15e418f0586558c6aebf82beab552c093efc4ff228af",
+          "characters": 171,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [
+        "s01"
+      ],
+      "executionAllowed": false
+    },
+    {
+      "id": "s01",
+      "type": "BUILD",
+      "label": "Build TRACK3R",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 1,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[1]",
+      "assetIds": [
+        "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:89a78c0d554b8b7b3df27e882bcde52abd6da836d9d7c3124d46a6aba1ac1fc7",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:6a10205bfd872ed4eb7c1aaaac4a1f305ae758aa0344e0469ed25b370c8d460a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:ea530f06b97bd8bd78c5dacf8a520f8a0c50ac58dc7c8166edd8171d4b074f57",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+        "sha256:19f62130fd17502c60735b256eebd14e428fc5b82bac8522fd4577dfb24c520a",
+        "sha256:1f70c502e9f2fb2f7d8b16d352f4df61034d38c800caa664d6c43230c3b17687",
+        "sha256:d0d7966c1e6099b6eb2971b2808b71cce4772da004a02acfd1ee087401868d96",
+        "sha256:8a4b67e26bc7abb1de15e86d3f4e8854ae24ad09e20d41489b6256e88660aa5b",
+        "sha256:df4a07dbfc0a7cdb5243c512bfbec02e3849025a3cc24101d670ce2f3e83a106",
+        "sha256:1c1c93c8cff2cee4a99a62e9bb4f24c7d598bbfa1ff9ea7bae05305e2cea4d4e",
+        "sha256:47b5bca74534820fd39aecedc59f9e1a4bcdcda2615453debcafdbfd19013be3",
+        "sha256:5393907e03f24a70480676b48d0600657c43cb7c4838e466d656bf43c75d43c3",
+        "sha256:6416ec8ddeb936e93f5ad885418b99c573b35e9134df43e6ccfd11e96e69650d",
+        "sha256:456f2b44f93199cf3989abf5106fab5d4def20ab6001aaaeda52207cb478a01f",
+        "sha256:f14e32628ce3ac1e3f2ccccf1250a98991f3b859f9057b4890ef80c0d9fb2845",
+        "sha256:bce7f97dfc4659ef869405e48d0e98154782f537a219c4b333de266ef76799eb",
+        "sha256:308edbf0aea30434719c64b2f9d39e5e0c6a05cd81c198fe6a4b54f9f186372c",
+        "sha256:1ad3bcb6d66addc978d094f452d4c773621fadc34227d9bbc77a164e384ae9dc",
+        "sha256:e223ea20e092633f25d13b5670ff0f870b94665ffcb8476c8161c6a3532f06c0",
+        "sha256:40ebf9a628a30e7b069b7c543af616b60cd499795596f606e096f1123e976f89",
+        "sha256:009935010a7364c246b823cbc9228c8a0afae31d2957c810b6f9cb38ce719bf2",
+        "sha256:f13278100943f9f2a243832b12686a9fdcf03013f46abc4dc31f9797eabafcb0",
+        "sha256:d1a96fb33cca5edb8baf5ab2460c1d7a06fd51a6ac37fcf06edfa0024147bff6",
+        "sha256:327298029f63f54c145e561898a47eaa65a31b73a55f596a1c8c16627fa4a362",
+        "sha256:0d8a9380f1f7a4c4bc5a0aa127fcd20ba186fe51666b27dacb27c2554f3d49c7",
+        "sha256:630af514e4f2bab9ccca4c5e75e0cf26906f032bdcba449d872405c9cae0c6b9",
+        "sha256:63d1959efe1c62e1637a2a0cd196af864de15a0c12c5d43b622d614fbbed1a1f",
+        "sha256:45533ed28ca35eef9e7b147dcdcf7788b33c4f3801bc452ee57ca3fc319e2114",
+        "sha256:4929541180411b534b6ce0b49a2756bcb2bccd9c99154edb7f527c80823864a4",
+        "sha256:13ba962a31d93d0803683fae0a4e8e59a4b8b8c4d01abc6d7311e04c63171344",
+        "sha256:cb3a2ef826d3525da2185896aa4611aabb7d581396098db74f33c3144e560bfa",
+        "sha256:742d11ffc59771a2fde831744b39dd1c8fe09a613847d286f0b49d07a43bf324",
+        "sha256:574a7cff98ecd90279539f48e4722a4742599ccd22376b8ce20c88764933cba7",
+        "sha256:d8f8cb3cb892f51a0628fa03dbbeca979cf387bed328bc6a2618d5d968247be2",
+        "sha256:f34312ef47266a4a085478547b53ea86834ec5b4ddfa84de6ee5b2a32069bce5",
+        "sha256:fbc1e7ae1755af6521c5908e85a6026067cee6f3b185df434d20d06a96b4b387",
+        "sha256:b183c1831f20c138ded3109a234ef2f53f2756d5b970d541bc7b9cd3ef998599",
+        "sha256:a8a4ce9ac1c45cf1fe1b3b46404670494f5266797c650e2500a60ef42e1a8e7b",
+        "sha256:3eeefe0d8715a7245f7876a90e2d1ee1b3859b8960f212ac7cce68d2a5f94a77",
+        "sha256:97ee7f155e3453471fffe91b7fdd6d322aeb6d7f15e2ddb12a33e8d28fc41cce",
+        "sha256:e4d6a62047e0abd463730125ce3be573a50a1bf9921b9a8ff331a2ff8f8c6f45",
+        "sha256:5dc93f3e1427ae1002274a9c750d4601f4321a402b53c2edd0e61abf8ac602f6",
+        "sha256:9d8c08a646dd388f04b9f2916d0ae27648acd074ae44681bb5db48ba6cdb94ab",
+        "sha256:7f434bef2651054004c3369620c633c3ff004588a328107425042a729ee7c6ee",
+        "sha256:52d74ba60263e50223fc7788eabbfccbd2b70a6610afd2d707421cbb263b1741",
+        "sha256:43a3b58ceea15c6d93b739345157036bd559425850c7bc637dd6ea15521e761c",
+        "sha256:259d14255e93f4324aca3ad67a1a2a95abcecbc9799f0ed09403b6c0bc2c3396",
+        "sha256:166d56cfb32d3ec13ce2eede3b483123529cc34bf9df9efe35aa403ee80716b0",
+        "sha256:8a0012a6a66990c8038d6c07319b38bae6e526286d5c8b183f68538dc7621376",
+        "sha256:cd11722b1201fae6a12d45a02a9e2911a38bde03be3722c9349b58c38997e07a",
+        "sha256:99f83d3dd30c8456d26f6d6a70375b2433614b437789f8004504f321169d3e44",
+        "sha256:d5513c9789240b9ccead8103ebbee8d35143b04e6cc96ffa6032dc05fa0fb36f"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[1]/SimpleData[0]",
+          "sha256": "4508872d28a465e22bf1cf6984841c38b4390893228bb4b250e0a618de0c488a",
+          "characters": 64,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [
+        "s02"
+      ],
+      "executionAllowed": false,
+      "buildSequence": [
+        {
+          "ordinal": 0,
+          "assetId": "sha256:19f62130fd17502c60735b256eebd14e428fc5b82bac8522fd4577dfb24c520a"
+        },
+        {
+          "ordinal": 1,
+          "assetId": "sha256:1f70c502e9f2fb2f7d8b16d352f4df61034d38c800caa664d6c43230c3b17687"
+        },
+        {
+          "ordinal": 2,
+          "assetId": "sha256:d0d7966c1e6099b6eb2971b2808b71cce4772da004a02acfd1ee087401868d96"
+        },
+        {
+          "ordinal": 3,
+          "assetId": "sha256:8a4b67e26bc7abb1de15e86d3f4e8854ae24ad09e20d41489b6256e88660aa5b"
+        },
+        {
+          "ordinal": 4,
+          "assetId": "sha256:df4a07dbfc0a7cdb5243c512bfbec02e3849025a3cc24101d670ce2f3e83a106"
+        },
+        {
+          "ordinal": 5,
+          "assetId": "sha256:1c1c93c8cff2cee4a99a62e9bb4f24c7d598bbfa1ff9ea7bae05305e2cea4d4e"
+        },
+        {
+          "ordinal": 6,
+          "assetId": "sha256:47b5bca74534820fd39aecedc59f9e1a4bcdcda2615453debcafdbfd19013be3"
+        },
+        {
+          "ordinal": 7,
+          "assetId": "sha256:5393907e03f24a70480676b48d0600657c43cb7c4838e466d656bf43c75d43c3"
+        },
+        {
+          "ordinal": 8,
+          "assetId": "sha256:6416ec8ddeb936e93f5ad885418b99c573b35e9134df43e6ccfd11e96e69650d"
+        },
+        {
+          "ordinal": 9,
+          "assetId": "sha256:456f2b44f93199cf3989abf5106fab5d4def20ab6001aaaeda52207cb478a01f"
+        },
+        {
+          "ordinal": 10,
+          "assetId": "sha256:f14e32628ce3ac1e3f2ccccf1250a98991f3b859f9057b4890ef80c0d9fb2845"
+        },
+        {
+          "ordinal": 11,
+          "assetId": "sha256:bce7f97dfc4659ef869405e48d0e98154782f537a219c4b333de266ef76799eb"
+        },
+        {
+          "ordinal": 12,
+          "assetId": "sha256:308edbf0aea30434719c64b2f9d39e5e0c6a05cd81c198fe6a4b54f9f186372c"
+        },
+        {
+          "ordinal": 13,
+          "assetId": "sha256:1ad3bcb6d66addc978d094f452d4c773621fadc34227d9bbc77a164e384ae9dc"
+        },
+        {
+          "ordinal": 14,
+          "assetId": "sha256:e223ea20e092633f25d13b5670ff0f870b94665ffcb8476c8161c6a3532f06c0"
+        },
+        {
+          "ordinal": 15,
+          "assetId": "sha256:40ebf9a628a30e7b069b7c543af616b60cd499795596f606e096f1123e976f89"
+        },
+        {
+          "ordinal": 16,
+          "assetId": "sha256:009935010a7364c246b823cbc9228c8a0afae31d2957c810b6f9cb38ce719bf2"
+        },
+        {
+          "ordinal": 17,
+          "assetId": "sha256:f13278100943f9f2a243832b12686a9fdcf03013f46abc4dc31f9797eabafcb0"
+        },
+        {
+          "ordinal": 18,
+          "assetId": "sha256:d1a96fb33cca5edb8baf5ab2460c1d7a06fd51a6ac37fcf06edfa0024147bff6"
+        },
+        {
+          "ordinal": 19,
+          "assetId": "sha256:327298029f63f54c145e561898a47eaa65a31b73a55f596a1c8c16627fa4a362"
+        },
+        {
+          "ordinal": 20,
+          "assetId": "sha256:0d8a9380f1f7a4c4bc5a0aa127fcd20ba186fe51666b27dacb27c2554f3d49c7"
+        },
+        {
+          "ordinal": 21,
+          "assetId": "sha256:630af514e4f2bab9ccca4c5e75e0cf26906f032bdcba449d872405c9cae0c6b9"
+        },
+        {
+          "ordinal": 22,
+          "assetId": "sha256:63d1959efe1c62e1637a2a0cd196af864de15a0c12c5d43b622d614fbbed1a1f"
+        },
+        {
+          "ordinal": 23,
+          "assetId": "sha256:45533ed28ca35eef9e7b147dcdcf7788b33c4f3801bc452ee57ca3fc319e2114"
+        },
+        {
+          "ordinal": 24,
+          "assetId": "sha256:4929541180411b534b6ce0b49a2756bcb2bccd9c99154edb7f527c80823864a4"
+        },
+        {
+          "ordinal": 25,
+          "assetId": "sha256:13ba962a31d93d0803683fae0a4e8e59a4b8b8c4d01abc6d7311e04c63171344"
+        },
+        {
+          "ordinal": 26,
+          "assetId": "sha256:cb3a2ef826d3525da2185896aa4611aabb7d581396098db74f33c3144e560bfa"
+        },
+        {
+          "ordinal": 27,
+          "assetId": "sha256:742d11ffc59771a2fde831744b39dd1c8fe09a613847d286f0b49d07a43bf324"
+        },
+        {
+          "ordinal": 28,
+          "assetId": "sha256:574a7cff98ecd90279539f48e4722a4742599ccd22376b8ce20c88764933cba7"
+        },
+        {
+          "ordinal": 29,
+          "assetId": "sha256:d8f8cb3cb892f51a0628fa03dbbeca979cf387bed328bc6a2618d5d968247be2"
+        },
+        {
+          "ordinal": 30,
+          "assetId": "sha256:f34312ef47266a4a085478547b53ea86834ec5b4ddfa84de6ee5b2a32069bce5"
+        },
+        {
+          "ordinal": 31,
+          "assetId": "sha256:fbc1e7ae1755af6521c5908e85a6026067cee6f3b185df434d20d06a96b4b387"
+        },
+        {
+          "ordinal": 32,
+          "assetId": "sha256:b183c1831f20c138ded3109a234ef2f53f2756d5b970d541bc7b9cd3ef998599"
+        },
+        {
+          "ordinal": 33,
+          "assetId": "sha256:a8a4ce9ac1c45cf1fe1b3b46404670494f5266797c650e2500a60ef42e1a8e7b"
+        },
+        {
+          "ordinal": 34,
+          "assetId": "sha256:3eeefe0d8715a7245f7876a90e2d1ee1b3859b8960f212ac7cce68d2a5f94a77"
+        },
+        {
+          "ordinal": 35,
+          "assetId": "sha256:97ee7f155e3453471fffe91b7fdd6d322aeb6d7f15e2ddb12a33e8d28fc41cce"
+        },
+        {
+          "ordinal": 36,
+          "assetId": "sha256:e4d6a62047e0abd463730125ce3be573a50a1bf9921b9a8ff331a2ff8f8c6f45"
+        },
+        {
+          "ordinal": 37,
+          "assetId": "sha256:5dc93f3e1427ae1002274a9c750d4601f4321a402b53c2edd0e61abf8ac602f6"
+        },
+        {
+          "ordinal": 38,
+          "assetId": "sha256:9d8c08a646dd388f04b9f2916d0ae27648acd074ae44681bb5db48ba6cdb94ab"
+        },
+        {
+          "ordinal": 39,
+          "assetId": "sha256:7f434bef2651054004c3369620c633c3ff004588a328107425042a729ee7c6ee"
+        },
+        {
+          "ordinal": 40,
+          "assetId": "sha256:52d74ba60263e50223fc7788eabbfccbd2b70a6610afd2d707421cbb263b1741"
+        },
+        {
+          "ordinal": 41,
+          "assetId": "sha256:43a3b58ceea15c6d93b739345157036bd559425850c7bc637dd6ea15521e761c"
+        },
+        {
+          "ordinal": 42,
+          "assetId": "sha256:259d14255e93f4324aca3ad67a1a2a95abcecbc9799f0ed09403b6c0bc2c3396"
+        },
+        {
+          "ordinal": 43,
+          "assetId": "sha256:166d56cfb32d3ec13ce2eede3b483123529cc34bf9df9efe35aa403ee80716b0"
+        },
+        {
+          "ordinal": 44,
+          "assetId": "sha256:8a0012a6a66990c8038d6c07319b38bae6e526286d5c8b183f68538dc7621376"
+        },
+        {
+          "ordinal": 45,
+          "assetId": "sha256:cd11722b1201fae6a12d45a02a9e2911a38bde03be3722c9349b58c38997e07a"
+        },
+        {
+          "ordinal": 46,
+          "assetId": "sha256:99f83d3dd30c8456d26f6d6a70375b2433614b437789f8004504f321169d3e44"
+        },
+        {
+          "ordinal": 47,
+          "assetId": "sha256:d5513c9789240b9ccead8103ebbee8d35143b04e6cc96ffa6032dc05fa0fb36f"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "type": "PROGRAMMING",
+      "label": "Choose a programming route",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 2,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[2]",
+      "assetIds": [
+        "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:0dc9e4a81f12e732b71f17dc595fb3bf10fdf450a5410f2875c1da7a5ce79e2a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:ea530f06b97bd8bd78c5dacf8a520f8a0c50ac58dc7c8166edd8171d4b074f57",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+        "sha256:6a9c20e9ee687997b14ce053540725bf016de6302c771e15e6963705e71a554c",
+        "sha256:fa1563295e68e9ee0ddbba95aea7a6559bb3c281fe811715b564928e0130e904",
+        "sha256:4e0f26b702748751f2ab3588a057270e22b973f0588cba98b42ff5fa1a9274c4",
+        "sha256:88b5015c45c9373b5d2bf9521871fb9bbef365933251c6df22a1c5149bff837c"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[2]/SimpleData[0]",
+          "sha256": "17514779c06d9121ee7da9bfe25a8484d2d1c0c25f8b5ff23fad087947928185",
+          "characters": 34,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        },
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[2]/SimpleData[1]",
+          "sha256": "8d83c9c84c7ae049c80736196fbae4b3a55cc657d67e7a9542f23aeed7fe0357",
+          "characters": 209,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [
+        "s03",
+        "s09"
+      ],
+      "executionAllowed": false,
+      "choices": [
+        {
+          "route": "reference-program",
+          "next": "s03"
+        },
+        {
+          "route": "guided-programming",
+          "next": "s09"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "type": "HARDWARE_CONNECTION",
+      "label": "Connect robot",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 3,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[3]",
+      "assetIds": [
+        "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:6a10205bfd872ed4eb7c1aaaac4a1f305ae758aa0344e0469ed25b370c8d460a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:887ebca5935f5e4821bd5bb116377d668e7979a7762c4c46a73694f9e57edcee",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+        "sha256:35d37ac1af9bf69210987d349a14784f756f8382e43d64b7bd8debc8161fcea6"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[3]/SimpleData[0]",
+          "sha256": "17514779c06d9121ee7da9bfe25a8484d2d1c0c25f8b5ff23fad087947928185",
+          "characters": 34,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        },
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[3]/SimpleData[1]",
+          "sha256": "8040ed3b4d16c56170673769a48b460421f2b1effbe93beceea4445c77ea9a55",
+          "characters": 65,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [
+        "s04"
+      ],
+      "executionAllowed": false,
+      "programReference": "sha256:947be54417dd20ae183f06c6273d78c17b97ed308ef4d958e1a60415ca1d72a8"
+    },
+    {
+      "id": "s04",
+      "type": "PROGRAM_TRANSFER",
+      "label": "Transfer reference program",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 4,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[4]",
+      "assetIds": [
+        "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:6a10205bfd872ed4eb7c1aaaac4a1f305ae758aa0344e0469ed25b370c8d460a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:887ebca5935f5e4821bd5bb116377d668e7979a7762c4c46a73694f9e57edcee",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+        "sha256:e82cb041697c00c19344a13384b5a52367a53fe25604aa73ebc0e523c3dc1963"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[4]/SimpleData[0]",
+          "sha256": "17514779c06d9121ee7da9bfe25a8484d2d1c0c25f8b5ff23fad087947928185",
+          "characters": 34,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        },
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[4]/SimpleData[1]",
+          "sha256": "e48971101f065956a1f8b88ad43da8fd2f0ebd3ccb73d65726bb2f405d5cc919",
+          "characters": 22,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [
+        "s05"
+      ],
+      "executionAllowed": false
+    },
+    {
+      "id": "s05",
+      "type": "TEST",
+      "label": "Prepare the mission area",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 5,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[5]",
+      "assetIds": [
+        "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:6a10205bfd872ed4eb7c1aaaac4a1f305ae758aa0344e0469ed25b370c8d460a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:887ebca5935f5e4821bd5bb116377d668e7979a7762c4c46a73694f9e57edcee",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+        "sha256:b9813ced271a269125bb837624e441aae4797096b38332e1dcd1a14cd093d023",
+        "sha256:31609a0bc9798fc4de94584221434532bab4d5b0de3c1fa172383c3025410aaf"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[5]/SimpleData[0]",
+          "sha256": "17514779c06d9121ee7da9bfe25a8484d2d1c0c25f8b5ff23fad087947928185",
+          "characters": 34,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        },
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[5]/SimpleData[2]",
+          "sha256": "270ede856f5bf33b98e4d2643acb081d92a7ceade8fa01c5169d996bc6def642",
+          "characters": 108,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [
+        "s06"
+      ],
+      "executionAllowed": false
+    },
+    {
+      "id": "s06",
+      "type": "EXECUTION",
+      "label": "Run reference program",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 6,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[6]",
+      "assetIds": [
+        "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:6a10205bfd872ed4eb7c1aaaac4a1f305ae758aa0344e0469ed25b370c8d460a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:887ebca5935f5e4821bd5bb116377d668e7979a7762c4c46a73694f9e57edcee",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+        "sha256:366bcd9a2cac98e43a2c444fb15f1a2b5a0f84890aa6a37ed382a6d1a01ae6fe"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[6]/SimpleData[0]",
+          "sha256": "17514779c06d9121ee7da9bfe25a8484d2d1c0c25f8b5ff23fad087947928185",
+          "characters": 34,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        },
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[6]/SimpleData[1]",
+          "sha256": "b36100ecb2766567f57862f5100acbb8e37e0577d6f08751a5bcea212d414375",
+          "characters": 17,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [
+        "s07"
+      ],
+      "executionAllowed": false
+    },
+    {
+      "id": "s07",
+      "type": "TEST",
+      "label": "Compare robot and video",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 7,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[7]",
+      "assetIds": [
+        "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:6a10205bfd872ed4eb7c1aaaac4a1f305ae758aa0344e0469ed25b370c8d460a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:887ebca5935f5e4821bd5bb116377d668e7979a7762c4c46a73694f9e57edcee",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+        "sha256:b9813ced271a269125bb837624e441aae4797096b38332e1dcd1a14cd093d023",
+        "sha256:31609a0bc9798fc4de94584221434532bab4d5b0de3c1fa172383c3025410aaf"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[7]/SimpleData[0]",
+          "sha256": "17514779c06d9121ee7da9bfe25a8484d2d1c0c25f8b5ff23fad087947928185",
+          "characters": 34,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        },
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[7]/SimpleData[1]",
+          "sha256": "8350fd1f2d7c6cf1dbb5f76f7351ecdc1f8323fc7b2fbae842235c68b7969da3",
+          "characters": 73,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [
+        "s08"
+      ],
+      "executionAllowed": false
+    },
+    {
+      "id": "s08",
+      "type": "TEXT",
+      "label": "Extension advice and completion",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 8,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[8]",
+      "assetIds": [
+        "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:6a10205bfd872ed4eb7c1aaaac4a1f305ae758aa0344e0469ed25b370c8d460a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:887ebca5935f5e4821bd5bb116377d668e7979a7762c4c46a73694f9e57edcee",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+        "sha256:72c8d88a0604e5ea4ca33e99fb4f6a523903f49c015eb1f6a7924cee2cedf3aa"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[8]/SimpleData[0]",
+          "sha256": "17514779c06d9121ee7da9bfe25a8484d2d1c0c25f8b5ff23fad087947928185",
+          "characters": 34,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        },
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[8]/SimpleData[1]",
+          "sha256": "900d16bc8b6d8ca85b9acbfdc5f9431ad565681369b13b08af93b91b09833208",
+          "characters": 156,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [],
+      "executionAllowed": false
+    },
+    {
+      "id": "s09",
+      "type": "PROGRAMMING",
+      "label": "Start guided programming",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 9,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[9]",
+      "assetIds": [
+        "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:0dc9e4a81f12e732b71f17dc595fb3bf10fdf450a5410f2875c1da7a5ce79e2a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:ea530f06b97bd8bd78c5dacf8a520f8a0c50ac58dc7c8166edd8171d4b074f57",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+        "sha256:72c8d88a0604e5ea4ca33e99fb4f6a523903f49c015eb1f6a7924cee2cedf3aa",
+        "sha256:beba52034a08d1372228e00fb5a0115e3be769e5604c4f9e02fbfd6e27e0f115",
+        "sha256:9f7b2515c183b7e4814b6ac765c4339e077116dcd97fe3e5a0ebbfd416a5ccc3",
+        "sha256:3811e800c02ad8a3f513c535dc662d777211d37c4050360672e718f216ba85c5"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[9]/SimpleData[0]",
+          "sha256": "17514779c06d9121ee7da9bfe25a8484d2d1c0c25f8b5ff23fad087947928185",
+          "characters": 34,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        },
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[9]/SimpleData[1]",
+          "sha256": "9968e2c5246320913e3edf416ab957dd17816fb908c78f04dae63849033f1ce6",
+          "characters": 421,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [
+        "s10"
+      ],
+      "executionAllowed": false,
+      "programReference": "sha256:e52619e95eb78b2aa1ddf36514a780c029a13c2aa27cfbc1a2e9ba6a7911f675"
+    },
+    {
+      "id": "s10",
+      "type": "PROGRAMMING",
+      "label": "Add display",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 10,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[10]",
+      "assetIds": [
+        "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:0dc9e4a81f12e732b71f17dc595fb3bf10fdf450a5410f2875c1da7a5ce79e2a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:ea530f06b97bd8bd78c5dacf8a520f8a0c50ac58dc7c8166edd8171d4b074f57",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+        "sha256:4eb12f4de2cf8df854472759788ae90d599a910847703a6ea26dbd0d823f06f2",
+        "sha256:beba52034a08d1372228e00fb5a0115e3be769e5604c4f9e02fbfd6e27e0f115",
+        "sha256:9f7b2515c183b7e4814b6ac765c4339e077116dcd97fe3e5a0ebbfd416a5ccc3"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[10]/SimpleData[0]",
+          "sha256": "17514779c06d9121ee7da9bfe25a8484d2d1c0c25f8b5ff23fad087947928185",
+          "characters": 34,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        },
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[10]/SimpleData[1]",
+          "sha256": "797ee2c4721efefd2886381906392f1605942549f34be1e9df6047b5a837737b",
+          "characters": 98,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [
+        "s11"
+      ],
+      "executionAllowed": false
+    },
+    {
+      "id": "s11",
+      "type": "PROGRAMMING",
+      "label": "Add forward movement",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 11,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[11]",
+      "assetIds": [
+        "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:0dc9e4a81f12e732b71f17dc595fb3bf10fdf450a5410f2875c1da7a5ce79e2a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:ea530f06b97bd8bd78c5dacf8a520f8a0c50ac58dc7c8166edd8171d4b074f57",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+        "sha256:b8c7eec835341aaea85571169e8767121cdfe0edd4705de079191b0e15540585",
+        "sha256:beba52034a08d1372228e00fb5a0115e3be769e5604c4f9e02fbfd6e27e0f115",
+        "sha256:9f7b2515c183b7e4814b6ac765c4339e077116dcd97fe3e5a0ebbfd416a5ccc3"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[11]/SimpleData[0]",
+          "sha256": "17514779c06d9121ee7da9bfe25a8484d2d1c0c25f8b5ff23fad087947928185",
+          "characters": 34,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        },
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[11]/SimpleData[1]",
+          "sha256": "76eb78b28ef9da5bb5fa8e8dffbd022837ac67704130015d9be6ab22c247e011",
+          "characters": 116,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [
+        "s12"
+      ],
+      "executionAllowed": false
+    },
+    {
+      "id": "s12",
+      "type": "PROGRAMMING",
+      "label": "Add attachment movement",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 12,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[12]",
+      "assetIds": [
+        "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:0dc9e4a81f12e732b71f17dc595fb3bf10fdf450a5410f2875c1da7a5ce79e2a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:ea530f06b97bd8bd78c5dacf8a520f8a0c50ac58dc7c8166edd8171d4b074f57",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+        "sha256:614b3794bcec0fef3bc195893f43b342eb245e8a8ecaf5a961d5da7a75338390",
+        "sha256:beba52034a08d1372228e00fb5a0115e3be769e5604c4f9e02fbfd6e27e0f115",
+        "sha256:9f7b2515c183b7e4814b6ac765c4339e077116dcd97fe3e5a0ebbfd416a5ccc3"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[12]/SimpleData[0]",
+          "sha256": "17514779c06d9121ee7da9bfe25a8484d2d1c0c25f8b5ff23fad087947928185",
+          "characters": 34,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        },
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[12]/SimpleData[1]",
+          "sha256": "16ebb704e9fc647a9646a606203e81769170ccaed9b8905556efc2e589ca4732",
+          "characters": 121,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [
+        "s13"
+      ],
+      "executionAllowed": false
+    },
+    {
+      "id": "s13",
+      "type": "PROGRAMMING",
+      "label": "Add return movement",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 13,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[13]",
+      "assetIds": [
+        "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:0dc9e4a81f12e732b71f17dc595fb3bf10fdf450a5410f2875c1da7a5ce79e2a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:ea530f06b97bd8bd78c5dacf8a520f8a0c50ac58dc7c8166edd8171d4b074f57",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+        "sha256:0df7be8eac8485d875f42f84b2b3a628866a157cd6ca51a25fad9a785203b6ef",
+        "sha256:beba52034a08d1372228e00fb5a0115e3be769e5604c4f9e02fbfd6e27e0f115",
+        "sha256:9f7b2515c183b7e4814b6ac765c4339e077116dcd97fe3e5a0ebbfd416a5ccc3"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[13]/SimpleData[0]",
+          "sha256": "17514779c06d9121ee7da9bfe25a8484d2d1c0c25f8b5ff23fad087947928185",
+          "characters": 34,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        },
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[13]/SimpleData[1]",
+          "sha256": "1c5310beeb7474c438bf480efd3726fddbdc49e56e168577e1f323d14bf1c66e",
+          "characters": 135,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [
+        "s14"
+      ],
+      "executionAllowed": false
+    },
+    {
+      "id": "s14",
+      "type": "PROGRAMMING",
+      "label": "Add sound",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 14,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[14]",
+      "assetIds": [
+        "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:0dc9e4a81f12e732b71f17dc595fb3bf10fdf450a5410f2875c1da7a5ce79e2a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:ea530f06b97bd8bd78c5dacf8a520f8a0c50ac58dc7c8166edd8171d4b074f57",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+        "sha256:dd66ba975d2752fe3bb926f1ef24c9d69ff87d028d1fae295fa222b9db533e62",
+        "sha256:beba52034a08d1372228e00fb5a0115e3be769e5604c4f9e02fbfd6e27e0f115",
+        "sha256:9f7b2515c183b7e4814b6ac765c4339e077116dcd97fe3e5a0ebbfd416a5ccc3"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[14]/SimpleData[0]",
+          "sha256": "17514779c06d9121ee7da9bfe25a8484d2d1c0c25f8b5ff23fad087947928185",
+          "characters": 34,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        },
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[14]/SimpleData[1]",
+          "sha256": "fc7c292112388a64e61f193d71b4478b2e8fcd67966bf76ea3bb863514b2e9ed",
+          "characters": 101,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [
+        "s15"
+      ],
+      "executionAllowed": false
+    },
+    {
+      "id": "s15",
+      "type": "HARDWARE_CONNECTION",
+      "label": "Connect robot",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 15,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[15]",
+      "assetIds": [
+        "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:6a10205bfd872ed4eb7c1aaaac4a1f305ae758aa0344e0469ed25b370c8d460a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:887ebca5935f5e4821bd5bb116377d668e7979a7762c4c46a73694f9e57edcee",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+        "sha256:35d37ac1af9bf69210987d349a14784f756f8382e43d64b7bd8debc8161fcea6"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[15]/SimpleData[0]",
+          "sha256": "17514779c06d9121ee7da9bfe25a8484d2d1c0c25f8b5ff23fad087947928185",
+          "characters": 34,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        },
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[15]/SimpleData[1]",
+          "sha256": "8040ed3b4d16c56170673769a48b460421f2b1effbe93beceea4445c77ea9a55",
+          "characters": 65,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [
+        "s16"
+      ],
+      "executionAllowed": false
+    },
+    {
+      "id": "s16",
+      "type": "PROGRAM_TRANSFER",
+      "label": "Transfer learner program",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 16,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[16]",
+      "assetIds": [
+        "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:6a10205bfd872ed4eb7c1aaaac4a1f305ae758aa0344e0469ed25b370c8d460a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:887ebca5935f5e4821bd5bb116377d668e7979a7762c4c46a73694f9e57edcee",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+        "sha256:e82cb041697c00c19344a13384b5a52367a53fe25604aa73ebc0e523c3dc1963"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[16]/SimpleData[0]",
+          "sha256": "17514779c06d9121ee7da9bfe25a8484d2d1c0c25f8b5ff23fad087947928185",
+          "characters": 34,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        },
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[16]/SimpleData[1]",
+          "sha256": "e48971101f065956a1f8b88ad43da8fd2f0ebd3ccb73d65726bb2f405d5cc919",
+          "characters": 22,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [
+        "s17"
+      ],
+      "executionAllowed": false
+    },
+    {
+      "id": "s17",
+      "type": "TEST",
+      "label": "Prepare the mission area",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 17,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[17]",
+      "assetIds": [
+        "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:6a10205bfd872ed4eb7c1aaaac4a1f305ae758aa0344e0469ed25b370c8d460a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:887ebca5935f5e4821bd5bb116377d668e7979a7762c4c46a73694f9e57edcee",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+        "sha256:b9813ced271a269125bb837624e441aae4797096b38332e1dcd1a14cd093d023",
+        "sha256:31609a0bc9798fc4de94584221434532bab4d5b0de3c1fa172383c3025410aaf"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[17]/SimpleData[0]",
+          "sha256": "17514779c06d9121ee7da9bfe25a8484d2d1c0c25f8b5ff23fad087947928185",
+          "characters": 34,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        },
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[17]/SimpleData[2]",
+          "sha256": "270ede856f5bf33b98e4d2643acb081d92a7ceade8fa01c5169d996bc6def642",
+          "characters": 108,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [
+        "s18"
+      ],
+      "executionAllowed": false
+    },
+    {
+      "id": "s18",
+      "type": "EXECUTION",
+      "label": "Run learner program",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 18,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[18]",
+      "assetIds": [
+        "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:6a10205bfd872ed4eb7c1aaaac4a1f305ae758aa0344e0469ed25b370c8d460a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:887ebca5935f5e4821bd5bb116377d668e7979a7762c4c46a73694f9e57edcee",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+        "sha256:7a79d1d4e03edbe8fe1669076301f52c34717e8959bdaf9ded47a62b6f520a7e"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[18]/SimpleData[0]",
+          "sha256": "17514779c06d9121ee7da9bfe25a8484d2d1c0c25f8b5ff23fad087947928185",
+          "characters": 34,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        },
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[18]/SimpleData[1]",
+          "sha256": "b36100ecb2766567f57862f5100acbb8e37e0577d6f08751a5bcea212d414375",
+          "characters": 17,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [
+        "s19"
+      ],
+      "executionAllowed": false
+    },
+    {
+      "id": "s19",
+      "type": "TEST",
+      "label": "Compare robot and video",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 19,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[19]",
+      "assetIds": [
+        "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:6a10205bfd872ed4eb7c1aaaac4a1f305ae758aa0344e0469ed25b370c8d460a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:887ebca5935f5e4821bd5bb116377d668e7979a7762c4c46a73694f9e57edcee",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+        "sha256:b9813ced271a269125bb837624e441aae4797096b38332e1dcd1a14cd093d023",
+        "sha256:31609a0bc9798fc4de94584221434532bab4d5b0de3c1fa172383c3025410aaf"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[19]/SimpleData[0]",
+          "sha256": "17514779c06d9121ee7da9bfe25a8484d2d1c0c25f8b5ff23fad087947928185",
+          "characters": 34,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        },
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[19]/SimpleData[1]",
+          "sha256": "8350fd1f2d7c6cf1dbb5f76f7351ecdc1f8323fc7b2fbae842235c68b7969da3",
+          "characters": 73,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [
+        "s20"
+      ],
+      "executionAllowed": false
+    },
+    {
+      "id": "s20",
+      "type": "QUESTION",
+      "label": "Diagnose movement",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 20,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[20]",
+      "assetIds": [
+        "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:6a10205bfd872ed4eb7c1aaaac4a1f305ae758aa0344e0469ed25b370c8d460a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:887ebca5935f5e4821bd5bb116377d668e7979a7762c4c46a73694f9e57edcee",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[20]/SimpleData[0]",
+          "sha256": "17514779c06d9121ee7da9bfe25a8484d2d1c0c25f8b5ff23fad087947928185",
+          "characters": 34,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        },
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[20]/SimpleData[1]",
+          "sha256": "99d113a94c558cbc90f886806f63646d6c73b152b8e64a3a9105718d5e8b9ff6",
+          "characters": 300,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [
+        "s21"
+      ],
+      "executionAllowed": false
+    },
+    {
+      "id": "s21",
+      "type": "TEXT",
+      "label": "Extension advice and completion",
+      "labelOrigin": "ev3-studio",
+      "sourceSlideIndex": 21,
+      "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[21]",
+      "assetIds": [
+        "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+        "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+        "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+        "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+        "sha256:6a10205bfd872ed4eb7c1aaaac4a1f305ae758aa0344e0469ed25b370c8d460a",
+        "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+        "sha256:887ebca5935f5e4821bd5bb116377d668e7979a7762c4c46a73694f9e57edcee",
+        "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+        "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+        "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+        "sha256:72c8d88a0604e5ea4ca33e99fb4f6a523903f49c015eb1f6a7924cee2cedf3aa"
+      ],
+      "textBindings": [
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[21]/SimpleData[0]",
+          "sha256": "17514779c06d9121ee7da9bfe25a8484d2d1c0c25f8b5ff23fad087947928185",
+          "characters": 34,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        },
+        {
+          "sourceLocator": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a#/Slides/Slide[21]/SimpleData[1]",
+          "sha256": "900d16bc8b6d8ca85b9acbfdc5f9431ad565681369b13b08af93b91b09833208",
+          "characters": 156,
+          "payloadIncluded": false,
+          "normalizedPayload": null
+        }
+      ],
+      "legacyActions": {
+        "disposition": "inert-provenance-only"
+      },
+      "next": [],
+      "executionAllowed": false
+    }
+  ],
+  "assets": [
+    {
+      "id": "sha256:6b879b916aee640fff1da842190e9906297d8e53f53c16fc0784839ea3bca743",
+      "sha256": "6b879b916aee640fff1da842190e9906297d8e53f53c16fc0784839ea3bca743",
+      "size": 847,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/MB-s.png"
+      ],
+      "alsoReferencedBy": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/3.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/4.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/5.ev3"
+      ],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+      "sha256": "01b5019ca5e3c480ee9139330e0b9152370ba36b3855b8deba2b32f91feef080",
+      "size": 857,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/MB-h.png"
+      ],
+      "alsoReferencedBy": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/3.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/4.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/5.ev3"
+      ],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+      "sha256": "c02356656b070c1cf04511834535f0ea72d9505c1f99b7b4981c788c6be81490",
+      "size": 527,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!ActivityAssets.laz!BI-dn.png"
+      ],
+      "alsoReferencedBy": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/3.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/4.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/5.ev3"
+      ],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+      "sha256": "b73ec738cc56897285b1f98e900cc13c6f5e964d2fd9ee96eed9710a7c1725f9",
+      "size": 531,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!ActivityAssets.laz!BI-hn.png"
+      ],
+      "alsoReferencedBy": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/3.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/4.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/5.ev3"
+      ],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:6a10205bfd872ed4eb7c1aaaac4a1f305ae758aa0344e0469ed25b370c8d460a",
+      "sha256": "6a10205bfd872ed4eb7c1aaaac4a1f305ae758aa0344e0469ed25b370c8d460a",
+      "size": 2985,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/PI-d.png"
+      ],
+      "alsoReferencedBy": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/3.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/4.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/5.ev3"
+      ],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+      "sha256": "3bb23ab4bd1ead99faa6319477981fad98f166596ae8ecb4e6e4f551f3fb5afe",
+      "size": 3035,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/PI-h.png"
+      ],
+      "alsoReferencedBy": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/3.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/4.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/5.ev3"
+      ],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:ea530f06b97bd8bd78c5dacf8a520f8a0c50ac58dc7c8166edd8171d4b074f57",
+      "sha256": "ea530f06b97bd8bd78c5dacf8a520f8a0c50ac58dc7c8166edd8171d4b074f57",
+      "size": 615,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/GO-d.png"
+      ],
+      "alsoReferencedBy": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/3.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/4.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/5.ev3"
+      ],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+      "sha256": "5dab9cb4d6c06b48d83d9881ad3e071fdab3a85e8509606ada03350198f4327f",
+      "size": 621,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/GO-h.png"
+      ],
+      "alsoReferencedBy": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/3.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/4.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/5.ev3"
+      ],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+      "sha256": "f7b8deaa87a91a6b953c8a41d218b1d92960c7929463f23681ec8f7f59d27d40",
+      "size": 893,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/TRACK3Rtxt.png"
+      ],
+      "alsoReferencedBy": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/3.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/4.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/5.ev3"
+      ],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+      "sha256": "294e697639e9406fde38ca08484e09e8d39d3db0c8b718de507fa8c9046f80d0",
+      "size": 510,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/01.png"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:b9813ced271a269125bb837624e441aae4797096b38332e1dcd1a14cd093d023",
+      "sha256": "b9813ced271a269125bb837624e441aae4797096b38332e1dcd1a14cd093d023",
+      "size": 528194,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!ActivityAssets.laz!1.png"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:31609a0bc9798fc4de94584221434532bab4d5b0de3c1fa172383c3025410aaf",
+      "sha256": "31609a0bc9798fc4de94584221434532bab4d5b0de3c1fa172383c3025410aaf",
+      "size": 3353104,
+      "mediaType": "video/mp4",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/1.mp4"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:139b86b9aa806b0bd257f3d14b64e20f537929d3ea6575d4c4f9d0d8803b33f9",
+      "sha256": "139b86b9aa806b0bd257f3d14b64e20f537929d3ea6575d4c4f9d0d8803b33f9",
+      "size": 16924,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!ActivityAssets.laz!arrowdown.png"
+      ],
+      "alsoReferencedBy": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/3.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/4.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/5.ev3"
+      ],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:89a78c0d554b8b7b3df27e882bcde52abd6da836d9d7c3124d46a6aba1ac1fc7",
+      "sha256": "89a78c0d554b8b7b3df27e882bcde52abd6da836d9d7c3124d46a6aba1ac1fc7",
+      "size": 527,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!ActivityAssets.laz!BI-sn.png"
+      ],
+      "alsoReferencedBy": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/3.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/4.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/5.ev3"
+      ],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:0dc9e4a81f12e732b71f17dc595fb3bf10fdf450a5410f2875c1da7a5ce79e2a",
+      "sha256": "0dc9e4a81f12e732b71f17dc595fb3bf10fdf450a5410f2875c1da7a5ce79e2a",
+      "size": 3026,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/PI-s.png"
+      ],
+      "alsoReferencedBy": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/3.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/4.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/5.ev3"
+      ],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:887ebca5935f5e4821bd5bb116377d668e7979a7762c4c46a73694f9e57edcee",
+      "sha256": "887ebca5935f5e4821bd5bb116377d668e7979a7762c4c46a73694f9e57edcee",
+      "size": 622,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/GO-s.png"
+      ],
+      "alsoReferencedBy": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/3.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/4.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/5.ev3"
+      ],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+      "sha256": "2142cab55db0bc7242a4a6429220b352848a85125b50d9f064a5054311751f2e",
+      "size": 857,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/MB-d.png"
+      ],
+      "alsoReferencedBy": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/3.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/4.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/5.ev3"
+      ],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:19f62130fd17502c60735b256eebd14e428fc5b82bac8522fd4577dfb24c520a",
+      "sha256": "19f62130fd17502c60735b256eebd14e428fc5b82bac8522fd4577dfb24c520a",
+      "size": 198063,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_1.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:1f70c502e9f2fb2f7d8b16d352f4df61034d38c800caa664d6c43230c3b17687",
+      "sha256": "1f70c502e9f2fb2f7d8b16d352f4df61034d38c800caa664d6c43230c3b17687",
+      "size": 181346,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_2.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:d0d7966c1e6099b6eb2971b2808b71cce4772da004a02acfd1ee087401868d96",
+      "sha256": "d0d7966c1e6099b6eb2971b2808b71cce4772da004a02acfd1ee087401868d96",
+      "size": 270281,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_3.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:8a4b67e26bc7abb1de15e86d3f4e8854ae24ad09e20d41489b6256e88660aa5b",
+      "sha256": "8a4b67e26bc7abb1de15e86d3f4e8854ae24ad09e20d41489b6256e88660aa5b",
+      "size": 155215,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_4.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:df4a07dbfc0a7cdb5243c512bfbec02e3849025a3cc24101d670ce2f3e83a106",
+      "sha256": "df4a07dbfc0a7cdb5243c512bfbec02e3849025a3cc24101d670ce2f3e83a106",
+      "size": 291927,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_5.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:1c1c93c8cff2cee4a99a62e9bb4f24c7d598bbfa1ff9ea7bae05305e2cea4d4e",
+      "sha256": "1c1c93c8cff2cee4a99a62e9bb4f24c7d598bbfa1ff9ea7bae05305e2cea4d4e",
+      "size": 189011,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_6.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:47b5bca74534820fd39aecedc59f9e1a4bcdcda2615453debcafdbfd19013be3",
+      "sha256": "47b5bca74534820fd39aecedc59f9e1a4bcdcda2615453debcafdbfd19013be3",
+      "size": 323844,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_7.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:5393907e03f24a70480676b48d0600657c43cb7c4838e466d656bf43c75d43c3",
+      "sha256": "5393907e03f24a70480676b48d0600657c43cb7c4838e466d656bf43c75d43c3",
+      "size": 241650,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_8.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:6416ec8ddeb936e93f5ad885418b99c573b35e9134df43e6ccfd11e96e69650d",
+      "sha256": "6416ec8ddeb936e93f5ad885418b99c573b35e9134df43e6ccfd11e96e69650d",
+      "size": 161762,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_9.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:456f2b44f93199cf3989abf5106fab5d4def20ab6001aaaeda52207cb478a01f",
+      "sha256": "456f2b44f93199cf3989abf5106fab5d4def20ab6001aaaeda52207cb478a01f",
+      "size": 229971,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_10.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:f14e32628ce3ac1e3f2ccccf1250a98991f3b859f9057b4890ef80c0d9fb2845",
+      "sha256": "f14e32628ce3ac1e3f2ccccf1250a98991f3b859f9057b4890ef80c0d9fb2845",
+      "size": 166512,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_11.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:bce7f97dfc4659ef869405e48d0e98154782f537a219c4b333de266ef76799eb",
+      "sha256": "bce7f97dfc4659ef869405e48d0e98154782f537a219c4b333de266ef76799eb",
+      "size": 109541,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_12.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:308edbf0aea30434719c64b2f9d39e5e0c6a05cd81c198fe6a4b54f9f186372c",
+      "sha256": "308edbf0aea30434719c64b2f9d39e5e0c6a05cd81c198fe6a4b54f9f186372c",
+      "size": 184120,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_13.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:1ad3bcb6d66addc978d094f452d4c773621fadc34227d9bbc77a164e384ae9dc",
+      "sha256": "1ad3bcb6d66addc978d094f452d4c773621fadc34227d9bbc77a164e384ae9dc",
+      "size": 185015,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_14.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:e223ea20e092633f25d13b5670ff0f870b94665ffcb8476c8161c6a3532f06c0",
+      "sha256": "e223ea20e092633f25d13b5670ff0f870b94665ffcb8476c8161c6a3532f06c0",
+      "size": 142973,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_15.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:40ebf9a628a30e7b069b7c543af616b60cd499795596f606e096f1123e976f89",
+      "sha256": "40ebf9a628a30e7b069b7c543af616b60cd499795596f606e096f1123e976f89",
+      "size": 186548,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_16.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:009935010a7364c246b823cbc9228c8a0afae31d2957c810b6f9cb38ce719bf2",
+      "sha256": "009935010a7364c246b823cbc9228c8a0afae31d2957c810b6f9cb38ce719bf2",
+      "size": 269322,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_17.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:f13278100943f9f2a243832b12686a9fdcf03013f46abc4dc31f9797eabafcb0",
+      "sha256": "f13278100943f9f2a243832b12686a9fdcf03013f46abc4dc31f9797eabafcb0",
+      "size": 299149,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_18.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:d1a96fb33cca5edb8baf5ab2460c1d7a06fd51a6ac37fcf06edfa0024147bff6",
+      "sha256": "d1a96fb33cca5edb8baf5ab2460c1d7a06fd51a6ac37fcf06edfa0024147bff6",
+      "size": 112813,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_19.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:327298029f63f54c145e561898a47eaa65a31b73a55f596a1c8c16627fa4a362",
+      "sha256": "327298029f63f54c145e561898a47eaa65a31b73a55f596a1c8c16627fa4a362",
+      "size": 137757,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_20.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:0d8a9380f1f7a4c4bc5a0aa127fcd20ba186fe51666b27dacb27c2554f3d49c7",
+      "sha256": "0d8a9380f1f7a4c4bc5a0aa127fcd20ba186fe51666b27dacb27c2554f3d49c7",
+      "size": 281165,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_21.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:630af514e4f2bab9ccca4c5e75e0cf26906f032bdcba449d872405c9cae0c6b9",
+      "sha256": "630af514e4f2bab9ccca4c5e75e0cf26906f032bdcba449d872405c9cae0c6b9",
+      "size": 154358,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_22.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:63d1959efe1c62e1637a2a0cd196af864de15a0c12c5d43b622d614fbbed1a1f",
+      "sha256": "63d1959efe1c62e1637a2a0cd196af864de15a0c12c5d43b622d614fbbed1a1f",
+      "size": 338997,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_23.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:45533ed28ca35eef9e7b147dcdcf7788b33c4f3801bc452ee57ca3fc319e2114",
+      "sha256": "45533ed28ca35eef9e7b147dcdcf7788b33c4f3801bc452ee57ca3fc319e2114",
+      "size": 213637,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_24.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:4929541180411b534b6ce0b49a2756bcb2bccd9c99154edb7f527c80823864a4",
+      "sha256": "4929541180411b534b6ce0b49a2756bcb2bccd9c99154edb7f527c80823864a4",
+      "size": 311258,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_25.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:13ba962a31d93d0803683fae0a4e8e59a4b8b8c4d01abc6d7311e04c63171344",
+      "sha256": "13ba962a31d93d0803683fae0a4e8e59a4b8b8c4d01abc6d7311e04c63171344",
+      "size": 193642,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_26.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:cb3a2ef826d3525da2185896aa4611aabb7d581396098db74f33c3144e560bfa",
+      "sha256": "cb3a2ef826d3525da2185896aa4611aabb7d581396098db74f33c3144e560bfa",
+      "size": 152138,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_27.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:742d11ffc59771a2fde831744b39dd1c8fe09a613847d286f0b49d07a43bf324",
+      "sha256": "742d11ffc59771a2fde831744b39dd1c8fe09a613847d286f0b49d07a43bf324",
+      "size": 158935,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_28.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:574a7cff98ecd90279539f48e4722a4742599ccd22376b8ce20c88764933cba7",
+      "sha256": "574a7cff98ecd90279539f48e4722a4742599ccd22376b8ce20c88764933cba7",
+      "size": 191241,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_29.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:d8f8cb3cb892f51a0628fa03dbbeca979cf387bed328bc6a2618d5d968247be2",
+      "sha256": "d8f8cb3cb892f51a0628fa03dbbeca979cf387bed328bc6a2618d5d968247be2",
+      "size": 124559,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_30.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:f34312ef47266a4a085478547b53ea86834ec5b4ddfa84de6ee5b2a32069bce5",
+      "sha256": "f34312ef47266a4a085478547b53ea86834ec5b4ddfa84de6ee5b2a32069bce5",
+      "size": 179167,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_31.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:fbc1e7ae1755af6521c5908e85a6026067cee6f3b185df434d20d06a96b4b387",
+      "sha256": "fbc1e7ae1755af6521c5908e85a6026067cee6f3b185df434d20d06a96b4b387",
+      "size": 171041,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_32.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:b183c1831f20c138ded3109a234ef2f53f2756d5b970d541bc7b9cd3ef998599",
+      "sha256": "b183c1831f20c138ded3109a234ef2f53f2756d5b970d541bc7b9cd3ef998599",
+      "size": 389466,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_33.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:a8a4ce9ac1c45cf1fe1b3b46404670494f5266797c650e2500a60ef42e1a8e7b",
+      "sha256": "a8a4ce9ac1c45cf1fe1b3b46404670494f5266797c650e2500a60ef42e1a8e7b",
+      "size": 352755,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_34.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:3eeefe0d8715a7245f7876a90e2d1ee1b3859b8960f212ac7cce68d2a5f94a77",
+      "sha256": "3eeefe0d8715a7245f7876a90e2d1ee1b3859b8960f212ac7cce68d2a5f94a77",
+      "size": 358270,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_35.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:97ee7f155e3453471fffe91b7fdd6d322aeb6d7f15e2ddb12a33e8d28fc41cce",
+      "sha256": "97ee7f155e3453471fffe91b7fdd6d322aeb6d7f15e2ddb12a33e8d28fc41cce",
+      "size": 104882,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_36.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:e4d6a62047e0abd463730125ce3be573a50a1bf9921b9a8ff331a2ff8f8c6f45",
+      "sha256": "e4d6a62047e0abd463730125ce3be573a50a1bf9921b9a8ff331a2ff8f8c6f45",
+      "size": 123965,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_37.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:5dc93f3e1427ae1002274a9c750d4601f4321a402b53c2edd0e61abf8ac602f6",
+      "sha256": "5dc93f3e1427ae1002274a9c750d4601f4321a402b53c2edd0e61abf8ac602f6",
+      "size": 166365,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_38.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:9d8c08a646dd388f04b9f2916d0ae27648acd074ae44681bb5db48ba6cdb94ab",
+      "sha256": "9d8c08a646dd388f04b9f2916d0ae27648acd074ae44681bb5db48ba6cdb94ab",
+      "size": 112167,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_39.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:7f434bef2651054004c3369620c633c3ff004588a328107425042a729ee7c6ee",
+      "sha256": "7f434bef2651054004c3369620c633c3ff004588a328107425042a729ee7c6ee",
+      "size": 105096,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_40.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:52d74ba60263e50223fc7788eabbfccbd2b70a6610afd2d707421cbb263b1741",
+      "sha256": "52d74ba60263e50223fc7788eabbfccbd2b70a6610afd2d707421cbb263b1741",
+      "size": 112919,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_41.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:43a3b58ceea15c6d93b739345157036bd559425850c7bc637dd6ea15521e761c",
+      "sha256": "43a3b58ceea15c6d93b739345157036bd559425850c7bc637dd6ea15521e761c",
+      "size": 333520,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_42.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:259d14255e93f4324aca3ad67a1a2a95abcecbc9799f0ed09403b6c0bc2c3396",
+      "sha256": "259d14255e93f4324aca3ad67a1a2a95abcecbc9799f0ed09403b6c0bc2c3396",
+      "size": 233110,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_43.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:166d56cfb32d3ec13ce2eede3b483123529cc34bf9df9efe35aa403ee80716b0",
+      "sha256": "166d56cfb32d3ec13ce2eede3b483123529cc34bf9df9efe35aa403ee80716b0",
+      "size": 165788,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_44.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:8a0012a6a66990c8038d6c07319b38bae6e526286d5c8b183f68538dc7621376",
+      "sha256": "8a0012a6a66990c8038d6c07319b38bae6e526286d5c8b183f68538dc7621376",
+      "size": 170835,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_45.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:cd11722b1201fae6a12d45a02a9e2911a38bde03be3722c9349b58c38997e07a",
+      "sha256": "cd11722b1201fae6a12d45a02a9e2911a38bde03be3722c9349b58c38997e07a",
+      "size": 340439,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_46.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:99f83d3dd30c8456d26f6d6a70375b2433614b437789f8004504f321169d3e44",
+      "sha256": "99f83d3dd30c8456d26f6d6a70375b2433614b437789f8004504f321169d3e44",
+      "size": 365889,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_47.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:d5513c9789240b9ccead8103ebbee8d35143b04e6cc96ffa6032dc05fa0fb36f",
+      "sha256": "d5513c9789240b9ccead8103ebbee8d35143b04e6cc96ffa6032dc05fa0fb36f",
+      "size": 210149,
+      "mediaType": "image/jpeg",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/bi_1_48.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:6a9c20e9ee687997b14ce053540725bf016de6302c771e15e6963705e71a554c",
+      "sha256": "6a9c20e9ee687997b14ce053540725bf016de6302c771e15e6963705e71a554c",
+      "size": 6368,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!ActivityAssets.laz!step_d.png"
+      ],
+      "alsoReferencedBy": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/3.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/4.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/5.ev3"
+      ],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:fa1563295e68e9ee0ddbba95aea7a6559bb3c281fe811715b564928e0130e904",
+      "sha256": "fa1563295e68e9ee0ddbba95aea7a6559bb3c281fe811715b564928e0130e904",
+      "size": 6408,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!ActivityAssets.laz!step.png"
+      ],
+      "alsoReferencedBy": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/3.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/4.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/5.ev3"
+      ],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:4e0f26b702748751f2ab3588a057270e22b973f0588cba98b42ff5fa1a9274c4",
+      "sha256": "4e0f26b702748751f2ab3588a057270e22b973f0588cba98b42ff5fa1a9274c4",
+      "size": 29945,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!ActivityAssets.laz!fini_d.png"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:88b5015c45c9373b5d2bf9521871fb9bbef365933251c6df22a1c5149bff837c",
+      "sha256": "88b5015c45c9373b5d2bf9521871fb9bbef365933251c6df22a1c5149bff837c",
+      "size": 30328,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!ActivityAssets.laz!fini.png"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:35d37ac1af9bf69210987d349a14784f756f8382e43d64b7bd8debc8161fcea6",
+      "sha256": "35d37ac1af9bf69210987d349a14784f756f8382e43d64b7bd8debc8161fcea6",
+      "size": 66007,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!ActivityAssets.laz!go_1.png"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:e82cb041697c00c19344a13384b5a52367a53fe25604aa73ebc0e523c3dc1963",
+      "sha256": "e82cb041697c00c19344a13384b5a52367a53fe25604aa73ebc0e523c3dc1963",
+      "size": 26498,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!ActivityAssets.laz!go_2.png"
+      ],
+      "alsoReferencedBy": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/3.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/4.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/5.ev3"
+      ],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:366bcd9a2cac98e43a2c444fb15f1a2b5a0f84890aa6a37ed382a6d1a01ae6fe",
+      "sha256": "366bcd9a2cac98e43a2c444fb15f1a2b5a0f84890aa6a37ed382a6d1a01ae6fe",
+      "size": 27618,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!ActivityAssets.laz!go_4g.png"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:72c8d88a0604e5ea4ca33e99fb4f6a523903f49c015eb1f6a7924cee2cedf3aa",
+      "sha256": "72c8d88a0604e5ea4ca33e99fb4f6a523903f49c015eb1f6a7924cee2cedf3aa",
+      "size": 997,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/tip.png"
+      ],
+      "alsoReferencedBy": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/3.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/4.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/5.ev3"
+      ],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:beba52034a08d1372228e00fb5a0115e3be769e5604c4f9e02fbfd6e27e0f115",
+      "sha256": "beba52034a08d1372228e00fb5a0115e3be769e5604c4f9e02fbfd6e27e0f115",
+      "size": 488,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/st1.png"
+      ],
+      "alsoReferencedBy": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/3.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/4.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/5.ev3"
+      ],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:9f7b2515c183b7e4814b6ac765c4339e077116dcd97fe3e5a0ebbfd416a5ccc3",
+      "sha256": "9f7b2515c183b7e4814b6ac765c4339e077116dcd97fe3e5a0ebbfd416a5ccc3",
+      "size": 653,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/st2.png"
+      ],
+      "alsoReferencedBy": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/3.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/4.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/5.ev3"
+      ],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:3811e800c02ad8a3f513c535dc662d777211d37c4050360672e718f216ba85c5",
+      "sha256": "3811e800c02ad8a3f513c535dc662d777211d37c4050360672e718f216ba85c5",
+      "size": 681,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/st3.png"
+      ],
+      "alsoReferencedBy": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/3.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/4.ev3",
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/5.ev3"
+      ],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:4eb12f4de2cf8df854472759788ae90d599a910847703a6ea26dbd0d823f06f2",
+      "sha256": "4eb12f4de2cf8df854472759788ae90d599a910847703a6ea26dbd0d823f06f2",
+      "size": 17111,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/pi_1_1.png"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:b8c7eec835341aaea85571169e8767121cdfe0edd4705de079191b0e15540585",
+      "sha256": "b8c7eec835341aaea85571169e8767121cdfe0edd4705de079191b0e15540585",
+      "size": 29769,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/pi_1_2.png"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:614b3794bcec0fef3bc195893f43b342eb245e8a8ecaf5a961d5da7a75338390",
+      "sha256": "614b3794bcec0fef3bc195893f43b342eb245e8a8ecaf5a961d5da7a75338390",
+      "size": 30387,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/pi_1_3.png"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:0df7be8eac8485d875f42f84b2b3a628866a157cd6ca51a25fad9a785203b6ef",
+      "sha256": "0df7be8eac8485d875f42f84b2b3a628866a157cd6ca51a25fad9a785203b6ef",
+      "size": 30720,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/pi_1_4.png"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:dd66ba975d2752fe3bb926f1ef24c9d69ff87d028d1fae295fa222b9db533e62",
+      "sha256": "dd66ba975d2752fe3bb926f1ef24c9d69ff87d028d1fae295fa222b9db533e62",
+      "size": 29246,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/pi_1_5.png"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:7a79d1d4e03edbe8fe1669076301f52c34717e8959bdaf9ded47a62b6f520a7e",
+      "sha256": "7a79d1d4e03edbe8fe1669076301f52c34717e8959bdaf9ded47a62b6f520a7e",
+      "size": 27856,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!ActivityAssets.laz!go_4r.png"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:ec9cc254aaf2e5e0296e362d0b32a8d72fc94bee80021e3541aa1b49fd7ea2cb",
+      "sha256": "ec9cc254aaf2e5e0296e362d0b32a8d72fc94bee80021e3541aa1b49fd7ea2cb",
+      "size": 47769,
+      "mediaType": "application/xml",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Activity.x3a"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:6700c97e327c397446170fe6377d2527b48fa4c9530aae3ccb3310a21ab0d958",
+      "sha256": "6700c97e327c397446170fe6377d2527b48fa4c9530aae3ccb3310a21ab0d958",
+      "size": 747844,
+      "mediaType": "application/zip",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!ActivityAssets.laz"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:cde4602cd39d4fb4aa93f778176fb09dcdb424029ac45cd1fc7523cfb231abce",
+      "sha256": "cde4602cd39d4fb4aa93f778176fb09dcdb424029ac45cd1fc7523cfb231abce",
+      "size": 17162,
+      "mediaType": "application/octet-stream",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Fanfare.rsf"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:4630b8908854dbbd43d2ad62e5e559e118807773eb75b703e5e762547f58fc37",
+      "sha256": "4630b8908854dbbd43d2ad62e5e559e118807773eb75b703e5e762547f58fc37",
+      "size": 2946,
+      "mediaType": "application/octet-stream",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Pinch left.rgf"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:e52619e95eb78b2aa1ddf36514a780c029a13c2aa27cfbc1a2e9ba6a7911f675",
+      "sha256": "e52619e95eb78b2aa1ddf36514a780c029a13c2aa27cfbc1a2e9ba6a7911f675",
+      "size": 2612,
+      "mediaType": "application/xml",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Program.ev3p"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:e77e564fdbf79ad9fc8c115474b908af2749c135575112689d0934f390c2a1ea",
+      "sha256": "e77e564fdbf79ad9fc8c115474b908af2749c135575112689d0934f390c2a1ea",
+      "size": 6874,
+      "mediaType": "application/xml",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!Project.lvprojx"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:947be54417dd20ae183f06c6273d78c17b97ed308ef4d958e1a60415ca1d72a8",
+      "sha256": "947be54417dd20ae183f06c6273d78c17b97ed308ef4d958e1a60415ca1d72a8",
+      "size": 11442,
+      "mediaType": "application/xml",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!TRACK3R 01.ev3p"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:2eb14ae5c6c8d6faa50916767c09a172235a2ecb930fbb436a13056895306384",
+      "sha256": "2eb14ae5c6c8d6faa50916767c09a172235a2ecb930fbb436a13056895306384",
+      "size": 22093,
+      "mediaType": "application/xml",
+      "sourceLocators": [
+        "Resources/Blocks/LEGO/VIs/PBR/MoveDistanceRotations.vix"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:28a47d2b9ee57ce109a8b3935440987360925b18bc8b6d0f035998f1a011c694",
+      "sha256": "28a47d2b9ee57ce109a8b3935440987360925b18bc8b6d0f035998f1a011c694",
+      "size": 15910,
+      "mediaType": "application/xml",
+      "sourceLocators": [
+        "Resources/Blocks/LEGO/VIs/PBR/MediumMotorDistanceRotations.vix"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:566aa7b771fc2ad036018345cfba60da5fa0d6fadfb18db28c986823156d721b",
+      "sha256": "566aa7b771fc2ad036018345cfba60da5fa0d6fadfb18db28c986823156d721b",
+      "size": 20917,
+      "mediaType": "application/xml",
+      "sourceLocators": [
+        "Resources/Blocks/LEGO/VIs/PBR/DisplayFile.vix"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:24572b352acc3af4c5b26a94dfc3dfc3f0745ddabf4f08231af14dfd7281c335",
+      "sha256": "24572b352acc3af4c5b26a94dfc3dfc3f0745ddabf4f08231af14dfd7281c335",
+      "size": 16405,
+      "mediaType": "application/xml",
+      "sourceLocators": [
+        "Resources/Blocks/LEGO/VIs/PBR/PlaySoundFile.vix"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:152e69cf3c8e76c8d8b0aed924ddd1708e4c68624611af33d52c2c2814dd5df9",
+      "sha256": "152e69cf3c8e76c8d8b0aed924ddd1708e4c68624611af33d52c2c2814dd5df9",
+      "size": 4,
+      "mediaType": "application/octet-stream",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!___CopyrightYear"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:b2d66c03bda5f6fa3c0b5b866ba7557771d2e113297538732b15ed2521e91ca2",
+      "sha256": "b2d66c03bda5f6fa3c0b5b866ba7557771d2e113297538732b15ed2521e91ca2",
+      "size": 22,
+      "mediaType": "application/octet-stream",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!___LinkProjectThumbnail"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:e0636231f8dd2ea57f5a15ec9c27409e695e86311a07f174896dac6f923476dc",
+      "sha256": "e0636231f8dd2ea57f5a15ec9c27409e695e86311a07f174896dac6f923476dc",
+      "size": 8,
+      "mediaType": "application/octet-stream",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!___LinkProjectVideo"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:73719446cb01f21e427121e4d98c71762d415cf1093b1b22ca765b98f95dcab1",
+      "sha256": "73719446cb01f21e427121e4d98c71762d415cf1093b1b22ca765b98f95dcab1",
+      "size": 89,
+      "mediaType": "application/octet-stream",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!___ProjectDescription"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:d005cceecaab00d7eac56e202fe1ecb0b5298229b69af708086f947e5ac135c7",
+      "sha256": "d005cceecaab00d7eac56e202fe1ecb0b5298229b69af708086f947e5ac135c7",
+      "size": 13,
+      "mediaType": "application/octet-stream",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/1.ev3!___ProjectTitle"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:d4339d3cf22d45c6ea022bc161e86b4fbfd1da60815614a4c1f1e9e5b1612dc4",
+      "sha256": "d4339d3cf22d45c6ea022bc161e86b4fbfd1da60815614a4c1f1e9e5b1612dc4",
+      "size": 83295,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/mission_1_hover.png"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:811db23ee70eb786d7933df50315e7356e9339b890a9837ed368e4d52585a22c",
+      "sha256": "811db23ee70eb786d7933df50315e7356e9339b890a9837ed368e4d52585a22c",
+      "size": 1401,
+      "mediaType": "application/xml",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/pack.xml"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:d40b34cdb11b853f42de8032ffdc37b95bcb3609ec420ed689df22d369ce72a2",
+      "sha256": "d40b34cdb11b853f42de8032ffdc37b95bcb3609ec420ed689df22d369ce72a2",
+      "size": 2024689,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/assets/0.png"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:88fb75dd9190f8ce0b6410d985ede7b92385dd7780bca26ef7019b713946fc55",
+      "sha256": "88fb75dd9190f8ce0b6410d985ede7b92385dd7780bca26ef7019b713946fc55",
+      "size": 2299544,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/assets/1.png"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:f4e0e5620ee281f94e70bffbb7be163b680900cf8cc645e83c77b066fe6c8906",
+      "sha256": "f4e0e5620ee281f94e70bffbb7be163b680900cf8cc645e83c77b066fe6c8906",
+      "size": 4187412,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/assets/2.png"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:7066182803ca97b891ef01ce88f5990c3df4bffaee8de6dbe5f5559ddd6e926f",
+      "sha256": "7066182803ca97b891ef01ce88f5990c3df4bffaee8de6dbe5f5559ddd6e926f",
+      "size": 242217,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/assets/3.png"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:2a0cae8b3633510ff1e218348eb538f679ca33cc0f07e558bdc2bde5122f1fc7",
+      "sha256": "2a0cae8b3633510ff1e218348eb538f679ca33cc0f07e558bdc2bde5122f1fc7",
+      "size": 238852,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/assets/4.png"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:bbd3d971c1c401c35a559840fd79fba65b8a9bb6ebc6d97f1aacba0c3c7f2f72",
+      "sha256": "bbd3d971c1c401c35a559840fd79fba65b8a9bb6ebc6d97f1aacba0c3c7f2f72",
+      "size": 1071375,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/assets/5.png"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:77ec16475460f67bd473b2fcea9f8a2df038e2bd9a94713bd78d8cbf687d658f",
+      "sha256": "77ec16475460f67bd473b2fcea9f8a2df038e2bd9a94713bd78d8cbf687d658f",
+      "size": 1224293,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/assets/6.png"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:44d1799cd1b7f53cb4ca8017b42e8bac12a079048770a1e8eff75db946676840",
+      "sha256": "44d1799cd1b7f53cb4ca8017b42e8bac12a079048770a1e8eff75db946676840",
+      "size": 2004,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/assets/7.png"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:67eda6b33046341f660e18dba5144c74cbdf5f34ab0235828e32c09c764fafbc",
+      "sha256": "67eda6b33046341f660e18dba5144c74cbdf5f34ab0235828e32c09c764fafbc",
+      "size": 2791,
+      "mediaType": "application/zip",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/0.ev3"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:507ccc83e7fd15891a990b7450ab04d9efe14c7d674dcf91d32020213131a8a4",
+      "sha256": "507ccc83e7fd15891a990b7450ab04d9efe14c7d674dcf91d32020213131a8a4",
+      "size": 132656,
+      "mediaType": "image/png",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/0_ProjectThumbnail.jpg"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:a9d6595869e2a9733312d7e4439a009ea3b387f961062c0aacd33a6ec8bb8bee",
+      "sha256": "a9d6595869e2a9733312d7e4439a009ea3b387f961062c0aacd33a6ec8bb8bee",
+      "size": 8539378,
+      "mediaType": "video/mp4",
+      "sourceLocators": [
+        "Resources/ContentPacks/Retail/nonlocalized/LEGO/pack0/projects/0_ProjectVideo.wmv"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    },
+    {
+      "id": "sha256:6815b5867e6bd2cead92a93e44a5f843f9100e95215043a17e353d06a1a6ebb4",
+      "sha256": "6815b5867e6bd2cead92a93e44a5f843f9100e95215043a17e353d06a1a6ebb4",
+      "size": 12343972,
+      "mediaType": "application/octet-stream",
+      "sourceLocators": [
+        "Resources/EditorHelp/Retail/en-US/ev3_user_guide.pdf"
+      ],
+      "alsoReferencedBy": [],
+      "payloadPath": null,
+      "rights": {
+        "localImport": "USER_AUTHORIZATION_REQUIRED",
+        "redistribution": "UNKNOWN"
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "action": "GoToProgram:Program.ev3p",
+      "executionAllowed": false,
+      "status": "RESOLVED",
+      "program": "Program.ev3p"
+    },
+    {
+      "action": "GoToProgram:TRACK3R 01.ev3p",
+      "executionAllowed": false,
+      "status": "RESOLVED",
+      "program": "TRACK3R 01.ev3p"
+    },
+    {
+      "action": "NavigateActivity-GoToNamedSlide:Brief1",
+      "executionAllowed": false,
+      "status": "RESOLVED",
+      "targetSlideIndices": [
+        0
+      ]
+    },
+    {
+      "action": "NavigateActivity-GoToNamedSlide:Build1",
+      "executionAllowed": false,
+      "status": "RESOLVED",
+      "targetSlideIndices": [
+        1
+      ]
+    },
+    {
+      "action": "NavigateActivity-GoToNamedSlide:Go1",
+      "executionAllowed": false,
+      "status": "RESOLVED",
+      "targetSlideIndices": [
+        3
+      ]
+    },
+    {
+      "action": "NavigateActivity-GoToNamedSlide:Program1",
+      "executionAllowed": false,
+      "status": "RESOLVED",
+      "targetSlideIndices": [
+        2
+      ]
+    },
+    {
+      "action": "NavigateActivity-GoToNamedSlide:ProgramInstructions1",
+      "executionAllowed": false,
+      "status": "RESOLVED",
+      "targetSlideIndices": [
+        9
+      ]
+    },
+    {
+      "action": "NavigateActivity-GoToNamedSlide:Run1",
+      "executionAllowed": false,
+      "status": "RESOLVED",
+      "targetSlideIndices": [
+        15
+      ]
+    },
+    {
+      "action": "OpenProjectTemplate:ev3Lobby\\://LEGO/pack0/projects/2.ev3",
+      "executionAllowed": false,
+      "status": "LOCATED_NOT_IMPORTED",
+      "path": "Resources/ContentPacks/Retail/en-US/LEGO/pack0/projects/2.ev3",
+      "sha256": "884f4b50a74b8b3d07619799ce97b4550ba21a027ceed0e75669f0c8be150192"
+    },
+    {
+      "action": "OpenWebsite:ev3HelpDirect\\://editor/ev3_user_guide.pdf#page=21",
+      "executionAllowed": false,
+      "status": "LOCATED_NOT_RENDERED",
+      "path": "Resources/EditorHelp/Retail/en-US/ev3_user_guide.pdf",
+      "fragment": "page=21",
+      "assetId": "sha256:6815b5867e6bd2cead92a93e44a5f843f9100e95215043a17e353d06a1a6ebb4"
+    },
+    {
+      "action": "OpenWebsite:ev3help\\://blocks/LEGO/MediumMotor.html#MotorPowerAndDirection",
+      "executionAllowed": false,
+      "status": "UNKNOWN_HELP_RESOLUTION",
+      "legacyUri": "ev3help://blocks/LEGO/MediumMotor.html#MotorPowerAndDirection"
+    },
+    {
+      "action": "OpenWebsite:ev3help\\://blocks/LEGO/Move.html#Mode_Rotations",
+      "executionAllowed": false,
+      "status": "UNKNOWN_HELP_RESOLUTION",
+      "legacyUri": "ev3help://blocks/LEGO/Move.html#Mode_Rotations"
+    },
+    {
+      "action": "OpenWebsite:ev3help\\://blocks/LEGO/Move.html#MotorPowerAndDirection",
+      "executionAllowed": false,
+      "status": "UNKNOWN_HELP_RESOLUTION",
+      "legacyUri": "ev3help://blocks/LEGO/Move.html#MotorPowerAndDirection"
+    },
+    {
+      "action": "OpenWebsite:ev3help\\://editor/ConnectingToBrick.html",
+      "executionAllowed": false,
+      "status": "UNKNOWN_HELP_RESOLUTION",
+      "legacyUri": "ev3help://editor/ConnectingToBrick.html"
+    },
+    {
+      "action": "OpenWebsite:ev3help\\://editor/HardwarePage.html#DownloadingAProgramProgrammingMode",
+      "executionAllowed": false,
+      "status": "UNKNOWN_HELP_RESOLUTION",
+      "legacyUri": "ev3help://editor/HardwarePage.html#DownloadingAProgramProgrammingMode"
+    },
+    {
+      "action": "OpenWebsite:ev3help\\://editor/ProgrammingEnvironment.html",
+      "executionAllowed": false,
+      "status": "UNKNOWN_HELP_RESOLUTION",
+      "legacyUri": "ev3help://editor/ProgrammingEnvironment.html"
+    },
+    {
+      "action": "ShowPaletteItem:Display",
+      "executionAllowed": false,
+      "status": "LEGACY_UI_ACTION",
+      "paletteItem": "Display"
+    },
+    {
+      "action": "ShowPaletteItem:MediumMotor",
+      "executionAllowed": false,
+      "status": "LEGACY_UI_ACTION",
+      "paletteItem": "MediumMotor"
+    },
+    {
+      "action": "ShowPaletteItem:Move",
+      "executionAllowed": false,
+      "status": "LEGACY_UI_ACTION",
+      "paletteItem": "Move"
+    },
+    {
+      "action": "ShowPaletteItem:Sound",
+      "executionAllowed": false,
+      "status": "LEGACY_UI_ACTION",
+      "paletteItem": "Sound"
+    },
+    {
+      "action": "ShowPaletteItem:StartBlock",
+      "executionAllowed": false,
+      "status": "LEGACY_UI_ACTION",
+      "paletteItem": "StartBlock"
+    }
+  ],
+  "completion": {
+    "mode": "learner-confirmation",
+    "automaticAssessment": false,
+    "nextMission": "track3r-02-not-imported"
+  },
+  "unknowns": [
+    "hardware execution",
+    "iPad playback",
+    "legacy HTML help resolution",
+    "production normalization",
+    "instruction image accessibility",
+    "redistribution rights",
+    "NI block execution semantics"
+  ]
+}

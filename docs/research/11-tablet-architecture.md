@@ -1,35 +1,71 @@
-# 11 — Tablet architecture proposal
+# 11 ? Tablet architecture proposal
 
-**Status: PLANNED; platform choice unresolved.** This is a research proposal based on the stated product requirements, not a prototype or compatibility finding. The blocking evidence gap is reliable iPad-to-EV3 communication.
+> Historical research snapshot (2026-10-04/05), recovered onto main on 2026-10-11. Evidence and proposals below retain their original dates; they do not describe the current implementation. See [current development](../development.md), [content and conversion limits](../classroom-content.md) and [hardware validation](../manual-connection-validation.md). Hardware behavior remains UNTESTED unless a later recorded test establishes it.
 
-## Candidate comparison
+**PROPOSED final architecture; browser proof implemented, device layer absent. Updated 2026-10-05.** Content preservation
+and native transport feasibility can advance independently. Bluetooth remains a
+product gate for iPad device control, not a prerequisite for the content model,
+lesson renderer, library, offline storage or block-editor evaluation.
 
-| Option | Web-core reuse | Tablet/offline potential | EV3 transport evidence here | Current assessment |
-| --- | --- | --- | --- | --- |
-| PWA | High | Potentially high; device APIs and offline behavior need target tests | No verified path; Web Bluetooth is BLE-oriented, while cited EV3 implementation uses Classic RFCOMM | Keep as a web delivery option, not the only iPad plan |
-| React + TypeScript + Capacitor | High | Potentially high; native plugins are possible | No verified Classic RFCOMM path on iOS; native plugins do not remove OS API limits. Wi-Fi merits testing | Candidate for web-core reuse if a viable native transport is demonstrated |
-| React Native | Partial; web UI reuse is not automatic | Native device integration possible | None | Compare if native transport or touch performance requires it |
-| Swift / Kotlin native | Low cross-platform UI reuse | Strong platform-native access potential | None | Fallback if required transport cannot be exposed safely through a hybrid host |
+The earlier proof used ES modules, bundled Blockly and a private local tutorial
+server. That prototype has been superseded by main; it was not a native-host
+decision. See [current development](../development.md).
 
-This comparison is qualitative; performance, APIs, and connectivity have not been measured. The independent `ev3-python3` implementation uses Classic Bluetooth RFCOMM and also supports Wi-Fi, which makes iPad Wi-Fi worth investigating. Apple Core Bluetooth/External Accessory and MDN Web Bluetooth are primary documentation leads, but could not be fetched in this pass. A Capacitor plugin is an integration mechanism, not proof that iPadOS exposes the required transport.
-
-## Proposed boundaries
+## Boundaries
 
 ```mermaid
 flowchart TD
-  UI[Tablet-first UI] --> Lesson[Lesson engine]
-  UI --> Editor[Block editor]
-  Lesson --> Runtime[EV3 runtime]
+  UI[Tablet-first UI] --> Lesson[Lesson Engine]
+  UI --> Editor[Blockly evaluation]
+  Library[Local library and progress] --> Lesson
+  Import[Copy-first extractor and normalizer] --> Library
+  Lesson --> Runtime[EV3 Runtime]
   Editor --> Runtime
-  Runtime --> Protocol[Transport-independent EV3 protocol]
-  Protocol --> Transport[EV3 transport interface]
-  Transport --> Native[Platform adapter, if required]
-  Transport --> Brick[EV3 brick]
-  Content[Local content and projects] --> Lesson
+  Runtime --> Protocol[EV3 Protocol]
+  Protocol --> Transport[EV3Transport]
+  Transport --> IOS[iOS ExternalAccessory candidate]
+  Transport --> Other[Android / Wi-Fi / USB candidates]
 ```
 
-Keep lesson/content models, editor state, runtime intent, protocol encoding, and device transport separately testable. Use a local-first content store; choose IndexedDB, OPFS, Capacitor Filesystem, or SQLite only after storage and offline requirements are tested. An importer should be a separate tool boundary from shipped content.
+The Lesson Engine runs normalized Activity types, never legacy commands. A
+program reference can be read without executing it. Runtime exposes typed motor,
+sensor, display and sound intentions; protocol handles framing/counters/replies;
+transport handles byte streams, session lifecycle and platform errors. Contract
+must address cancellation, serialization, partial reads/writes, bounded queues,
+timeouts, stale replies, disconnect and foreground/background transitions.
+An app-side stop command alone is not evidence of brick safety after host loss.
 
-## Decision gate
+## Host candidates
 
-Before selecting a mobile host, verify current platform API constraints and produce a minimal proof on a current iPad: connect using a documented, permitted transport, read battery and port state, execute a safe motor command, stop, disconnect/reconnect, and show actionable permission/errors. Test Wi-Fi as well as any legally and technically available Bluetooth option. Repeat on Android before claiming parity. If neither web nor a Capacitor-native adapter supports the required transport, evaluate native alternatives or an explicitly supported gateway with the same proof checklist. Record the outcome in an ADR only after evidence exists.
+| Host | Assessment | Gate |
+| --- | --- | --- |
+| React / TypeScript / Capacitor + Swift | Candidate: reusable lesson UI and native EASession in one installed app | Actual accessory access, authorization, touch performance and offline storage tests |
+| Swift native | Candidate if native integration/lifecycle or tablet UX warrants it | Same manufacturer/protocol constraints; no assumed permission advantage |
+| React Native | Candidate; shared web UI is not automatic | Same accessory constraints and additional integration costs |
+| PWA | Candidate for content access/editor without promised EV3 connection | No verified Safari/EV3 GATT path; not selected as sole iPad delivery |
+
+[18](18-ipad-accessory-bluetooth.md) documents the stronger ExternalAccessory
+candidate. CoreBluetooth's GATT support does not provide arbitrary SPP/RFCOMM.
+A native wrapper is an integration mechanism, not proof of permitted accessory
+access. There is no proposed additional bridge for students to install/manage.
+Wi-Fi/USB are separately researched alternatives, not substitutes for meeting the
+owner's iPad Bluetooth objective or evidence of universal compatibility.
+
+## Decisions that can proceed now
+
+Define normalized Activity contracts and import diagnostics; prototype touch
+lesson navigation, local import review, build-image zoom and accessible branch
+choices; evaluate Blockly touch/keyboard/screen-reader interaction using original
+or synthetic fixtures. Keep Library, learner progress and workspace ownership
+separate. Test offline cold-start, quota failure, backup/restore and content-version
+migration before selecting a durable storage backend. Do not commit to a frontend
+framework solely because a sample manifest exists.
+
+## Decision gates
+
+Choose the mobile host through an ADR after a current iPad/brick test demonstrates
+one-app pairing/session, battery/port reads, bounded motor run/stop, disconnect and
+reconnect, permission/lifecycle behavior, and a distributable authorization route.
+Choose runtime execution (direct streaming vs downloaded program) based on lesson
+needs, timing and brick safety evidence. Compare Android separately before
+claiming parity. Next milestones and unknowns: [17](17-preservation-milestone.md).

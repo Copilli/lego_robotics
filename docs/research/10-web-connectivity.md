@@ -23,3 +23,35 @@ The [`ev3-python3` implementation](https://github.com/ChristophGaukel/ev3-python
 | USB | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | UNTESTED |
 
 Investigate browser API support and EV3 profile compatibility on exact target devices. For USB, establish VID/PID, interface/endpoints, driver behavior, and browser permission requirements from a real brick before evaluating WebUSB/Web Serial. For Wi-Fi, measure discovery, ports, handshake, and protocol using documented captures. If a native host is required, make it an explicit adapter rather than pretending a browser can open arbitrary sockets.
+
+## Historical native/tablet research (2026-10-04)
+
+> Historical research snapshot (2026-10-04/05), recovered onto main on 2026-10-11. This section records the pre-implementation investigation; see the implemented transports above and [current development](../development.md). Hardware behavior remains UNTESTED.
+
+**No EV3 Studio transport has been tested on hardware.** VERIFIED sources do not
+mean implemented support. iPad Bluetooth is the first priority, followed by
+Android Bluetooth, Wi-Fi, then desktop.
+
+| Platform / route | Documentary evidence | Product status | Required evidence |
+| --- | --- | --- | --- |
+| iPad native accessory Bluetooth | Classic/RFCOMM Mode2 source; EASession SDK inspected | EXPERIMENTAL / UNTESTED | Actual protocol strings/session, data, authorization, reliability |
+| iPad CoreBluetooth | GATT over BLE and BR/EDR | Compatible EV3 GATT service UNKNOWN; UNTESTED | Compatible service, not general RFCOMM assumption |
+| iPad pure PWA / Web Bluetooth | GATT API; no EV3 route demonstrated | UNTESTED; no support claim | Exact browser API plus compatible brick service |
+| Android native Bluetooth | RFCOMM protocol/source corroboration | UNTESTED | Current APIs/permissions, pairing and real-brick tests |
+| iPad/Android native Wi-Fi | Transport documented by EV3 kit | UNTESTED; secondary priority | Dongle/firmware, discovery/handshake, school network and permissions |
+| Desktop native Bluetooth/Wi-Fi | EV3 kit and implementations | UNTESTED | OS APIs and device tests |
+| Desktop native USB | EV3 kit | UNTESTED | VID/PID/interfaces/endpoints, drivers and exchange |
+| Browser WebUSB/Web Serial | Matching EV3 interface not evaluated | UNKNOWN / UNTESTED | Exact browser API/interface and device proof |
+| Student-managed gateway/bridge | No experiment | OUT OF PRODUCT SCOPE | Owner requires a single app with no managed extra server/bridge |
+
+Sources and constraints: [iPad follow-up](18-ipad-accessory-bluetooth.md),
+[LEGO kit](https://www.lego.com/cdn/cs/set/assets/blt6879b00ae6951482/LEGO_MINDSTORMS_EV3_Communication_Developer_Kit.pdf),
+[Web Bluetooth specification](https://webbluetoothcg.github.io/web-bluetooth/).
+For iPad Wi-Fi, investigate [Apple TN3179](https://developer.apple.com/documentation/technotes/tn3179-understanding-local-network-privacy)
+after determining the actual discovery method. No Internet and no local network
+are distinct operating scenarios.
+
+Compatibility records must include date, prototype revision, device/OS,
+brick/firmware/mode, protocol, accessories/network, procedure/captures and separate
+results for discovery, connect, sensor/motor, stop, reconnect, background and
+multiple robots. Maintainer-reported results are distinct from our tests.
