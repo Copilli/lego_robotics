@@ -45,3 +45,19 @@ test('rebuilding the media palette does not leave blocks at its origin',async({p
   }).length);
   expect(orphans).toBe(0);
 });
+
+test('palette width can be dragged, changed by keyboard and retained',async({page})=>{
+  await page.goto('');await page.getByRole('button',{name:'Nuevo proyecto',exact:true}).click();
+  const divider=page.getByRole('separator',{name:'Ancho de la paleta de bloques'});
+  const before=Number(await divider.getAttribute('aria-valuenow'));
+  const box=await divider.boundingBox();
+  await page.mouse.move(box.x+4,box.y+120);await page.mouse.down();await page.mouse.move(box.x+154,box.y+120);await page.mouse.up();
+  await expect.poll(async()=>Number(await divider.getAttribute('aria-valuenow'))).toBeGreaterThan(before+100);
+  const expanded=await page.locator('.blocklyToolboxFlyout').boundingBox();
+  expect(expanded.width).toBeGreaterThan(before+100);
+  await divider.focus();await page.keyboard.press('ArrowRight');
+  const saved=await divider.getAttribute('aria-valuenow');
+  await page.reload();await page.getByRole('button',{name:'Nuevo proyecto',exact:true}).click();
+  await expect(divider).toHaveAttribute('aria-valuenow',saved);
+  await page.getByRole('button',{name:'Ocultar bloques',exact:true}).click();await expect(divider).toBeHidden();
+});

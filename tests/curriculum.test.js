@@ -36,3 +36,27 @@ test('brick programming uses current editor captures and loadable progressive pr
   assert.match(activity.modernPrograms[1].code,/count1/);
   assert.match(activity.modernPrograms[1].code,/robot.motion\("B\+C", -30, 30/);
 });
+test('Home missions retain source step order and only construction has a manual',()=>{
+  const sources=fs.existsSync('.preservation/legacy-programs.json')?JSON.parse(fs.readFileSync('.preservation/legacy-programs.json','utf8')):[];
+  for(const unit of catalog.units.filter(unit=>unit.group==='home')){
+    const missions=unit.activities.map(id=>Number(id.split('-').at(-1)));
+    assert.deepEqual(missions,[...missions].sort((a,b)=>a-b));
+    for(const id of unit.activities){
+      const activity=catalog.activities.find(activity=>activity.id===id);
+      const sourceSteps=activity.steps.filter(step=>!step.generatedModernProgram);
+      const source=sources.find(source=>source.activityId===id);
+      const names=sourceSteps.map(step=>step.sourceSlideName);
+      if(source){
+        const expected=source.slides.filter(slide=>/^(Brief|Build|Program|Go)\d+$/.test(slide.name)).map(slide=>slide.name);
+        assert.deepEqual(names,expected,id);
+      }
+      const stages=names.map(name=>{assert.match(name,/^(Brief|Build|Program|Go)\d+$/);return ['Brief','Build','Program','Go'].indexOf(name.replace(/\d+$/,''));});
+      assert.deepEqual(stages,[...stages].sort((a,b)=>a-b),id);
+      for(const step of activity.steps){
+        if(/^Build\d+$/.test(step.sourceSlideName||''))assert.ok(step.manualIds.length);
+        else assert.equal(step.manualIds.length,0);
+        if(step.video)assert.ok(!step.video.startsWith('../media/lego-local/'));
+      }
+    }
+  }
+});

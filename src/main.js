@@ -77,6 +77,7 @@ function render() {
   $('#console-panel').hidden = view !== 'editor';
   const container = $('#content');
   document.body.classList.toggle('editor-fullscreen',view==='editor');
+  document.body.classList.toggle('manual-fullscreen',view==='manual');
   if(view!=='editor')editorExpanded=false;
   document.body.classList.toggle('editor-expanded',editorExpanded);
   if(curriculumView(view,container,{navigate:v=>{save();view=v;render();},newProject,projects,openProject:id=>{active=id;view='editor';render();}}))return;
@@ -182,7 +183,7 @@ function mountGuide(p){
   ];
   if(!Number.isInteger(p.tutorialStep))return;
   const index=Math.max(0,Math.min(3,p.tutorialStep)),step=steps[index];
-  const aside=$('.examples');aside.innerHTML='<p class="eyebrow">MI PRIMER PROGRAMA · '+(index+1)+' / 4</p><h3>'+step[0]+'</h3><p>'+step[1]+'</p>'+(index===0?'<button id="guide-connect">Conectar EV3</button><p>También puedes activar el simulador para practicar sin robot.</p>':'<button id="guide-example">Cargar ejemplo de este paso</button>')+'<div class="guide-nav"><button id="guide-prev" '+(index===0?'disabled':'')+'>Anterior</button><button id="guide-next">'+(index===3?'Completar':'Siguiente')+'</button></div><button id="guide-close">Cerrar guía</button>';
+  const aside=$('.examples');aside.innerHTML='<p class="eyebrow">MI PRIMER PROGRAMA · '+(index+1)+' / 4</p><h3>'+step[0]+'</h3><p>'+step[1]+'</p>'+(index===0?'<button id="guide-connect">Conectar EV3</button><p>También puedes activar el simulador para practicar sin robot.</p>':'<button id="guide-example">Cargar ejemplo de este paso</button>')+'<div class="guide-nav"><button id="guide-prev" '+(index===0?'disabled':'')+'>Anterior</button><button id="guide-next">'+(index===3?'Completar':'Siguiente')+'</button></div>';
   $('#guide-connect')?.addEventListener('click',()=>$('#connect').click());
   $('#guide-example')?.addEventListener('click',()=>{if(blockStudio){blockStudio.loadExample(step[2]);save();}else notify('Abre la pestaña Bloques para cargar este ejemplo.');});
   $('#guide-prev').onclick=()=>{save();p.tutorialStep=index-1;persist();render();};
@@ -192,7 +193,6 @@ function mountGuide(p){
     if(index===3){if(!completed.includes('start'))completed.push('start');try{localStorage.setItem('copilli-lego-progress',JSON.stringify(completed));}catch{notify('No se pudo guardar el progreso.');}delete p.tutorialStep;persist();render();notify('Tutorial completado. Sigue experimentando con tus bloques.');}
     else{p.tutorialStep=index+1;persist();render();}
   };
-  $('#guide-close').onclick=()=>{save();delete p.tutorialStep;persist();render();};
 }
 function bindLessons(){document.querySelectorAll('[data-lesson]').forEach(b=>b.onclick=()=>{lessonId=b.dataset.lesson;view='lesson';render();});}
 function download(name,content,type){const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}

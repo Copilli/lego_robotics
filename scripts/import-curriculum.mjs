@@ -10,4 +10,5 @@ for(const [command,args] of [
   [process.execPath,['scripts/modernize-programs.mjs']],
   [process.execPath,['scripts/modernize-workshop.mjs']],
   [process.execPath,['scripts/capture-modern-programs.mjs']],
+  [process.execPath,['scripts/prepare-tutorial-flow.mjs']],
 ]){const r=spawnSync(command,args,{stdio:'inherit'});if(r.error)throw r.error;if(r.status!==0)process.exit(r.status||1);}

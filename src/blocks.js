@@ -57,11 +57,31 @@ export function createBlocks(container,{xml,onChange}){
   // The flyout cache keys by block type, but our media entries have different
   // fields and file data. Recycling them leaves orphan blocks and wrong assets.
   workspace.getFlyout().setRecyclingEnabled(false);
+  const flyout=workspace.getFlyout();
+  let paletteWidth=Number(localStorage.getItem('copilli-palette-width'))||250;
+  const divider=document.createElement('div');
+  divider.className='palette-divider';divider.tabIndex=0;
+  divider.setAttribute('role','separator');divider.setAttribute('aria-orientation','vertical');
+  divider.setAttribute('aria-label','Ancho de la paleta de bloques');
+  container.append(divider);
+  flyout.getWidth=()=>paletteWidth;
+  function resizePalette(value=paletteWidth){
+    paletteWidth=Math.max(180,Math.min(value,Math.max(180,container.clientWidth-180)));
+    divider.hidden=!paletteVisible;
+    divider.style.left=(workspace.getToolbox().getWidth()+paletteWidth-4)+'px';
+    divider.setAttribute('aria-valuemin','180');divider.setAttribute('aria-valuemax',String(Math.max(180,container.clientWidth-180)));
+    divider.setAttribute('aria-valuenow',String(Math.round(paletteWidth)));
+    Scratch.svgResize(workspace);
+  }
+  divider.onpointerdown=event=>{event.preventDefault();divider.setPointerCapture(event.pointerId);};
+  divider.onpointermove=event=>{if(!divider.hasPointerCapture(event.pointerId))return;resizePalette(event.clientX-container.getBoundingClientRect().left-workspace.getToolbox().getWidth());};
+  divider.onpointerup=event=>{divider.releasePointerCapture(event.pointerId);localStorage.setItem('copilli-palette-width',String(paletteWidth));};
+  divider.onkeydown=event=>{if(!['ArrowLeft','ArrowRight'].includes(event.key))return;event.preventDefault();resizePalette(paletteWidth+(event.key==='ArrowRight'?30:-30));localStorage.setItem('copilli-palette-width',String(paletteWidth));};
   function togglePalette(){
     paletteVisible=!paletteVisible;
     workspace.getToolbox().setVisible(paletteVisible);
     if(paletteVisible)workspace.getToolbox().forceRerender();else workspace.getFlyout().hide();
-    Scratch.svgResize(workspace);workspace.scrollCenter();return paletteVisible;
+    resizePalette();workspace.scrollCenter();return paletteVisible;
   }
   function load(value){
     const dom=Scratch.utils.xml.textToDom(value);
@@ -73,7 +93,8 @@ export function createBlocks(container,{xml,onChange}){
   try{load(xml||exampleXML());}catch(error){workspace.dispose();throw error;}
   if(container.clientWidth<500)togglePalette();
   workspace.addChangeListener(event=>{if(!event.isUiEvent)onChange();});
-  const observer=new ResizeObserver(()=>Scratch.svgResize(workspace));observer.observe(container);
+  const observer=new ResizeObserver(()=>resizePalette());observer.observe(container);
+  resizePalette();
   return {
     workspace,
     get paletteVisible(){return paletteVisible;},
@@ -96,7 +117,7 @@ export function createBlocks(container,{xml,onChange}){
     loadXML(value){load(value);onChange();},
     loadExample(kind,comment){load(exampleXML(kind));if(comment)workspace.getTopBlocks(false)[0]?.setCommentText(comment);onChange();},
     undo:()=>workspace.undo(false),redo:()=>workspace.undo(true),
-    destroy(){observer.disconnect();workspace.dispose();},
+    destroy(){observer.disconnect();divider.remove();workspace.dispose();},
   };
 }
 

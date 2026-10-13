@@ -4332,14 +4332,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/31609a0bc9798fc4de94584221434532bab4d5b0de3c1fa172383c3025410aaf.mp4",
+          "video": "videos/31609a0bc9798fc4de94.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Blend It with Precision",
           "toolbox": [],
           "description": "In this mission, you will use the Bi-blade Blender to remove a tire from the Mission Pad. This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/b9813ced271a269125bb.png",
-          "manualIds": [
-            "manual-legacy-home-0-1"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief1"
         },
         {
           "id": "step-1",
@@ -4350,7 +4349,8 @@
           "image": "assets/19f62130fd17502c6073.jpg",
           "manualIds": [
             "manual-legacy-home-0-1"
-          ]
+          ],
+          "sourceSlideName": "Build1"
         },
         {
           "id": "step-2",
@@ -4359,9 +4359,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-0-1"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program1"
         },
         {
           "id": "modern-code-1",
@@ -4480,9 +4479,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/35d37ac1af9bf6921098.png",
-          "manualIds": [
-            "manual-legacy-home-0-1"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go1"
         }
       ],
       "unitId": "legacy-home-0",
@@ -4504,14 +4502,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/09b7117a6ae184fc34c1aca9d11d8787c95e24379083c0a85b834d38ae5c6fd2.mp4",
+          "video": "videos/09b7117a6ae184fc34c1.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Blast It Away",
           "toolbox": [],
           "description": "In this mission, you will blast away tires with the Blasting Bazooka. This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/f62c87dc9527bcc37dab.png",
-          "manualIds": [
-            "manual-legacy-home-0-2"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief2"
         },
         {
           "id": "step-1",
@@ -4522,7 +4519,8 @@
           "image": "assets/5c5ef4ea85103fa27280.jpg",
           "manualIds": [
             "manual-legacy-home-0-2"
-          ]
+          ],
+          "sourceSlideName": "Build2"
         },
         {
           "id": "step-2",
@@ -4531,9 +4529,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-0-2"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program2"
         },
         {
           "id": "modern-code-1",
@@ -4740,9 +4737,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/20d49bd3c13e27da0160.png",
-          "manualIds": [
-            "manual-legacy-home-0-2"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go2"
         }
       ],
       "unitId": "legacy-home-0",
@@ -4764,14 +4760,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/b6a6121ff970f208074954a60478994e71780033a9fa1fb620e205ab4236f608.mp4",
+          "video": "videos/b6a6121ff970f2080749.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Take Them Away",
           "toolbox": [],
           "description": "In this mission, you will move two tires with the Gripping Claw and place them inside the squares on the Mission Pad. This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/6b20b1e801ba01b30491.png",
-          "manualIds": [
-            "manual-legacy-home-0-3"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief3"
         },
         {
           "id": "step-1",
@@ -4782,7 +4777,8 @@
           "image": "assets/6b132de2d09659f7c0e9.jpg",
           "manualIds": [
             "manual-legacy-home-0-3"
-          ]
+          ],
+          "sourceSlideName": "Build3"
         },
         {
           "id": "step-2",
@@ -4791,9 +4787,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-0-3"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program3"
         },
         {
           "id": "modern-code-1",
@@ -4836,9 +4831,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/5bb8df01c647f220ee61.png",
-          "manualIds": [
-            "manual-legacy-home-0-3"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go3"
         }
       ],
       "unitId": "legacy-home-0",
@@ -4860,14 +4854,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/d23f06b7329a664eba39cb560fae7e527666b917bae084b2c8cc5ed68266665e.mp4",
+          "video": "videos/d23f06b7329a664eba39.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Tactical Defense System",
           "toolbox": [],
           "description": "In this mission, you will create a Tactical Defense System using the Heavy Hammer to protect TRACK3R from ambushes from behind. This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/bd8fe4d72e502b52f23b.png",
-          "manualIds": [
-            "manual-legacy-home-0-4"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief4"
         },
         {
           "id": "step-1",
@@ -4878,7 +4871,8 @@
           "image": "assets/af158cd5052fb1f260fe.jpg",
           "manualIds": [
             "manual-legacy-home-0-4"
-          ]
+          ],
+          "sourceSlideName": "Build4"
         },
         {
           "id": "step-2",
@@ -4887,9 +4881,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-0-4"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program4"
         },
         {
           "id": "step-3",
@@ -4898,9 +4891,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/c4bfdd301e33fc0e9c34.png",
-          "manualIds": [
-            "manual-legacy-home-0-4"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go4"
         }
       ],
       "unitId": "legacy-home-0",
@@ -4922,14 +4914,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/127626a2de27e15c0be2496a37fb02766148259e86712dcfe0129f52364d0072.mp4",
+          "video": "videos/127626a2de27e15c0be2.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Time Trial",
           "toolbox": [],
           "description": "In this mission, you will command TRACK3R with the Infrared Beacon to pass through all the checkpoints on the Mission Pad before time runs out! This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/b4ac460ed9c09859cff5.png",
-          "manualIds": [
-            "manual-legacy-home-0-5"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief5"
         },
         {
           "id": "step-1",
@@ -4940,7 +4931,8 @@
           "image": "assets/089ae2bcf4b175630174.jpg",
           "manualIds": [
             "manual-legacy-home-0-5"
-          ]
+          ],
+          "sourceSlideName": "Build5"
         },
         {
           "id": "step-2",
@@ -4949,9 +4941,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-0-5"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program5"
         },
         {
           "id": "step-3",
@@ -4960,9 +4951,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/e0457f7a8e94cb626f79.png",
-          "manualIds": [
-            "manual-legacy-home-0-5"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go5"
         }
       ],
       "unitId": "legacy-home-0",
@@ -4991,14 +4981,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/8358bd14d96a6eb0d586baed3f5084d771c26ca6872b39074735ec25f3a9088e.mp4",
+          "video": "videos/8358bd14d96a6eb0d586.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Lightning Tail",
           "toolbox": [],
           "description": "In this mission, you will shoot a ball with the Lightning Tail. This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/93a6a0e9b7e6706d702a.png",
-          "manualIds": [
-            "manual-legacy-home-1-1"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief1"
         },
         {
           "id": "step-1",
@@ -5009,7 +4998,8 @@
           "image": "assets/ccb7071cc7d305958643.jpg",
           "manualIds": [
             "manual-legacy-home-1-1"
-          ]
+          ],
+          "sourceSlideName": "Build1"
         },
         {
           "id": "step-2",
@@ -5018,9 +5008,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-1-1"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program1"
         },
         {
           "id": "modern-code-1",
@@ -5139,9 +5128,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/77bb5c7fa8e9f5555972.png",
-          "manualIds": [
-            "manual-legacy-home-1-1"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go1"
         }
       ],
       "unitId": "legacy-home-1",
@@ -5163,14 +5151,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/c58a1d09dd9ef6673aa39b7fb9313c56fd1974e38446d1105a4c09afb84441ed.mp4",
+          "video": "videos/c58a1d09dd9ef6673aa3.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Crawling Maneuvers",
           "toolbox": [],
           "description": "In this mission, you will make a crawling maneuver and perform a long-range attack. This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/59616465134ca196dea5.png",
-          "manualIds": [
-            "manual-legacy-home-1-2"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief2"
         },
         {
           "id": "step-1",
@@ -5181,7 +5168,8 @@
           "image": "assets/e2d7ae1277789b0467f1.jpg",
           "manualIds": [
             "manual-legacy-home-1-2"
-          ]
+          ],
+          "sourceSlideName": "Build2"
         },
         {
           "id": "step-2",
@@ -5190,9 +5178,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-1-2"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program2"
         },
         {
           "id": "modern-code-1",
@@ -5399,9 +5386,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/5c1131b24d99b505630d.png",
-          "manualIds": [
-            "manual-legacy-home-1-2"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go2"
         }
       ],
       "unitId": "legacy-home-1",
@@ -5423,14 +5409,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/1a1febc2ab8953da75e99489928b923ba8c3f72fadbd8d3f42fdd3eb07765845.mp4",
+          "video": "videos/1a1febc2ab8953da75e9.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Crush It!",
           "toolbox": [],
           "description": "In this mission, you will add the Crushing Claws and perform a close range attack. This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/3f66d4185cf8e6019d0b.png",
-          "manualIds": [
-            "manual-legacy-home-1-3"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief3"
         },
         {
           "id": "step-1",
@@ -5441,7 +5426,8 @@
           "image": "assets/9afb4edf7a7ef8487c9b.jpg",
           "manualIds": [
             "manual-legacy-home-1-3"
-          ]
+          ],
+          "sourceSlideName": "Build3"
         },
         {
           "id": "step-2",
@@ -5450,9 +5436,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-1-3"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program3"
         },
         {
           "id": "modern-code-1",
@@ -5494,9 +5479,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/812708478ae247ccdd11.png",
-          "manualIds": [
-            "manual-legacy-home-1-3"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go3"
         }
       ],
       "unitId": "legacy-home-1",
@@ -5518,14 +5502,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/cb8135e4f570f81a64c305f62646b46780e8cf6b46496a22c2f8f147511e9f02.mp4",
+          "video": "videos/cb8135e4f570f81a64c3.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Wait for It…",
           "toolbox": [],
           "description": "In this mission, you will make SPIK3R crawl around in place and wait until it detects something to attack. This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/cd6ef4c6ae7a97a82b3b.png",
-          "manualIds": [
-            "manual-legacy-home-1-4"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief4"
         },
         {
           "id": "step-1",
@@ -5536,7 +5519,8 @@
           "image": "assets/6e24d6459f5e07540c4b.jpg",
           "manualIds": [
             "manual-legacy-home-1-4"
-          ]
+          ],
+          "sourceSlideName": "Build4"
         },
         {
           "id": "step-2",
@@ -5545,9 +5529,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-1-4"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program4"
         },
         {
           "id": "step-3",
@@ -5556,9 +5539,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/62f7a8e62c89481cba62.png",
-          "manualIds": [
-            "manual-legacy-home-1-4"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go4"
         }
       ],
       "unitId": "legacy-home-1",
@@ -5580,14 +5562,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/7ce9e725e6b23cc789f88a08f9459e70143f85c454224878db01f44bd9c0b056.mp4",
+          "video": "videos/7ce9e725e6b23cc789f8.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Catch That Bug",
           "toolbox": [],
           "description": "In this mission, you will hunt the Bug and take it out with a long range shot before moving in to finish the job with the Crushing Claws. This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/c92a964b4cc0f00decbb.png",
-          "manualIds": [
-            "manual-legacy-home-1-5"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief5"
         },
         {
           "id": "step-1",
@@ -5598,7 +5579,8 @@
           "image": "assets/07e4b982b0011fb5699c.jpg",
           "manualIds": [
             "manual-legacy-home-1-5"
-          ]
+          ],
+          "sourceSlideName": "Build5"
         },
         {
           "id": "step-2",
@@ -5607,9 +5589,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-1-5"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program5"
         },
         {
           "id": "step-3",
@@ -5618,9 +5599,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/8f951f1e915289fa2910.png",
-          "manualIds": [
-            "manual-legacy-home-1-5"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go5"
         }
       ],
       "unitId": "legacy-home-1",
@@ -5642,14 +5622,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/a6501c39d0d7773ec8312a0c405e4dafa0b79c5b9641d1d3928509275a3333d4.mp4",
+          "video": "videos/a6501c39d0d7773ec831.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Driving and Turning",
           "toolbox": [],
           "description": "In this mission, you will drive and turn EV3RSTORM. This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/cf8e6b6077ae6b0355f6.png",
-          "manualIds": [
-            "manual-legacy-home-2-1"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief1"
         },
         {
           "id": "step-1",
@@ -5660,7 +5639,8 @@
           "image": "assets/e7344d10bc1ea3e3bb35.jpg",
           "manualIds": [
             "manual-legacy-home-2-1"
-          ]
+          ],
+          "sourceSlideName": "Build1"
         },
         {
           "id": "step-2",
@@ -5669,9 +5649,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-2-1"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program1"
         },
         {
           "id": "modern-code-1",
@@ -5856,9 +5835,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/19c5e49f38a6c554e6f4.png",
-          "manualIds": [
-            "manual-legacy-home-2-1"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go1"
         }
       ],
       "unitId": "legacy-home-2",
@@ -5880,14 +5858,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/fcec95b812b468495dc7fd3793be04978c44bd199060ba84fe7878fb84c616fd.mp4",
+          "video": "videos/fcec95b812b468495dc7.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Activate!",
           "toolbox": [],
           "description": "In this mission, you will press the Touch Sensor to activate EV3RSTORM or put him back to sleep. This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/cf33995877895f2d958d.png",
-          "manualIds": [
-            "manual-legacy-home-2-2"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief2"
         },
         {
           "id": "step-1",
@@ -5898,7 +5875,8 @@
           "image": "assets/df6718ef9b4f858aa33c.jpg",
           "manualIds": [
             "manual-legacy-home-2-2"
-          ]
+          ],
+          "sourceSlideName": "Build2"
         },
         {
           "id": "step-2",
@@ -5907,9 +5885,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-2-2"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program2"
         },
         {
           "id": "step-3",
@@ -5918,9 +5895,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/7cc5ec424769025413cd.png",
-          "manualIds": [
-            "manual-legacy-home-2-2"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go2"
         }
       ],
       "unitId": "legacy-home-2",
@@ -5942,14 +5918,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/53676073f38daf7d90a973975ab3136d053bf557d2ebafda7f2f07a255083afb.mp4",
+          "video": "videos/53676073f38daf7d90a9.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Stay Out of the Dark",
           "toolbox": [],
           "description": "In this mission, you will make clever use of the Color Sensor so EV3RSTORM stays out of the dark and attacks with the Spinning Triblade using the Touch Sensor. This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/0a6ffa63b970397927fd.png",
-          "manualIds": [
-            "manual-legacy-home-2-3"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief3"
         },
         {
           "id": "step-1",
@@ -5960,7 +5935,8 @@
           "image": "assets/afd0cc7e34d4f8b99622.jpg",
           "manualIds": [
             "manual-legacy-home-2-3"
-          ]
+          ],
+          "sourceSlideName": "Build3"
         },
         {
           "id": "step-2",
@@ -5969,9 +5945,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-2-3"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program3"
         },
         {
           "id": "step-3",
@@ -5980,9 +5955,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/3280465dee5421b94005.png",
-          "manualIds": [
-            "manual-legacy-home-2-3"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go3"
         }
       ],
       "unitId": "legacy-home-2",
@@ -6011,14 +5985,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/bb87eabdf6b30a437539d593037312591535f18cab5d0c11c5b445bc1d09e7af.mp4",
+          "video": "videos/bb87eabdf6b30a437539.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Attack on Sight",
           "toolbox": [],
           "description": "In this mission, you will attack with the Spinning Triblade when something comes too close. This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/64d365fcd827d397e570.png",
-          "manualIds": [
-            "manual-legacy-home-2-4"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief4"
         },
         {
           "id": "step-1",
@@ -6029,7 +6002,8 @@
           "image": "assets/f25d90ae9b7e513b2c97.jpg",
           "manualIds": [
             "manual-legacy-home-2-4"
-          ]
+          ],
+          "sourceSlideName": "Build4"
         },
         {
           "id": "step-2",
@@ -6038,9 +6012,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-2-4"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program4"
         },
         {
           "id": "step-3",
@@ -6049,9 +6022,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/f4d6691d1c58bdb86350.png",
-          "manualIds": [
-            "manual-legacy-home-2-4"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go4"
         }
       ],
       "unitId": "legacy-home-2",
@@ -6080,14 +6052,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/bff24bec56067c984a5e6869aebc9eaebcb786884f0f94e6740874ca196c4f7d.mp4",
+          "video": "videos/bff24bec56067c984a5e.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Command and Blast",
           "toolbox": [],
           "description": "In this mission, you will control EV3RSTORM remotely with the Infrared Beacon and shoot with the Blasting Bazooka using the Touch Sensor and the Color Sensor. This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/a9ba4b70e7256002af5f.png",
-          "manualIds": [
-            "manual-legacy-home-2-5"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief5"
         },
         {
           "id": "step-1",
@@ -6098,7 +6069,8 @@
           "image": "assets/901d8fab8c26b3f60afa.jpg",
           "manualIds": [
             "manual-legacy-home-2-5"
-          ]
+          ],
+          "sourceSlideName": "Build5"
         },
         {
           "id": "step-2",
@@ -6107,9 +6079,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-2-5"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program5"
         },
         {
           "id": "step-3",
@@ -6118,9 +6089,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/48db43678550c4ec718a.png",
-          "manualIds": [
-            "manual-legacy-home-2-5"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go5"
         }
       ],
       "unitId": "legacy-home-2",
@@ -6156,14 +6126,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/fc5d00806032fa564a114d61ef59781766e9ab2ed1430c0620d595bf8bd7a743.mp4",
+          "video": "videos/fc5d00806032fa564a11.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Search and Destroy",
           "toolbox": [],
           "description": "In this mission, you will search for Wheeler using the Infrared Sensor to aim and shoot with the Blasting Bazooka. This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/e6c866bf6c423e8ca10e.png",
-          "manualIds": [
-            "manual-legacy-home-2-6"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief6"
         },
         {
           "id": "step-1",
@@ -6174,7 +6143,8 @@
           "image": "assets/77613835a759e8307338.jpg",
           "manualIds": [
             "manual-legacy-home-2-6"
-          ]
+          ],
+          "sourceSlideName": "Build6"
         },
         {
           "id": "step-2",
@@ -6183,9 +6153,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-2-6"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program6"
         },
         {
           "id": "step-3",
@@ -6194,9 +6163,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/92f7af94e7f260d49297.png",
-          "manualIds": [
-            "manual-legacy-home-2-6"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go6"
         }
       ],
       "unitId": "legacy-home-2",
@@ -6225,14 +6193,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/e4e49a8b1cf6ad0f1757ec4cf332b94e04ef9ce27d4fb45b5052ed74d109f676.mp4",
+          "video": "videos/e4e49a8b1cf6ad0f1757.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Slither like a Snake",
           "toolbox": [],
           "description": "In this mission, you will make a slithering movement like a real snake. This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/30b2f1be55318faea825.png",
-          "manualIds": [
-            "manual-legacy-home-3-1"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief1"
         },
         {
           "id": "step-1",
@@ -6243,7 +6210,8 @@
           "image": "assets/67a9da87a50f24a2c65f.jpg",
           "manualIds": [
             "manual-legacy-home-3-1"
-          ]
+          ],
+          "sourceSlideName": "Build1"
         },
         {
           "id": "step-2",
@@ -6252,9 +6220,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-3-1"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program1"
         },
         {
           "id": "modern-code-1",
@@ -6288,9 +6255,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/99a203d58100af26f46a.png",
-          "manualIds": [
-            "manual-legacy-home-3-1"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go1"
         }
       ],
       "unitId": "legacy-home-3",
@@ -6312,14 +6278,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/bcfc70934736d8efb4e71cc55b060344e9762a0a3a01ef118fe25f032c3b50e2.mp4",
+          "video": "videos/bcfc70934736d8efb4e7.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Rattling R3PTAR",
           "toolbox": [],
           "description": "In this mission, you will make R3PTAR rattle and wait until it detects something to strike with its Fearsome Fangs. This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/e6d2220411d04afe1609.png",
-          "manualIds": [
-            "manual-legacy-home-3-2"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief2"
         },
         {
           "id": "step-1",
@@ -6330,7 +6295,8 @@
           "image": "assets/7a7354563685aa6980a3.jpg",
           "manualIds": [
             "manual-legacy-home-3-2"
-          ]
+          ],
+          "sourceSlideName": "Build2"
         },
         {
           "id": "step-2",
@@ -6339,9 +6305,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-3-2"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program2"
         },
         {
           "id": "step-3",
@@ -6350,9 +6315,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/7bfd7a34d1c0f498a7b2.png",
-          "manualIds": [
-            "manual-legacy-home-3-2"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go2"
         }
       ],
       "unitId": "legacy-home-3",
@@ -6379,7 +6343,8 @@
           "manualIds": [],
           "image": "assets/f2f9a5bf43ec2f4470aa.png",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Hunting",
-          "video": "../media/lego-local/2b18a1d293bf6b043eb884ce7fe9d63b644b8c0cd5f8499d9b690351bbc5ca5d.mp4"
+          "video": "videos/2b18a1d293bf6b043eb8.mp4",
+          "sourceSlideName": "Brief3"
         },
         {
           "id": "step-1",
@@ -6388,7 +6353,8 @@
           "manualIds": [],
           "image": null,
           "title": "&nbsp; &nbsp; &nbsp; &nbsp;",
-          "video": null
+          "video": null,
+          "sourceSlideName": "Program3"
         },
         {
           "id": "step-2",
@@ -6397,7 +6363,8 @@
           "manualIds": [],
           "image": "assets/c8e249e27f0b5e1cc1b9.png",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp;",
-          "video": null
+          "video": null,
+          "sourceSlideName": "Go3"
         }
       ],
       "unitId": "legacy-home-3",
@@ -6424,7 +6391,8 @@
           "manualIds": [],
           "image": "assets/6380b41ddfa63d10c06a.png",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Take Control",
-          "video": "../media/lego-local/d0ae91010225ba16bc2d0a408e5d1b6d47678f5450160183b77a28581e5ce8d9.mp4"
+          "video": "videos/d0ae91010225ba16bc2d.mp4",
+          "sourceSlideName": "Brief4"
         },
         {
           "id": "step-1",
@@ -6433,7 +6401,8 @@
           "manualIds": [],
           "image": null,
           "title": "&nbsp; &nbsp; &nbsp; &nbsp;",
-          "video": null
+          "video": null,
+          "sourceSlideName": "Program4"
         },
         {
           "id": "step-2",
@@ -6442,7 +6411,8 @@
           "manualIds": [],
           "image": "assets/ac90a80b1233c7fa3e58.png",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp;",
-          "video": null
+          "video": null,
+          "sourceSlideName": "Go4"
         }
       ],
       "unitId": "legacy-home-3",
@@ -6464,14 +6434,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/212ad14b5bbdfd13d0056be8c002e431c2b58b4c640cc5df0ac029774e3303ef.mp4",
+          "video": "videos/212ad14b5bbdfd13d005.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Grasping It",
           "toolbox": [],
           "description": "In this mission, you will practice using the Grasping Grippers. This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/5c58634e3fff870994a2.png",
-          "manualIds": [
-            "manual-legacy-home-4-1"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief1"
         },
         {
           "id": "step-1",
@@ -6482,7 +6451,8 @@
           "image": "assets/fe001fdcaaa218ebea17.jpg",
           "manualIds": [
             "manual-legacy-home-4-1"
-          ]
+          ],
+          "sourceSlideName": "Build1"
         },
         {
           "id": "step-2",
@@ -6491,9 +6461,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-4-1"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program1"
         },
         {
           "id": "modern-code-1",
@@ -6634,9 +6603,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/8086f1a0b8044da343f9.png",
-          "manualIds": [
-            "manual-legacy-home-4-1"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go1"
         }
       ],
       "unitId": "legacy-home-4",
@@ -6658,14 +6626,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/756471b8b0e5292298f22bb8474121749578affc5828e40146d5e571624e1284.mp4",
+          "video": "videos/756471b8b0e5292298f2.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Moving Around the Tire Stack",
           "toolbox": [],
           "description": "In this mission, you will drive, pick up the Tire Stack, turn around and put it down again. This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/36297475b9963bdf3bca.png",
-          "manualIds": [
-            "manual-legacy-home-4-2"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief2"
         },
         {
           "id": "step-1",
@@ -6676,7 +6643,8 @@
           "image": "assets/edae231ab84e8b455e91.jpg",
           "manualIds": [
             "manual-legacy-home-4-2"
-          ]
+          ],
+          "sourceSlideName": "Build2"
         },
         {
           "id": "step-2",
@@ -6685,9 +6653,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-4-2"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program2"
         },
         {
           "id": "modern-code-1",
@@ -6872,9 +6839,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/add5aec90d5af3e037d5.png",
-          "manualIds": [
-            "manual-legacy-home-4-2"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go2"
         }
       ],
       "unitId": "legacy-home-4",
@@ -6896,14 +6862,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/f8d057e86cb9c85e2881fd20378428d1fdcade75f589d63b1ff050240a06f781.mp4",
+          "video": "videos/f8d057e86cb9c85e2881.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Pick That Up!",
           "toolbox": [],
           "description": "In this mission, you will use the Infrared Sensor to show GRIPP3R what objects you want it to pick up or put down. This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/a2f733a9cf1d601dde8c.png",
-          "manualIds": [
-            "manual-legacy-home-4-3"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief3"
         },
         {
           "id": "step-1",
@@ -6914,7 +6879,8 @@
           "image": "assets/635289f00e38f1964831.jpg",
           "manualIds": [
             "manual-legacy-home-4-3"
-          ]
+          ],
+          "sourceSlideName": "Build3"
         },
         {
           "id": "step-2",
@@ -6923,9 +6889,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-4-3"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program3"
         },
         {
           "id": "step-3",
@@ -6934,9 +6899,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/52de9df935a035a0d7db.png",
-          "manualIds": [
-            "manual-legacy-home-4-3"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go3"
         }
       ],
       "unitId": "legacy-home-4",
@@ -6958,14 +6922,13 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/0ba80e48ce0264c6c42a13e48c3c094046f847151c859a6afbfcf038e19551e9.mp4",
+          "video": "videos/0ba80e48ce0264c6c42a.mp4",
           "title": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;At Your Service!",
           "toolbox": [],
           "description": "In this mission, you will use the Infrared Beacon to control GRIPP3R remotely so you can carry around things as you please. This mission consists of the following steps: OBJECTIVE CREATE COMMAND GO!",
           "image": "assets/b9fee7c1c0178dad631e.png",
-          "manualIds": [
-            "manual-legacy-home-4-4"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Brief4"
         },
         {
           "id": "step-1",
@@ -6976,7 +6939,8 @@
           "image": "assets/6aca623dc3820db2a627.jpg",
           "manualIds": [
             "manual-legacy-home-4-4"
-          ]
+          ],
+          "sourceSlideName": "Build4"
         },
         {
           "id": "step-2",
@@ -6985,9 +6949,8 @@
           "toolbox": [],
           "description": "You are now ready to command your robot. Open the finished program or program yourself by following step-by-step programming instructions. Follow step-by-step programming instructions Open the finished program",
           "image": null,
-          "manualIds": [
-            "manual-legacy-home-4-4"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Program4"
         },
         {
           "id": "step-3",
@@ -6996,9 +6959,8 @@
           "toolbox": [],
           "description": "You are now ready to try out your robot. Connect your EV3 Brick .",
           "image": "assets/e71c35f33714bebd2443.png",
-          "manualIds": [
-            "manual-legacy-home-4-4"
-          ]
+          "manualIds": [],
+          "sourceSlideName": "Go4"
         }
       ],
       "unitId": "legacy-home-4",
@@ -7020,14 +6982,12 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/d4b9e015063a697461db6409e870813950c10ddc83855828da52c14162dd4bdc.mp4",
+          "video": "videos/d4b9e015063a697461db.mp4",
           "title": "Seleccionador de Color",
           "toolbox": [],
           "description": "",
           "image": "assets/dfa4f69b009b97e4a439.png",
-          "manualIds": [
-            "manual-legacy-base-0-mcs_Model-Instructions_Color-Sorter"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-1",
@@ -7036,9 +6996,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/3298425d8650dd3eef87.jpg",
-          "manualIds": [
-            "manual-legacy-base-0-mcs_Model-Instructions_Color-Sorter"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-2",
@@ -7047,9 +7005,7 @@
           "toolbox": [],
           "description": "Para ver una descripción del programa, haga clic aquí .",
           "image": "assets/8d03f0ae48eb0726f2a7.png",
-          "manualIds": [
-            "manual-legacy-base-0-mcs_Model-Instructions_Color-Sorter"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "robot-core-2",
@@ -7071,14 +7027,12 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/7cb0a98b8869e5381ba4a870726c84267006bc8b0097d767808e0bbfdde5a77e.mp4",
+          "video": "videos/7cb0a98b8869e5381ba4.mp4",
           "title": "Gyro Boy",
           "toolbox": [],
           "description": "",
           "image": "assets/2829ba05bd32b007a57a.png",
-          "manualIds": [
-            "manual-legacy-base-0-mcs_Model-Instructions_Gyro-Boy"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-1",
@@ -7087,9 +7041,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/9abf8e0c0e10146d67e9.jpg",
-          "manualIds": [
-            "manual-legacy-base-0-mcs_Model-Instructions_Gyro-Boy"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-2",
@@ -7098,9 +7050,7 @@
           "toolbox": [],
           "description": "Para ver una descripción del programa, haga clic aquí .",
           "image": "assets/8d03f0ae48eb0726f2a7.png",
-          "manualIds": [
-            "manual-legacy-base-0-mcs_Model-Instructions_Gyro-Boy"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "robot-core-1",
@@ -7178,14 +7128,12 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/379d1b5a344ad6435df746c990ec098ee574e6e640b3fc7c7a6cdb13ba5c8a0d.mp4",
+          "video": "videos/379d1b5a344ad6435df7.mp4",
           "title": "Perro",
           "toolbox": [],
           "description": "",
           "image": "assets/13ec447d93df959f416a.png",
-          "manualIds": [
-            "manual-legacy-base-0-mcs_Model-Instructions_Puppy"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-1",
@@ -7194,9 +7142,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/7976da577b58d9e7051d.jpg",
-          "manualIds": [
-            "manual-legacy-base-0-mcs_Model-Instructions_Puppy"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-2",
@@ -7205,9 +7151,7 @@
           "toolbox": [],
           "description": "Para ver una descripción del programa, haga clic aquí .",
           "image": "assets/8d03f0ae48eb0726f2a7.png",
-          "manualIds": [
-            "manual-legacy-base-0-mcs_Model-Instructions_Puppy"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "robot-core-3",
@@ -7383,14 +7327,12 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/4ffbc4a88a03ffa11e69502f3f56dae8f73e85c283d1a3d2926f2f1dc7961813.mp4",
+          "video": "videos/4ffbc4a88a03ffa11e69.mp4",
           "title": "Brazo del robot H25",
           "toolbox": [],
           "description": "",
           "image": "assets/9fa3af5e708e29a8824f.png",
-          "manualIds": [
-            "manual-legacy-base-0-mcs_Model-Instructions_Robot-Arm-H25"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-1",
@@ -7399,9 +7341,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/c082a4fd353aa06e0091.jpg",
-          "manualIds": [
-            "manual-legacy-base-0-mcs_Model-Instructions_Robot-Arm-H25"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-2",
@@ -7410,9 +7350,7 @@
           "toolbox": [],
           "description": "Para ver una descripción del programa, haga clic aquí .",
           "image": "assets/8d03f0ae48eb0726f2a7.png",
-          "manualIds": [
-            "manual-legacy-base-0-mcs_Model-Instructions_Robot-Arm-H25"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "robot-core-4",
@@ -7685,7 +7623,7 @@
           "manualIds": [],
           "image": null,
           "title": "Parámetros de ajuste",
-          "video": "../media/lego-local/ef51d6104cb686306a3c88d97db64514727d8b86e540525e45f76f74bb57bc42.mp4"
+          "video": "videos/ef51d6104cb686306a3c.mp4"
         },
         {
           "id": "step-7",
@@ -7712,7 +7650,7 @@
           "manualIds": [],
           "image": null,
           "title": "Parámetros de ajuste",
-          "video": "../media/lego-local/ce05b0577c9966db64be47f23490fec24b7d2cb38bd21f1f8542e1c4c710674d.mp4"
+          "video": "videos/ce05b0577c9966db64be.mp4"
         }
       ],
       "unitId": "legacy-base-3",
@@ -7819,7 +7757,7 @@
           "manualIds": [],
           "image": null,
           "title": "Mover objeto",
-          "video": "../media/lego-local/7d5910262bc557b853b1a093612a82f44b352383f12a1369bde340bd7ee84999.mp4"
+          "video": "videos/7d5910262bc557b853b1.mp4"
         },
         {
           "id": "step-1",
@@ -7914,7 +7852,7 @@
           "manualIds": [],
           "image": null,
           "title": "Detener en un ángulo",
-          "video": "../media/lego-local/e7f46b74b245fc40933eb7847d64e6d71f0484145f2b48c27b1037b932575854.mp4"
+          "video": "videos/e7f46b74b245fc40933e.mp4"
         },
         {
           "id": "step-1",
@@ -8023,7 +7961,7 @@
           "manualIds": [],
           "image": null,
           "title": "Detener en una línea",
-          "video": "../media/lego-local/e80952a591b5aaf436296920cfa4056b57791791d26d239dd1f117a63612f0f2.mp4"
+          "video": "videos/e80952a591b5aaf43629.mp4"
         },
         {
           "id": "step-1",
@@ -9698,7 +9636,7 @@
           "manualIds": [],
           "image": null,
           "title": "Tareas múltiples",
-          "video": "../media/lego-local/ee11cffee8325c6e90436bc4b55207653beb49e0ea87d606d700baa1d30c18c6.mp4"
+          "video": "videos/ee11cffee8325c6e9043.mp4"
         },
         {
           "id": "step-1",
@@ -10134,7 +10072,7 @@
           "manualIds": [],
           "image": null,
           "title": "Interruptor",
-          "video": "../media/lego-local/0e7e3d668ec19d583d190cd33408831fe45e3cf7b6c42d014f06a99f87f9464f.mp4"
+          "video": "videos/0e7e3d668ec19d583d19.mp4"
         },
         {
           "id": "step-1",
@@ -10526,9 +10464,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/8a4f0f5900bf224ac577.jpg",
-          "manualIds": [
-            "manual-legacy-base-3-re_Building-Instructions_Color-Sensor---Brick"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "legacy-base-3",
@@ -10547,9 +10483,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/ca77f42e0c6393d55cb6.jpg",
-          "manualIds": [
-            "manual-legacy-base-3-re_Building-Instructions_Color-Sensor-Down---Driving-Base"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "legacy-base-3",
@@ -10568,9 +10502,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/39c1a878aef9a18bb64c.jpg",
-          "manualIds": [
-            "manual-legacy-base-3-re_Building-Instructions_Color-Sensor-Forward---Driving-Base"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "legacy-base-3",
@@ -10589,9 +10521,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/12edb7710b7eaa304919.jpg",
-          "manualIds": [
-            "manual-legacy-base-3-re_Building-Instructions_Cuboid"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "legacy-base-3",
@@ -10610,9 +10540,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/8d3bd03ff9172afb2e6b.jpg",
-          "manualIds": [
-            "manual-1"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "legacy-base-3",
@@ -10631,9 +10559,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/7faa1c95cdffee229201.jpg",
-          "manualIds": [
-            "manual-legacy-base-3-re_Building-Instructions_EV3-Brick"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "legacy-base-3",
@@ -10652,9 +10578,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/bd48fa587aedbe8ca299.jpg",
-          "manualIds": [
-            "manual-legacy-base-3-re_Building-Instructions_Gyro-Sensor---Brick"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "legacy-base-3",
@@ -10673,9 +10597,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/e98e4ad4f0351c60cb0e.jpg",
-          "manualIds": [
-            "manual-legacy-base-3-re_Building-Instructions_Gyro-Sensor---Driving-Base"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "legacy-base-3",
@@ -10694,9 +10616,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/cdf8b776e8698288342a.jpg",
-          "manualIds": [
-            "manual-legacy-base-3-re_Building-Instructions_Large-Motor---Brick"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "legacy-base-3",
@@ -10715,9 +10635,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/273b3657a6320aab548a.jpg",
-          "manualIds": [
-            "manual-legacy-base-3-re_Building-Instructions_Medium-Motor---Brick"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "legacy-base-3",
@@ -10736,9 +10654,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/275b20ba954d1e52e3f6.jpg",
-          "manualIds": [
-            "manual-legacy-base-3-re_Building-Instructions_Medium-Motor---Driving-Base"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "legacy-base-3",
@@ -10757,9 +10673,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/95eb508bfc444e70c174.jpg",
-          "manualIds": [
-            "manual-legacy-base-3-re_Building-Instructions_Temperature-Sensor---Brick"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "legacy-base-3",
@@ -10778,9 +10692,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/41385e64bc647a67e3dc.jpg",
-          "manualIds": [
-            "manual-legacy-base-3-re_Building-Instructions_Touch-Sensor---Brick"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "legacy-base-3",
@@ -10799,9 +10711,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/de819ce4fa341c3b686f.jpg",
-          "manualIds": [
-            "manual-legacy-base-3-re_Building-Instructions_Touch-Sensor---Driving-Base"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "legacy-base-3",
@@ -10820,9 +10730,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/acb28c090e3822a961aa.jpg",
-          "manualIds": [
-            "manual-legacy-base-3-re_Building-Instructions_Ultrasonic-Sensor---Brick"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "legacy-base-3",
@@ -10841,9 +10749,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/c7bec3ed72a18d76ecc3.jpg",
-          "manualIds": [
-            "manual-legacy-base-3-re_Building-Instructions_Ultrasonic-Sensor---Driving-Base"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "legacy-base-3",
@@ -13245,14 +13151,12 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/a2289f37dd8ca41ab4978de961e99844a34f60b3a1befd46fed5d8d82c1c8668.mp4",
+          "video": "videos/a2289f37dd8ca41ab497.mp4",
           "title": "Elefante",
           "toolbox": [],
           "description": "",
           "image": "assets/60b81857c93486bd259c.png",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Elephant"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-1",
@@ -13261,9 +13165,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/d0a8b30461e10e776d1b.jpg",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Elephant"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-2",
@@ -13272,9 +13174,7 @@
           "toolbox": [],
           "description": "Para ver una descripción del programa, haga clic aquí .",
           "image": "assets/8d03f0ae48eb0726f2a7.png",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Elephant"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "robot-legacy-base-5-mes_Model-Instructions_Elephant",
@@ -13331,14 +13231,12 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/d28d3241888e3014551c533c52780ead03c2959fbd353f53a3f36588b4aa71a5.mp4",
+          "video": "videos/d28d3241888e3014551c.mp4",
           "title": "Control remoto",
           "toolbox": [],
           "description": "",
           "image": "assets/0bab69507215c81b2338.png",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Remote-Control"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-1",
@@ -13347,9 +13245,7 @@
           "toolbox": [],
           "description": "Antes de comenzar con este proyecto, puede ser útil repasar este tutorial del Robot educador: Mandar Mensaje",
           "image": "assets/f6f8eefa657021be6ecb.png",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Remote-Control"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-2",
@@ -13358,9 +13254,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/60837cccb02243c07500.jpg",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Remote-Control"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-3",
@@ -13369,9 +13263,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/11ec822c37853859e841.png",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Remote-Control"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-4",
@@ -13380,9 +13272,7 @@
           "toolbox": [],
           "description": "Para ver una descripción del programa, haga clic aquí .",
           "image": "assets/8d03f0ae48eb0726f2a7.png",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Remote-Control"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-5",
@@ -13391,9 +13281,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/a7aca534a1953e8055dd.png",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Remote-Control"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-6",
@@ -13402,9 +13290,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/ebc264d83c52995577be.png",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Remote-Control"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-7",
@@ -13413,9 +13299,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/8d03f0ae48eb0726f2a7.png",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Remote-Control"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "robot-legacy-base-5-mes_Model-Instructions_Remote-Control",
@@ -13444,14 +13328,12 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/6a0c86c4120882f2fd45524f9bb5f411625875fd1f4c9de86c2729f46de70c20.mp4",
+          "video": "videos/6a0c86c4120882f2fd45.mp4",
           "title": "Fábrica de spinners",
           "toolbox": [],
           "description": "",
           "image": "assets/1172daac955898bb3f15.png",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Spinner-Factory"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-1",
@@ -13460,9 +13342,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/8229e5105e152502383b.jpg",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Spinner-Factory"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-2",
@@ -13471,9 +13351,7 @@
           "toolbox": [],
           "description": "¿Necesitas ayuda? Haz clic aquí",
           "image": "assets/d88beb0c1407f5cdfc24.png",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Spinner-Factory"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-3",
@@ -13482,9 +13360,7 @@
           "toolbox": [],
           "description": "Para ver una descripción del programa, haga clic aquí .",
           "image": "assets/8d03f0ae48eb0726f2a7.png",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Spinner-Factory"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "robot-legacy-base-5-mes_Model-Instructions_Spinner-Factory",
@@ -13569,14 +13445,12 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/82e061866199126bba134322757b6c3280aa0a74e1ad55e4981907f24676846d.mp4",
+          "video": "videos/82e061866199126bba13.mp4",
           "title": "Escaladora",
           "toolbox": [],
           "description": "",
           "image": "assets/21cefe4b16fd69a1aeac.png",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Stairclimber"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-1",
@@ -13585,9 +13459,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/bff3283ddb15b947b354.jpg",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Stairclimber"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-2",
@@ -13596,9 +13468,7 @@
           "toolbox": [],
           "description": "Para ver una descripción del programa, haga clic aquí .",
           "image": "assets/8d03f0ae48eb0726f2a7.png",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Stairclimber"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "robot-legacy-base-5-mes_Model-Instructions_Stairclimber",
@@ -13627,14 +13497,12 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/f4c22d2a9f5d96d4c15a20292a706f7e7063ef52d705fdb9bdc861361ba83a3a.mp4",
+          "video": "videos/f4c22d2a9f5d96d4c15a.mp4",
           "title": "Tank Bot",
           "toolbox": [],
           "description": "",
           "image": "assets/cb5609c4fa692d050559.png",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Tank-Bot"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-1",
@@ -13643,9 +13511,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/c48a8a7b65e253deabb2.jpg",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Tank-Bot"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-2",
@@ -13654,9 +13520,7 @@
           "toolbox": [],
           "description": "Para ver una descripción del programa, haga clic aquí .",
           "image": "assets/8d03f0ae48eb0726f2a7.png",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Tank-Bot"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "robot-legacy-base-5-mes_Model-Instructions_Tank-Bot",
@@ -13678,14 +13542,12 @@
       "steps": [
         {
           "id": "step-0",
-          "video": "../media/lego-local/b22899615b121b607f024e0ca65276edeea55387aec51ef198f1c47c49d63824.mp4",
+          "video": "videos/b22899615b121b607f02.mp4",
           "title": "Znap",
           "toolbox": [],
           "description": "",
           "image": "assets/a8206704e10495cee9ce.png",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Znap"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-1",
@@ -13694,9 +13556,7 @@
           "toolbox": [],
           "description": "",
           "image": "assets/5732e4341cd792ce04d2.jpg",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Znap"
-          ]
+          "manualIds": []
         },
         {
           "id": "step-2",
@@ -13705,9 +13565,7 @@
           "toolbox": [],
           "description": "Para ver una descripción del programa, haga clic aquí .",
           "image": "assets/8d03f0ae48eb0726f2a7.png",
-          "manualIds": [
-            "manual-legacy-base-5-mes_Model-Instructions_Znap"
-          ]
+          "manualIds": []
         }
       ],
       "unitId": "robot-legacy-base-5-mes_Model-Instructions_Znap",

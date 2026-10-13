@@ -98,7 +98,7 @@ foreach($source in $sources) {
             }
           }
           $description = ($texts | Select-Object -Skip 1) -join ' '
-          if($description -or $stepImage){$steps+=@{id="step-$($steps.Count)";title=$(if($texts.Count){$texts[0]}else{$title});description=$description;image=$stepImage;video=$stepVideo;manualIds=@();toolbox=@()}}
+          if($description -or $stepImage){$steps+=@{id="step-$($steps.Count)";title=$(if($texts.Count){$texts[0]}else{$title});sourceSlideName=$slide.GetAttribute('SlideName');description=$description;image=$stepImage;video=$stepVideo;manualIds=@();toolbox=@()}}
         }
         if(-not $steps.Count){continue}
         $activityId="$id-$($file.BaseName -replace '[^a-zA-Z0-9_-]','-')"
@@ -116,7 +116,7 @@ foreach($source in $sources) {
         if($buildImages.Count){
           $manualId="manual-$activityId"
           $catalog.manuals+=@{id=$manualId;title=$title;image=$image;images=@($buildImages | Select-Object -Unique);stepCount=$buildImages.Count}
-          foreach($step in $steps){$step.manualIds=@($manualId)}
+          foreach($step in $steps){if($step.sourceSlideName -match '^Build' -or $step.title -match 'constr[uú]|build'){$step.manualIds=@($manualId)}}
         }
         $catalog.activities+=@{id=$activityId;unitId=$activityUnitId;title=$title.Trim();summary=(Read-Entry $zip '___ProjectDescription');image=$image;steps=$steps;source=$file.FullName}
         $unit.activities+= $activityId

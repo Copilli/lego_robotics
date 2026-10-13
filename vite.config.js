@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import fs from 'node:fs';
 import path from 'node:path';
+import {createHash} from 'node:crypto';
 const mediaRoot=path.resolve('node_modules/scratch-blocks/media');
 const scratchMedia={
   name:'scratch-local-media',
@@ -15,6 +16,7 @@ const scratchMedia={
 };
 export default defineConfig(({ mode }) => ({
   base: mode === 'production' ? '/lego_robotics/' : '/',
+  define:{__CURRICULUM_VERSION__:JSON.stringify(createHash('sha256').update(fs.readFileSync('public/content/catalog.json')).digest('hex').slice(0,16))},
   plugins:[scratchMedia],
   build: {rollupOptions: {output: {manualChunks: {editor:['codemirror','@codemirror/lang-javascript','@codemirror/theme-one-dark']}}}},
 }));
